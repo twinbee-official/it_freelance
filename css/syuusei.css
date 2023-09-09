@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+
+.text01{
+    font-size: 16;
+    width: 496px;
+    height:232px ;
+    margin-top: 20px;
+
+}
+
+.osigoto_flexbox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.os_Title{
+    font-size: 24px;
+    font-weight: bold;
+}
+

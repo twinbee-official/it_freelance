@@ -1,0 +1,161 @@
+/*ーーーーーーーーーー
+.header
+ーーーーーーーーーーー*/
+
+@media (max-width: 1000px) {
+ 
+/* Fixed */
+#head_wrap.fixed {
+  margin-top: 0;
+  top: 0;
+  position: fixed;
+  height: 70px;
+  transition: top 0.65s ease-in;
+  -webkit-transition: top 0.65s ease-in;
+  -moz-transition: top 0.65s ease-in;
+  z-index: 9999;
+}
+
+
+/* Toggle Button */
+#nav-toggle {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 23px;
+  width: 34px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+#nav-toggle div {
+  position: relative;
+}
+	
+#head_wrap {
+    top: 0;
+    position: fixed;
+    margin-top: 0;
+    width: 100%;
+    padding: 0;
+    /* Fixed reset */
+  }
+  #head_wrap .inner {
+    width: 100%;
+    padding: 0;
+  }
+  #head_wrap .fixed {
+    padding-top: 0;
+    background: transparent;
+  }
+  #mobile-head {
+    background: #fff;
+    width: 100%;
+    height: 70px;
+    z-index: 999;
+    position: relative;
+  }
+  nav#g-nav{
+    right: 0; /* 画面右寄せにするために reft: 0; を追加 */
+
+  }
+  #global-nav {
+    position: absolute;
+    /* 開いてないときは画面外に配置 */
+    top: -500px;
+    background-image: url('../images/menu06.png'); /* 画像のパスを指定 */
+    /* opacity: 0.9; */
+    /* background-color: rgba(255, 255, 255, 0.8);  */
+    background-size: cover; /* 画像を要素全体に広げる */
+    width: 40%;
+    right: 0; /* 画面右寄せにするために reft: 0; を追加 */
+    /* text-align: center; */
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+
+  
+  #global-nav ul {
+    list-style: none;
+    position: static;
+    right: 0;
+    bottom: 0;
+    font-size: 18px;
+	  margin-top: 24px;
+    /* background-color: rgba(255, 255, 255, 0.8);  */
+    background-color:#fff;
+    
+  }
+  #global-nav ul li {
+    float: none;
+    position: static;
+  }
+  #head_wrap #global-nav ul li a,
+  #head_wrap.fixed #global-nav ul li a {
+    width: 100%;
+    display: block;
+    padding: 20px 16px 20px 56px;
+  }
+  #nav-toggle {
+    display: block;
+  }
+  /* #nav-toggle 切り替えアニメーション */
+  #nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #EACFFF;
+    left: 0;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+  }
+  #nav-toggle span:nth-child(1) {
+    top: 0;
+  }
+  #nav-toggle span:nth-child(2) {
+    top: 11px;
+  }
+  #nav-toggle span:nth-child(3) {
+    top: 22px;
+  }
+  .open #nav-toggle span:nth-child(1) {
+    top: 11px;
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    transform: rotate(315deg);
+  }
+  .open #nav-toggle span:nth-child(2) {
+    width: 0;
+    left: 50%;
+  }
+  .open #nav-toggle span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(-315deg);
+    -moz-transform: rotate(-315deg);
+    transform: rotate(-315deg);
+  }
+  /* #global-nav スライドアニメーション */
+  .open #global-nav {
+    /* #global-nav top + #mobile-head height */
+    -moz-transform: translateY(558px);
+    -webkit-transform: translateY(558px);
+    transform: translateY(558px);
+    width: 300px;
+    height: 667px;
+  }
+	
+	
+}
+
+/* @media only screen and (max-width: 834px) {
+  #global-nav {
+    width: 50%;
+    text-align: center;
+  }
+
+}
+ */

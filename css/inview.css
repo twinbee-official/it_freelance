@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*フェードイン*/
+.fade_in {
+  opacity: 0;
+transition: 1s;
+}
+
+.fade_in_anime {
+  opacity: 1;  
+}
+
+/*フェードインアップ*/
+.up {
+  transform: translate(0,50px); 
+  -webkit-transform: translate(0,50px); 
+  opacity: 0; 
+	 transition: 1s;
+}
+
+.up_anime {
+  transform: translate(0,0); 
+  -webkit-transform: translate(0,0); 
+  opacity: 1;  
+}
+
+/*フェードイン右下斜め*/
+.slanting_right {
+  transform: translate(0,0); 
+  -webkit-transform: translate(0,0); 
+  opacity: 0; 
+	transition: 1s;
+}
+
+.up_slanting_right {
+  transform: translate(50px,50px); 
+  -webkit-transform: translate(50px,50px); 
+  opacity: 1;  
+}
+
+/*フェードイン横から*/
+.side {
+  transform: translate(50px,0); 
+  -webkit-transform: translate(50px,0);
+  opacity: 0;  
+	transition: 1s;
+}
+
+.side_anime {
+  transform: translate(0,0); 
+  -webkit-transform: translate(0,0);
+  opacity: 1;  
+}
+
+/*フェードイン横から*/
+.side_left {
+  transform: translate(50px,0); 
+  -webkit-transform: translate(50px,0);
+  opacity: 0;  
+	transition: 1s;
+}
+
+.side_left_anime {
+  transform: translate(0,0); 
+  -webkit-transform: translate(0,0);
+  opacity: 1;  
+}
+
+.side_right {
+  transform: translate(-50px,0); 
+  -webkit-transform: translate(-50px,0);
+  opacity: 0;  
+	transition: 1s;
+}
+
+.side_right_anime {
+  transform: translate(0,0); 
+  -webkit-transform: translate(0,0);
+  opacity: 1;  
+}
