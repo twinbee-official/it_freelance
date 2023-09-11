@@ -833,3 +833,90 @@ input::placeholder {
 
 }
  */
+
+ /* .switch_content {
+	width: 400px; 
+	border: 1px solid #333; 
+  } */
+  
+  #switch {
+	display: none; /* チェックボックスを除去 */
+  }
+  #switch_close {
+	display: none; /* チェックボックスを除去 */
+  }
+  .button {
+	/* display: block; */
+	/* position: relative; */
+	padding-top: 28px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+    .button_close {
+		/* display: block; */
+		/* position: relative; */
+		padding-top: 28px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	
+  
+  
+  
+  .open { /* 表示ボタンのスタイル */
+	display: inline-block; /* デフォルトは表示 */
+  }
+  
+  .close { /* 閉じるボタンのスタイル */
+	display: none; /* デフォルトは非表示 */
+  }
+  
+  .contents { /* コンテンツのスタイル */
+	display: none; /* デフォルトは非表示 */
+	padding: 0 20px 15px;
+  }
+  
+   /* 以降、チェック時（クリック後）のスタイル */
+  
+  #switch:checked + .button > .icon::before{
+	transform: translate(-50%,-50%) rotate(45deg);
+  }
+  
+  #switch:checked + .button > .icon::after{
+	transform: translate(-50%,-50%) rotate(-45deg);
+  }
+  
+  #switch:checked + .button > .open{
+	display: none; /* 表示ボタンを非表示 */
+  }
+  
+  #switch:checked + .button > .close{
+	display: inline-block; /* 閉じるボタンを表示 */
+  }
+  
+  #switch:checked ~ .contents {
+	display: block; /* コンテンツを表示 */
+  }
+
+  .open img {
+    margin: 0 auto; /* 水平方向に中央揃えにする */
+	padding-right: 12px;
+}
+
+.close img {
+    margin: 0 auto; /* 水平方向に中央揃えにする */
+	padding-right: 12px;
+}
+
+/* チェックボックスがチェックされている場合（ラベルが閉じている状態）のスタイル */
+/* #switch:checked + .button .close {
+    display: none;  */
+	/* .close を非表示にする */
+
+
