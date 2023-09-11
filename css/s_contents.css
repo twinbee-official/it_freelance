@@ -217,15 +217,15 @@ footer {
 
 /* 画面幅が834px以上の場合に質問回答を開いた状態にするスタイル */
 @media (min-width: 834px) {
-    /* .cp_qa .cp_actab label { */
-        /* color: #8086DC;  */
-		/* 質問が開いた状態のラベル色を変更 */
-    /* } */
+    .cp_qa .cp_actab label {
+        color: #8086DC; 
+		/*質問が開いた状態のラベル色を変更*/
+    }
     
-    /* .cp_qa .cp_actab label:hover { */
-        /* color: #8086DC;  */
-		/* 質問が開いた状態でもホバー時のラベル色を変更 */
-    /* } */
+    .cp_qa .cp_actab label:hover {
+        color: #8086DC; 
+		/*質問が開いた状態でもホバー時のラベル色を変更 */
+    }
 
     .cp_qa .cp_actab .cp_actab-content {
         max-height: 40em; /* 開いた状態の最大高さを指定 */
@@ -255,7 +255,7 @@ footer {
 }
 
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 375px) {
 
 
 	.hero {
@@ -328,7 +328,7 @@ margin-top: 10px;
 /*section1*/
 .bg_waku{
 	width: 283px;
-	height: 354px;
+	height: auto;
 	padding: 24px 30px;
 margin: 0% auto;
 margin-top: 32px;
@@ -457,4 +457,25 @@ label .label_size {
 	background-size: contain;
 }
 /**/
+
+/* デフォルトの画像スタイル */
+#footer_logo_change {
+	max-width: 100%;
+	height: auto;
+}
+
+/* 375px以下の幅のデバイスfooterlogoに表示する画像 */
+	#footer_logo_change {
+		content: url('..//images/sp_footer_logo.png');
+	}
+
+
+	
+}
+
+/* 375px以上の幅のデバイスfooterlogoに表示する画像 */
+@media (min-width: 376px) {
+	#footer_logo_change {
+		content: url('..//images/footer_logo.png');
+	}
 }
