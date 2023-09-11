@@ -145,7 +145,7 @@ footer {
 	/* width: 283px; */
 	margin: 0 auto;
 	align-items: center;
-	padding: 28px 0px 0px;
+	/* padding: 28px 0px 0px; */
 	/* padding-top: 28px; */
 }
 .btnset .button {
@@ -163,7 +163,7 @@ footer {
 	font-size: 14px;
 	font-weight: bold;
 }
-.boxopen:before {
+/* .boxopen:before {
 	display: block;
 	content: "";
 	position: absolute;
@@ -172,8 +172,8 @@ footer {
 	width: 6px;
 	height: 13px;
 	border-left: solid 1px #382A3F;
-}
-.boxopen:after {
+} */
+/* .boxopen:after {
 	display: block;
 	content: "";
 	position: absolute;
@@ -192,7 +192,7 @@ footer {
 	width: 13px;
 	height: 6px;
 	border-top: solid 1px #382A3F;
-}
+} */
 /**/
 
 .flex_item_goriyou_sp_00 h3{
@@ -306,7 +306,7 @@ margin-top: 10px;
 	padding: 0%;
 } */
 
-.ColorBg {
+.spColorBg {
 	margin: 64px 0px;
 	/* padding:0 */
 }
