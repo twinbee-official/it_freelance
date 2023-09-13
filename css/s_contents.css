@@ -134,21 +134,56 @@ margin-top: 32px;
 	font-size: 16px;
 	font-weight: bolder;
 	white-space: nowrap;
+	letter-spacing: normal;
+	padding: 8px 0px;
 }
-
 .os_bg{
 	width:343px;
 	padding:40px 16px;
 }
-.os_flexbox{
-	display: block;
-}
 .os_Title{
 	font-size: 18px;
 	white-space: nowrap;
+	text-align: center;
 }
+.os_flexitem_02 li{
+	font-size: 100%;
+  }
+.os_flexitem_02{
+font-size: 14px;
+padding-bottom: 16px;
+width: 100%;
+
+}
+.os_flexitem_01{
+font-size: 14px;
+padding-bottom: 8px;
+padding-top: 20px;
+width: 100%;
+}
+.os_flexbox{
+display: block;
+}
+
+
+.os_title{
+text-align: center;
+font-size: 140%;
+}
+.tab-004>div{
+padding: 40px 16px;
+}
+
+.ckd {
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+}
+
+
 /*お仕事紹介end**************************************************************/
-	  /*よくある質問**************************************************************/
+
+/*よくある質問**************************************************************/
   /* アコーディオン全体 */
   .accordion {
 	width: 375px;
@@ -266,7 +301,6 @@ margin-top: 32px;
 
 .dekirukoto_flexbox_01{
 	display: flex;
-	max-width: 700px;
 	align-items: center;
 }
 
@@ -292,6 +326,7 @@ margin-top: 32px;
 	text-decoration: none;
 	font-size: 14px;
 	font-weight: bold;
+	padding-top:28px;
 }
 
 .flex_item_goriyou_sp_00 h3{
@@ -311,6 +346,75 @@ margin-top: 32px;
 
 
  /*無料会員登録**************************************************************/
+
+ .touroku_inner {
+	width: 375px;
+	padding:40px 16px;
+  }
+  div.touroku_flexbox{
+	display: block;
+  }
+  .touroku_flexitem p {
+	font-size: 16px;
+	padding-left: 8px;
+  }
+  
+  .waku_input {
+	width: 343px;
+	height: 42px;
+	border-radius: 4px;
+  }
+  .waku_input_1 {
+	width: 343px;
+	height: 42px;
+	padding: 5px;
+	/* margin-bottom: 20px; */
+	border-radius: 4px;
+	margin-top: 8px;
+  }
+  
+  
+   .touroku_bgimg {
+	background-repeat: no-repeat;
+	background-image: url(../images/touroku_haikei.png);
+	position: relative;
+	margin: 0% auto;
+	padding: 64px 0px;
+	background-size: cover;
+	width: 100%;
+	height: auto;
+  }
+  
+  .privacy-policy{
+	width: 303px;
+	height: 240px;
+	padding: 20px;
+  }
+  
+  /* placeholderのフォントサイズを設定 */
+  .waku_input::placeholder {
+	font-size: 16px;
+  }
+  
+  /* 入力テキストのフォントサイズを設定 */
+  .waku_input {
+	font-size: 16px;
+  
+  }
+  
+  /* placeholderのフォントサイズを設定 */
+  .waku_input_1::placeholder {
+	font-size: 16px;
+  
+  }
+  
+  /* 入力テキストのフォントサイズを設定 */
+  .waku_input_1 {
+	font-size: 16px;
+  
+  }
+  
+  
  /*無料会員登録end**************************************************************/
 
 
@@ -346,9 +450,9 @@ margin-top: 32px;
 }
 /*インスタend**************************************************************/
 
-
-	
 }
+	
+
 
 
 /*footer**************************************************************/

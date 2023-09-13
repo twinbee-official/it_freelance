@@ -1,7 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
 
-
+html {
+	/* 一般的なブラウザのデフォルトフォントサイズが16pxと言われており、62.5%にすると10pxになる。
+	  ルートのフォントサイズが10px = 1rem となって今後のフォントサイズが指定しやすくなります */
+	  font-size: 62.5%;
+	}
+	
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
 	font-size: 15px!important;
@@ -41,7 +46,7 @@ body {
 }
 
 .title {
-  font-size: 300%;
+  font-size: 32px;
 	font-weight: normal;
   line-height: 1.5;
   padding: 0 3%;
@@ -71,28 +76,20 @@ body {
 .sp { display: none !important; }
 @media only screen and (min-width: 1000px) {
     .pc1000 { display: none !important; }
-    .sp1000 { display: block !important; }
 
 }
 @media only screen and (max-width: 999px) {
-    .pc999 { display: none !important; }
     .sp999 { display: block !important; }
 }
 
 /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 375px) {
     .pc { display: none !important; }
     .sp { display: block !important; }
 }
-@media only screen and (max-width: 834px) {
-    .pc834 { display: none !important; }
-    .sp834 { display: block !important; }
-}
-
-
 
 .Title {
-	font-size: 230%;
+	font-size: 200%;/*32px*/
 }
 
 
@@ -167,6 +164,11 @@ body {
 
 
 /*Twinbeeにできること**************************************************************/
+.inner_1072{
+	max-width: 1072px;
+	margin: 0% auto;
+}
+
 .left_yose{
 	text-align: left;
 	display:block;
@@ -177,35 +179,42 @@ body {
 .dekirukoto_flexbox_01{
 	display: flex;
 	width: 100%;
-	max-width: 1072px;
-	height: 483px;
+	height: auto;
 	background-color: #FCF9FF;
 	border-radius: 30px;
 	margin: 0px auto;
 	justify-content: space-between;
 	margin-top: 40px;
+	align-items: center;
 }
+.dekirukoto_waku{
+	padding-left: 10px;
+	
+}
+
 
 .dekirukoto_flexbox_001{
 	display: flex;
 	max-width: 1072px;
-	height: 483px;
+	height: auto;
 	background-color: #FCF9FF;
 	border-radius: 30px;
 	margin: 0px auto;
 	justify-content:flex-end;
 	margin-top: 40px;
+	align-items: center;
 }
+
 
 .text_w{
 	max-width: 496px;
-	height: 232px;
-	font-size: 16px;
+	height: auto;
+	font-size: 100%;/*16px*/
 	margin-top: 20px;
 }
 
 .text01{
-	font-size: 16px;
+	font-size: 100%;/*16px*/
 	width: 100%;
 }
 .dekirukoto_flexbox_02{
@@ -215,7 +224,7 @@ body {
 }
 
 .dekirukoto_flexbox_02 h3{
-	font-size: 24px;
+	font-size: 150%;/*24px*/
 	font-weight: bold;
 }
 .dekirukoto_flexitem_03{
@@ -244,9 +253,6 @@ body {
 	background-size: contain;
 
 }
-.dekirukoto_waku{
-	padding-left: 10px;
-}
 .dekirukoto_flexitem_001 img{
  width: 100%;
 }
@@ -262,7 +268,13 @@ body {
 .size{
 	border-radius: 12px;
 }
+.text01{
+    font-size: 16;
+    max-width: 496px;
+    height:auto ;
+    margin-top: 20px;
 
+}
 
 /*Twinbeeにできることend**************************************************************/
 /*お仕事紹介**************************************************************/
@@ -270,11 +282,126 @@ body {
 	font-size: 16px;
 	padding-bottom: 40px;
 }
+.os_Title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tab-004 {
+    display: flex;
+  margin: 0% auto;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    justify-content: center;
+    margin-bottom: 96px;
+}
+
+.tab-004 > label {
+    flex: 1 1;
+    order: -1;
+    position: relative;
+    min-width: 70px;
+    padding: 8px 0px;
+    background-color: #FCF9FF;
+    color: #EACFFF;
+    font-size: 18px;
+	font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tab-004 > label:hover,
+.tab-004 label:has(:checked) {
+    background-color: #DAADFF;
+    color: #382A3F;
+}
+
+.tab-004 label:has(:checked)::before {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 9px;
+    background-color: #DAACFA;
+    content: '';
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.tab-004 input {
+    display: none;
+}
+
+.tab-004 > div {
+    display: none;
+    width: 100%;
+    padding: 40px 91px 64px ;
+}
+
+.tab-004 label:has(:checked) + div {
+    display: block;
+}
+
+.tabu{
+    margin-top: 3%;
+}
+
+.tabu_1{
+    margin-top: 2%;
+}
+
+.tabu_2{
+    list-style: disc;
+}
+
+.tabu_bg3{
+    height: 80vh; /* 全画面表示フルなら100 */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-image: url("../images/2483610.png");
+      position: relative;
+  }
+
+  .os_flexbox{
+    display: flex;
+    max-width: 890px;
+    border-bottom: #EACFFF solid 1px;
+    padding: 2% 0%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .os_flexitem_01{
+    width: 253px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .os_flexitem_02{
+    width: 617px;
+    font-size: 16px;
+  }
+.os_bg{
+  background-color: #FCF9FF;
+  border-radius: 12px;
+  margin-top: 30px;
+  width: 1072px;
+}
+
+.font_s{
+	font-size: 16px;
+  margin-bottom: 40px;
+}	
+
+.cp_actab-content p{
+  font-size: 16px;
+}
 
 /*お仕事紹介end**************************************************************/
 
 /*ご利用の流れ**************************************************************/
-
 .flex_box_goriyou{
 	display: flex;
 	justify-content: space-between;
@@ -405,7 +532,291 @@ body {
 	opacity: 0;
   }
 /*よくある質問end**************************************************************/
-
+/*無料会員登録*******************************************************************/
+/* 送信ボタン */
+input#agree {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	cursor:pointer;
+  }
+  #agree,
+  input[type=search]
+  {
+	  outline: none;
+  }
+  /*ボタン*/
+  #submit-btn {
+	  display: block;
+	  text-align: center;
+	  /* vertical-align: middle; */
+	  text-decoration: none;
+	  width: 180px;
+	  padding: 0.5rem 1rem;
+	  font-weight: bold;
+	  border: 2px solid #8086DC;
+	  color: #8086DC;
+	  cursor: pointer;
+	  position: relative;
+	   overflow: hidden;
+	   z-index: 1;
+	
+  }
+  #submit-btn::before {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+	  background-color: #8086DC;
+	  transform: translateX(-100%);
+	  transition: all .3s;
+	  z-index: -1;
+  }
+  #submit-btn:hover::before {
+	  transform: translateX(0);
+  }
+  #submit-btn:hover {
+	  color: #fff;
+  }
+  
+  
+	.privacy-policy {
+	  width: 708px;
+	  height: 240px;
+	  font-size: 12px;
+	  margin: 3% auto;
+	  height: 150px;
+	  overflow: scroll;
+	  padding: 25px;
+	  border: 1px solid #EACFFF;
+	  border-radius: 4px;
+	  background-color: #fff;
+	  line-height: 1.5;
+	  &__item {
+		p {
+		  margin-bottom: 25px;
+		}
+	  }
+	}
+  
+	.touroku{
+	  margin: 0% auto;
+  
+	}
+  
+  
+	.touroku_flexitem{
+	  width: 252px;
+	  display: flex;
+	  
+  
+	}
+  
+	.touroku_flexitem p{
+	  font-weight: bold;
+	  font-size: 18px;
+	  padding:0px 10px;
+	}
+  
+	.checkbox_flexitem{
+	  align-content:space-around;
+	}
+  
+	.doui{
+	  margin: 3% auto;
+	  text-align: center;
+	}
+  
+	.touroku_bgimg{
+	  /* height: auto; */
+	   /* 全画面表示フルなら100 */
+	  background-repeat: no-repeat;
+	  /* background-position: center center; */
+	  background-image: url("../images/touroku_haikei.png");
+	  position: relative;
+	  margin: 0% auto;
+	  padding: 64px 0px;
+	  background-size:cover;                               /* 画像のサイズを指定    */
+	  width:1072px;                                            /* 横幅のサイズを指定    */
+	  height:auto;                                          /* 縦幅のサイズを指定    */
+  
+	}
+  
+  /* input要素の枠を大きくする */
+  .waku_input {
+	width: 150px; /* 幅を適宜調整 */
+	height: 45px;
+	padding: 5px; /* 入力フィールド内の余白を設定 */
+	border: 0.5px solid #EACFFF; /* 枠線を追加し、色を適宜変更 */
+	/* margin-bottom: 20px; */
+	border-radius: 5px; /* 枠線の角を丸くする */
+	/* 他のスタイルも適宜追加してください */
+  }
+  
+  .waku_input_1{
+	width: 350px; /* 幅を適宜調整 */
+	height: 45px;
+	padding: 5px; /* 入力フィールド内の余白を設定 */
+	border: 0.5px solid #EACFFF; /* 枠線を追加し、色を適宜変更 */
+	/* margin-bottom: 20px; */
+	border-radius: 5px; /* 枠線の角を丸くする */
+	/* 他のスタイルも適宜追加してください */
+  
+  }
+  
+  .hissuu{
+	font-size: 12px;
+	text-align: center;
+	align-items: center;
+	color: #fff;
+	background-color: #8DA5FA;
+	border-radius: 5px;
+	padding:4px 8px 5px;
+	max-width: 35px;
+	height: min-content;
+  }
+  
+  
+  /* ボタンの共通スタイル */
+  .custom-button {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 14px;
+	border-radius: 10px;
+	letter-spacing: 3px;
+	width: 40%;
+	height: 50px;
+	border: none;
+	margin: 3% auto;
+	transition: 0.3s;
+	background-image: radial-gradient(circle at 100% 0%, rgba(218, 173, 255, 1) 42%, rgba(154, 176, 227, 1));
+  }
+  
+  .custom-button:hover{
+	color:#382A3F;
+  }
+  
+  .custom-button::before { /* 背景の表示設定 */
+	content: "";
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 3px;
+	width: 23px; /* 横幅 */
+	height: 23px; /* 高さ */
+  }
+  
+  .custom-button::after { /* くの字の表示設定 */
+	content: "";
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 25px;
+	width: 8px;
+	height: 8px;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+	transform: rotate(45deg);
+  }
+  
+  /* 無効な状態のボタンのスタイル */
+  .custom-button.disabled {
+	background-color: #DADADA;
+	pointer-events: none; /* ボタンを無効化してクリックを防ぐ */
+  }
+  
+  /* 無効な状態のボタンの矢印スタイル */
+  .custom-button.disabled::after {
+	border-top: 1px solid #333; /* 矢印の色を変更 */
+	border-right: 1px solid #333; /* 矢印の色を変更 */
+  }
+  
+  div.touroku_flexbox{
+	max-width: 980px;
+	display: flex;
+	align-items: center;
+  
+  }
+  
+  .touroku_inner{
+	/* width: 565px; */
+	margin: 0% auto;
+	width: 708px;
+	padding-top:40px;
+  }
+  
+  
+  
+  
+  
+  
+  .ckd{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 20px 0px 40px 0px;
+	text-align: center;
+	height: 30px;
+  }
+  
+  .ck {
+	margin-right: 5px;
+  }
+  
+  
+  div.touroku_flexbox {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	margin-bottom: 20px;
+  }
+  .touroku_flexitem{
+	-webkit-flex:2;
+	flex: 2;
+	margin-right: 30px;
+  }
+  .touroku_flexitem:last-child{
+	-webkit-flex:3;
+	flex: 3;
+	margin-right:0;
+  }
+  
+  /* placeholderのフォントサイズを設定 */
+  .waku_input::placeholder {
+	font-size: 18px;
+	padding: 8px;
+  
+  }
+  
+  /* 入力テキストのフォントサイズを設定 */
+  .waku_input {
+	font-size: 18px;
+	padding: 8px;
+  
+  }
+  
+  /* placeholderのフォントサイズを設定 */
+  .waku_input_1::placeholder {
+	font-size: 18px;
+	padding: 8px;
+  
+  }
+  
+  /* 入力テキストのフォントサイズを設定 */
+  .waku_input_1 {
+	font-size: 18px;
+	padding: 8px;
+  
+  }
+  
+  
+/*無料会員登録end*******************************************************************/
 /*アクセス**************************************************************/
 
 .AccessDl {
