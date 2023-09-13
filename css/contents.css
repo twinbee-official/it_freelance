@@ -531,6 +531,16 @@ body {
 	transform: rotate(180deg);
 	opacity: 0;
   }
+
+  @media only screen and (min-width: 376px) {
+	.accordion__item.is-active .accordion__title::before{
+		display: none;
+	}
+	.accordion__title::before, .accordion__title::after {
+		display: none;
+	}
+  }
+
 /*よくある質問end**************************************************************/
 /*無料会員登録*******************************************************************/
 /* 送信ボタン */
@@ -631,14 +641,15 @@ input#agree {
 	  /* height: auto; */
 	   /* 全画面表示フルなら100 */
 	  background-repeat: no-repeat;
-	  /* background-position: center center; */
+	  background-position: center;
 	  background-image: url("../images/touroku_haikei.png");
 	  position: relative;
 	  margin: 0% auto;
 	  padding: 64px 0px;
 	  background-size:cover;                               /* 画像のサイズを指定    */
 	  width:1072px;                                            /* 横幅のサイズを指定    */
-	  height:auto;                                          /* 縦幅のサイズを指定    */
+	  height:auto;    
+	  border-radius: 12px;                                      /* 縦幅のサイズを指定    */
   
 	}
   
