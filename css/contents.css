@@ -1,14 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*PCのみに適用*/
-@media only screen and (min-width:769px){
-.PageLink {
-    padding-top:40px;
-	margin-top:-40px;
-}	
-}
-/*PCのみに適用 END*/
 
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
@@ -48,18 +40,6 @@ body {
   content: "";
 }
 
-/* text */
-
-.text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 100;
-}
 .title {
   font-size: 300%;
 	font-weight: normal;
@@ -76,96 +56,46 @@ body {
 	margin-left: 100px;
 	font-size: 150%
 }
-/*ボタン*/
-.btn,
-a.btn,
-button.btn {
-  font-size: 1.6rem;
-  line-height: 1.5;
-  position: relative;
-  display: inline-block;
-  padding: 1rem 4rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #382A3F;
-  border-radius: 0.5rem;
-  background-color: #d8d4dc;
-  margin-left: 150px;
-  margin-top: 50px;
+
+  
+  .BGtitle{
+	background-image: url(../images/daimei_line.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
-a.btn--red.btn--cubic {
-	border-bottom: 5px solid #d8d4dc;
-  }
-  
-  
-  a.btn--radius {
-	border-radius: 100vh;
-  }
-  
-/* 全画面表示CSS END */
+
+  /* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc { display: block !important; }
+.sp { display: none !important; }
+@media only screen and (min-width: 1000px) {
+    .pc1000 { display: none !important; }
+    .sp1000 { display: block !important; }
+
+}
+@media only screen and (max-width: 999px) {
+    .pc999 { display: none !important; }
+    .sp999 { display: block !important; }
+}
+
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 770px) {
+    .pc { display: none !important; }
+    .sp { display: block !important; }
+}
+@media only screen and (max-width: 834px) {
+    .pc834 { display: none !important; }
+    .sp834 { display: block !important; }
+}
+
+
 
 .Title {
 	font-size: 230%;
 }
 
-.TextBoxRight {
-	background: #F8F8F8;
-	padding: 5% 5% 5% 10%;
-	float: right;
-	width: 37%;
-	margin-left: -10%;
-	margin-top: 18%;
-	position: relative;
-	z-index: 0;
-}
 
-.PhotoLeft {
-	float: left;
-	width: 55%;
-	position: relative;
-	z-index: 1;
-}
-
-
-.TextBoxRight {
-	padding: 5% 10%;
-	width: 85%;
-	margin-right: -5%;
-	margin-top: -10%;
-	border-radius: 30px;
-}
-
-.PhotoLeft {
-	width: 80%;
-}
-
-
-.PhotoLeftCenter {
-	display: inline-block;
-	width: 100%;
-	vertical-align: middle;
-}
-
-.TextBoxRightCenter {
-	display: inline-block;
-	width: 35%;
-	margin-left: 3%;
-	font-size: 110%;
-	vertical-align: middle;
-}
-
-/* .S_Title {
-	font-size: 150%;
-	line-height: 1.5;
-	text-align: center;
-} */
 
 .BG {
 	background: #FCF9FF;
@@ -184,127 +114,10 @@ a.btn--red.btn--cubic {
 	font-size: 120%;
 }
 
-.WhtBox {
-	/* background: #FFF; */
-	padding: 5%;
-}
+/* 全画面表示CSS END */
 
-.GraphPhoto {
-	display: inline-block;
-	width: 35%;
-	vertical-align: middle;
-}
+/*ボタンスタイル**************************************************************/
 
-.GraphBox {
-	display: inline-block;
-	width: 58%;
-	margin-left: 5%;
-	vertical-align: middle;
-}
-
-
-
-/* table01 */
-#table01 {
-	background: #FFF;
-	width: 100%;
-}
-#table01 tr {
-  border-bottom: 1px solid #382A3F;
-}
-
-#table01 th,
-#table01 td {
-  padding: 24px;
-  border: none;
-}
-
-#table01 td {
-	vertical-align: middle;
-}
-
-#table01 th {
-  width: 30%;
-	background: #F8F8F8;
-	padding: 24px;
-}
-.p_tion{
-	text-align: center;
-}
-
-.triangle_2{
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-top: 13px solid transparent;
-	border-bottom: 13px solid transparent;
-	border-left: 15px solid #eacfff;
-	border-right: 0;
-	margin: 100px 8px;
-}
-/* sp */
-@media only screen and (max-width: 480px) {
-	
-#table01 tr {
-  border-bottom: none;
-}
-	
-  #table01 th,  #table01 th,
-  #table01 td {
-     width: 90%;
-    display: block;
-	  padding: 3% 5%;
-  }
-}
-
-/* .LeftBox {
-	display: inline-block;
-	width: 40%;
-	vertical-align: middle;
-}
- */
-/* .RightBox {
-	display: inline-block;
-	width: 50%;
-	vertical-align: middle;
-	padding-left: 5% !important;
-} */
-/* .LeftBox .Insta {
-	margin-top: -3% !important;
-} */
-/* .Insta ul {
-	list-style: none; 
-	padding: 0;
-  } */
-/* .Insta li {
-	margin-top: 3% !important;
-	text-align: left;
-	text-align: left; 
-} */
-.Insta_flexbox{
-	width: 890px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin: 0% auto;
-}
-.Insta_flexitem{
-	margin-bottom: 20px;
-}
-.Insta_flexitem img{
-	width: 283px;
-}
-
-.AccessDl {
-	font-size: 110%;
-}
-
-.AccessDl dt {
-	font-weight: bold;
-	margin-top: 20px;
-}
-/*ボタン*/
-/* 追加したクラスに対するスタイル */
 .btn_23 {
 	display: flex;
 	position: relative;
@@ -350,280 +163,15 @@ a.btn--red.btn--cubic {
 	transform: rotate(45deg);
   } */
   
-/*ボタン END*/
-
-footer {
-	background: #8DA5FA;
-	text-align: center;
-	padding: 40px 0px;
-}
+/*ボタンスタイルend**************************************************************/
 
 
-.Copy {
-	font-family: -apple-system,BlinkMacSystemFont, "Source Sans Pro", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-	font-size: 12px;
-	margin-top: 10px;
-	color:#382A3F;
-}
-
-.Map {
-	width: 100%;
-	height: 450px;
-	padding-top: 40px;
-}
-
-
-.F_nav {
-	margin-top: 1%;
-	text-align: center;
-	font-family: "Helvetica Neue",Helvetica,Arial,YuGothic,"Yu Gothic",游ゴシック体,游ゴシック,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,"MS ゴシック","MS Gothic",sans-serif;
-	font-weight: 700;
-}
-
-.F_nav li {
-	margin: 0 15px;
-	display: inline-block;
-}
-
-.F_nav li a {
-	text-decoration: none;
-	color: #FFF;
-}
-
-.F_nav li a:hover {
-	text-decoration: underline;
-}
-/*S*/
-.flex_box_02{
-	display: flex;
-	justify-content: space-around;
-	margin: 0% 1.5%;
-}
-
-.flex_item_02{
-	width: 100%;
-	padding: 1%;
-	text-align: center;
-	
-}
-.cp_qa{
-	padding-top:40px;
-	margin: 0px auto;
-	width: 890px;
-	
-}
-
-.cp_qa *, .cp_qa *:after, .cp_qa *:before {
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
-}
-.cp_qa .cp_actab {
-	width: 890px;
-	position: relative;
-	overflow: hidden;
-	width: 100%;
-	margin-bottom: 4px;
-	padding: 20px;
-	color: #382A3F;
-	background-color: #FCF9FF;
-
-}
-.cp_qa .cp_actab input {
-	position: absolute;
-	opacity: 0;
-}
-/* 質問 */
-.cp_qa .cp_actab label {
-	
-	line-height: 1.6;
-	position: relative;
-	display: block;
-	margin: 0 0 0 0;
-	padding-bottom: 20px;
-	cursor: pointer;
-	border-bottom: 1px solid #EACFFF;
-	color: #382A3F;
-	font-size: 18px;
-	font-weight: bold;
-}
-/* .cp_qa .cp_actab label:hover {
-	color: #8086DC;
-} */
-/* 答え */
-.cp_qa .cp_actab .cp_actab-content {
-	overflow: hidden;
-	max-height: 0;
-	-webkit-transition: max-height 0.5s ease;
-	        transition: max-height 0.5s ease;
-	color: #434344;
-	background: #FCF9FF;
-	padding: 20px;
-	padding-bottom: 0px;
-}
-
-.cp_actab-content{
-	padding: 20px 20px 12px;
-	overflow: hidden;
-	max-height: 0;
-	-webkit-transition: max-height 0.5s ease;
-	        transition: max-height 0.5s ease;
-	color: #434344;
-	background: #FCF9FF;
-
-}
-/* .cp_qa .cp_actab .cp_actab-content p {
-	margin: 16px;
-} */
-
-
-/**/
-/* 質問を開いた時の仕様 */
-/* --アイコン */
-/* .cp_qa .cp_actab input:checked ~ label {
-    color: #8086DC;
-} */
-
-/* --答えの高さ */
-.cp_qa .cp_actab input:checked ~ .cp_actab-content {
-    max-height: 16px;
-}
-
-/* 質問をクリックした時のアイコンの動き */
-.cp_qa .cp_actab label::after {
-    line-height: 1.6;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    display: block;
-    /* width: 3em; */
-    margin-top: -12.5px;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    text-align: center;
-    content: '+'; /* アイコンの初期状態は↓です */
-}
-
-.cp_qa .cp_actab input[type=checkbox] + label::after {
-    content: '+';
-}
-
-.cp_qa .cp_actab input[type=checkbox]:checked + label::after {
-    content: '-'; /* アイコンをクリックされたときに-に変更します */
-    -webkit-transform: rotateX(180deg);
-    transform: rotateX(180deg);
-}
-
-/**/
-
-.video{
-	text-align: center;
-}
-
-/* .SS_title{
-	margin: 5% 2% 2%;
-	white-space: nowrap;
-} */
-
+/*Twinbeeにできること**************************************************************/
 .left_yose{
 	text-align: left;
 	display:block;
 	max-width: 800px;
 	margin: 0% auto;
-	/* column-count:2;
-	-webkit-column-count:2;
-	-moz-column-count:2; */
-}
-.moji_kan{
-	letter-spacing:-1px;
-	margin-top: 40px;
-    margin-left: 10px;
-	font-size: 12px;
-
-}
-
-
-.bg_waku{
-	border-radius: 30px;
-	margin:  5% auto;
-	background-color: #FCF9FF;
-	/* box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.4); */
-}
-
-.bg_waku_2{
-	max-width: 980px;
-	border-radius: 30px;
-	padding: 3% 0% 3% 3%;
-	margin:  0% auto;
-	background-color: #FCF9FF;
-	/* box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.4); */
-
-}
-@media only screen and (max-width: 1200px) {
-    img { max-width: 100%; }
-}
-
-
-
-/* パソコンで見たときは"pc"のclassがついた画像が表示される */
-.pc { display: block !important; }
-.sp { display: none !important; }
-@media only screen and (min-width: 1000px) {
-    .pc1000 { display: none !important; }
-    .sp1000 { display: block !important; }
-
-}
-@media only screen and (max-width: 999px) {
-    .pc999 { display: none !important; }
-    .sp999 { display: block !important; }
-}
-
-/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
-@media only screen and (max-width: 770px) {
-    .pc { display: none !important; }
-    .sp { display: block !important; }
-}
-@media only screen and (max-width: 834px) {
-    .pc834 { display: none !important; }
-    .sp834 { display: block !important; }
-}
-
-
-.flex_box_baner{
-	display: flex;
-	justify-content: space-between;
-}
-.flex_item_bner{
-	width: 100%;
-	height: auto;
-
-}
-.img_bner{
-	width: 30%;
-}
-
-.keireki{
-	display: flex;
-	justify-content: space-around;
-}
-.yokonarabi{
-	display: flex;
-	justify-content: space-around;
-}
-.box{
-	display: flex;
-}
-.flex_box_02{
-	display: inline;
-}
-
-.flex_item_02{
-height: 150px;
-align-items: center;
-text-align: left;
-}
-
-.img_w{
-	width:400px;
 }
 
 .dekirukoto_flexbox_01{
@@ -674,75 +222,6 @@ text-align: left;
 	align-items: center;
 }
 
-.BGtitle{
-	background-image: url(../images/daimei_line.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-}
-
-/* インプット要素のplaceholderの色を変える */
-input::placeholder {
-  color: #999; /* 好きな色に置き換えてください */
-}
-
-.label_size{
-	font-size: 16px;
-	font-weight: bold;
-	padding-top: 0px;
-	padding-bottom: 20px;
-}
-
-.flex_box_goriyou{
-	display: flex;
-	justify-content: space-between;
-	width: 1072px;
-	margin: 0% auto;
-	padding-top:64px;
-}
-.flex_item_goriyou{
-	text-align: center;
-	width: 100%;
-	
-}
-.bg_goriyou img{
-	width: 148px;
-	height: auto;
-	margin: 0px 20px 0px 20px;
-}
-
-/* .flex_item_goriyou img {
-	width: 92px;
-	transform: rotate(-45deg); */
-	 /* 45度の角度で傾ける */
-
-/* } */
-
-.trancs{
-	transform: rotate(-25deg); 
-	 /* 45度の角度で傾ける */
-	 float: left; /* 左寄せにする */
-	 background-color: transparent;
-}
-.flex_item_goriyou p{
-	font-size: 14px;
-	width: 189px;
-	text-align: left;
-	margin: 10px auto;
-}
-.bg_goriyou{
-	background-color: #FFF;
-	border-radius: 8px;
-
-}
-/*insta*/
-/* 画像サイズを調整 */
-.Center.MgnTop5.List3-3.Insta.up li img {
-    width: 250px; /* 画像の幅を調整 */
-    height: auto; /* 高さは自動調整（アスペクト比を保つ） */
-    /* 他のプロパティも適宜追加してください */
-}
-/**/
 .dekirukoto_flexitem_01{
 	padding: 24px 30px;
 	align-items: center;
@@ -765,9 +244,6 @@ input::placeholder {
 	background-size: contain;
 
 }
-.size{
-	border-radius: 12px;
-}
 .dekirukoto_waku{
 	padding-left: 10px;
 }
@@ -783,29 +259,167 @@ input::placeholder {
 	padding-left: 20px;
 	white-space: nowrap;
 }
+.size{
+	border-radius: 12px;
+}
+
+
+/*Twinbeeにできることend**************************************************************/
+/*お仕事紹介**************************************************************/
 .font_s{
 	font-size: 16px;
 	padding-bottom: 40px;
 }
 
+/*お仕事紹介end**************************************************************/
+
+/*ご利用の流れ**************************************************************/
+
+.flex_box_goriyou{
+	display: flex;
+	justify-content: space-between;
+	width: 1072px;
+	margin: 0% auto;
+	padding-top:64px;
+}
+.flex_item_goriyou{
+	text-align: center;
+	width: 100%;
+	
+}
+.bg_goriyou img{
+	width: 148px;
+	height: auto;
+	margin: 0px 20px 0px 20px;
+}
+.flex_item_goriyou p{
+	font-size: 14px;
+	width: 189px;
+	text-align: left;
+	margin: 10px auto;
+}
+.bg_goriyou{
+	background-color: #FFF;
+	border-radius: 8px;
+
+}
+.triangle_2{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-top: 13px solid transparent;
+	border-bottom: 13px solid transparent;
+	border-left: 15px solid #eacfff;
+	border-right: 0;
+	margin: 100px 8px;
+}
+.trancs{
+	transform: rotate(-25deg); 
+	 /* 45度の角度で傾ける */
+	 float: left; /* 左寄せにする */
+	 background-color: transparent;
+}
 .goriyou_h3{
 	text-align: center;
 	padding-top: 5%;
 	font-size: 16px;
 	padding-bottom: 12px;
 }
-
 .bd{
 	font-weight: bold;
 }
 
-.ConceptList{
-	margin: 0% 3%;
+
+/*ご利用の流れend**************************************************************/
+  /*よくある質問**************************************************************/
+
+
+  /* アコーディオン全体 */
+  .accordion {
+	width: 890px;
+	margin: 0 auto;
+	margin-top: 20px;
+	box-sizing: border-box;
+  }
+  
+  
+  /* アコーディオン */
+  .accordion__item {
+	/* border: 1px solid #ccc; */
+	max-width: 100%;
+	margin-bottom: 4px;
+	cursor: pointer;
+	background-color: #FCF9FF;
+	padding:20px;
+
+  }
+  
+  /* アコーディオンのタイトル */
+  .accordion__title {
+	position: relative;
+	padding-right: 24px;
+	font-weight: bold;
+	font-size: 18px;
+	cursor: pointer;
+  }
+  
+  /* (+)アイコン */
+  .accordion__title::before,
+  .accordion__title::after {
+	content: "";
+	position: absolute;
+	right: 0px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	background-color: #382A3F;
+	width: 20px;
+	height: 2px;
+	transition: all 0.3s;
+  }
+  
+  .accordion__title::after {
+	transform: rotate(90deg);
+  }
+  
+  /* アコーディオンのコンテンツ */
+  .accordion__content {
+	padding: 20px 0px 12px 20px;
+	display: none;
+	cursor: pointer;
+	border-top: #EACFFF solid 1px;
+	font-size: 16px;
+  }
+  
+  .accordion__content.is-open {
 	display: block;
+  }
+  
+  /* アコーディオン展開時の(-)アイコン */
+  .accordion__item.is-active .accordion__title::before {
+	transform: rotate(180deg);
+  }
+  
+  .accordion__item.is-active .accordion__title::after {
+	transform: rotate(180deg);
+	opacity: 0;
+  }
+/*よくある質問end**************************************************************/
+
+/*アクセス**************************************************************/
+
+.AccessDl {
+	font-size: 110%;
 }
 
-.text_pg{
-	text-align: center;
+.AccessDl dt {
+	font-weight: bold;
+	margin-top: 20px;
+}
+.Map {
+	width: 100%;
+	height: 450px;
+	padding-top: 40px;
 }
 
 .map_ad{
@@ -813,110 +427,57 @@ input::placeholder {
 	border-radius: 10px;
 	font-size: 60%;
 }
+.text_pg{
+	text-align: center;
+}
 
+
+
+/*アクセスend**************************************************************/
+
+/*インスタ**************************************************************/
+
+.Insta_flexbox{
+	width: 890px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0% auto;
+}
+.Insta_flexitem{
+	margin-bottom: 20px;
+}
+.Insta_flexitem img{
+	width: 283px;
+}
+/*insta*/
+/* 画像サイズを調整 */
+.Center.MgnTop5.List3-3.Insta.up li img {
+    width: 250px; /* 画像の幅を調整 */
+    height: auto; /* 高さは自動調整（アスペクト比を保つ） */
+    /* 他のプロパティも適宜追加してください */
+}
+/**/
 .btn_top{
 	margin-top: 60px;
 
 }
 
-/*map*/
 
-/* .triangle_title{
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-top: 5px solid transparent;
-		border-bottom: 14px solid transparent;
-		border-left: 270px solid (90deg, rgba(154, 176, 255, 1), rgba(234, 207, 255, 1) 40% 71%, rgba(218, 173, 255, 1));
-		margin: 0px auto;
-		transform:skew(29deg) rotate(-4deg);
+/*インスタend**************************************************************/
+/*footer **************************************************************/
 
-}
- */
-
- /* .switch_content {
-	width: 400px; 
-	border: 1px solid #333; 
-  } */
-  
-  #switch {
-	display: none; /* チェックボックスを除去 */
-  }
-  #switch_close {
-	display: none; /* チェックボックスを除去 */
-  }
-  .button {
-	/* display: block; */
-	/* position: relative; */
-	padding-top: 28px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-	}
-    .button_close {
-		/* display: block; */
-		/* position: relative; */
-		padding-top: 28px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-		}
-	
-  
-  
-  
-  .open { /* 表示ボタンのスタイル */
-	display: inline-block; /* デフォルトは表示 */
-  }
-  
-  .close { /* 閉じるボタンのスタイル */
-	display: none; /* デフォルトは非表示 */
-  }
-  
-  .contents { /* コンテンツのスタイル */
-	display: none; /* デフォルトは非表示 */
-	padding: 0 20px 15px;
-  }
-  
-   /* 以降、チェック時（クリック後）のスタイル */
-  
-  #switch:checked + .button > .icon::before{
-	transform: translate(-50%,-50%) rotate(45deg);
-  }
-  
-  #switch:checked + .button > .icon::after{
-	transform: translate(-50%,-50%) rotate(-45deg);
-  }
-  
-  #switch:checked + .button > .open{
-	display: none; /* 表示ボタンを非表示 */
-  }
-  
-  #switch:checked + .button > .close{
-	display: inline-block; /* 閉じるボタンを表示 */
-  }
-  
-  #switch:checked ~ .contents {
-	display: block; /* コンテンツを表示 */
-  }
-
-  .open img {
-    margin: 0 auto; /* 水平方向に中央揃えにする */
-	padding-right: 12px;
+footer {
+	background: #8DA5FA;
+	text-align: center;
+	padding: 40px 0px;
 }
 
-.close img {
-    margin: 0 auto; /* 水平方向に中央揃えにする */
-	padding-right: 12px;
+
+.Copy {
+	font-family: -apple-system,BlinkMacSystemFont, "Source Sans Pro", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+	font-size: 12px;
+	margin-top: 10px;
+	color:#382A3F;
 }
-
-/* チェックボックスがチェックされている場合（ラベルが閉じている状態）のスタイル */
-/* #switch:checked + .button .close {
-    display: none;  */
-	/* .close を非表示にする */
-
-
+/*footer end**************************************************************/

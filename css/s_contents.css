@@ -2,269 +2,46 @@
 /* デバイスの横幅が1000px以下の場合 */
 
 	
-@media only screen and (max-width: 980px) {
-	
-
-body {
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-	/* font-size:13px !important; */
-	/* color:#382A3F; */
-	line-height:1.8 !important;
-	background:#FFF;
-	-webkit-text-size-adjust: 100%;
-	word-wrap:break-word;
-	letter-spacing: .1em;
-}
-
-.hero {
-  height: 80vh; /* 全画面表示フルなら100 */
-	background-size:contain;
-  }
-}
-	
-.title {
-  font-size: 200%;
-}
-.description {
-	font-size: 120%
-}
-
-.Title {
-	font-size: 180%;
-}
-	
-	
-.GraphPhoto {
-	display: block;
-	width: 90%;
-	margin: 0 auto;
-	text-align: center;
-	/* vertical-align: middle; */
-}
-
-.GraphBox {
-	margin-top: 8%;
-	display: block;
-	width: 100%;
-	margin-left: 0;
-	/* vertical-align: middle; */
-}
-	
-	.GraphBox h2,
-	.GraphBox p {
-		text-align: center;
-	}
-	
-	.F_Logo {
-		width: 60px;
-		margin: 0 auto;
-	}
-
-footer {
-	padding: 2% 0 !important;
-}
-	
-.Map {
-	height: 400px;
-}
-.video{
-	display: none;
-	
-}
-.p_right{
-	justify-content:flex-end;
-}
-.img_w{
-	width: 50%;
-}
-
-/* デバイスの横幅が768px以下の場合 */
-
-/*S*/
-@media only screen and (max-width: 834px) {
-.flex_box_goriyou_sp{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #fff;
-	border-radius: 15px;
-	max-width: 500px;
-	margin: 0% auto;
-	padding: 2% 0%;
-
-}
-
-.flex_item_goriyou_sp img{
-	width: 150px;
-}
-
-
-.flex_item_goriyou_sp_00{
-	width: 45%;
-	padding-left: 3%;
-}
-
-.custom-image {
-    width: 64px; /* 画像の最大幅を親要素に合わせる */
-    height: auto; /* 高さは自動調整（アスペクト比を保つ） */
-    margin: 2% auto -2%; /* 上下の余白を設定 */
-	display: block;
-}
-
-.triangle {
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-right: 10px solid transparent;
-	border-left: 10px solid transparent;
-	border-top: 15px solid #eacfff;
-	border-bottom: 0;
-	display: block;
-	margin: 1% auto 2%; 
-  }
-
-.dekirukoto_flexbox_01{
-	display: flex;
-	max-width: 700px;
-	align-items: center;
-}
-
-.flexbox_dekirukoto_sp{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.flexitem_dekirukoto_sp img{
-	width: 80%;
-	height: auto;
-}
-
-/**/
-.btnset {
-	/* width: 283px; */
-	margin: 0 auto;
-	align-items: center;
-	/* padding: 28px 0px 0px; */
-	/* padding-top: 28px; */
-}
-.btnset .button {
-	/* border: 1px solid #9a9a9a; */
-	/* padding-top:28px; */
-	margin: 0px auto;
-	text-align: center;
-	color: #382A3F;
-	display: inline-block;
-	width: 283px;
-	height: 22px;
-	box-sizing: border-box;
-	position: relative;
-	text-decoration: none;
-	font-size: 14px;
-	font-weight: bold;
-}
-/* .boxopen:before {
-	display: block;
-	content: "";
-	position: absolute;
-	top: 34%;
-	right: 13px;
-	width: 6px;
-	height: 13px;
-	border-left: solid 1px #382A3F;
-} */
-/* .boxopen:after {
-	display: block;
-	content: "";
-	position: absolute;
-	top: 50%;
-	right: 13px;
-	width: 13px;
-	height: 6px;
-	border-top: solid 1px #382A3F;
-}
-.boxclose:after {
-	display: block;
-	content: "";
-	position: absolute;
-	top: 50%;
-	right: 13px;
-	width: 13px;
-	height: 6px;
-	border-top: solid 1px #382A3F;
-} */
-/**/
-
-.flex_item_goriyou_sp_00 h3{
-	font-size: 16px;
-	padding-bottom: 8px;
-}
-.flex_item_goriyou_sp_00 p{
-	font-size: 14px;
-}
-
-.label_size{
-	font-size: 120%;
-}
-
-.cp_actab-content{
-	font-size: 100%;
-}
-
-
-
-}
-
-/* 画面幅が834px以上の場合に質問回答を開いた状態にするスタイル */
-@media (min-width: 834px) {
-    .cp_qa .cp_actab label {
-        color: #8086DC; 
-		/*質問が開いた状態のラベル色を変更*/
-    }
-    
-    .cp_qa .cp_actab label:hover {
-        color: #8086DC; 
-		/*質問が開いた状態でもホバー時のラベル色を変更 */
-    }
-
-    .cp_qa .cp_actab .cp_actab-content {
-        max-height: 40em; /* 開いた状態の最大高さを指定 */
-        -webkit-transition: none; /* トランジションを無効化 */
-        transition: none; /* トランジションを無効化 */
-    }
-    
-    .cp_qa .cp_actab input[type="checkbox"]:not(:checked) + label::after {
-        content: '-'; /* 画面幅が834px以上でも非チェック時に-に変更 */
-        -webkit-transform: rotateX(180deg);
-        transform: rotateX(180deg);
-    }
-}
-/* 画面幅が834px以上の場合に開閉アイコンを非表示にするスタイル */
-@media (min-width: 834px) {
-    .cp_qa .cp_actab label::after {
-        display: none !important;
-    }
-    
-    .cp_qa .cp_actab input[type="checkbox"] + label::after {
-        display: none !important;
-    }
-    
-    .cp_qa .cp_actab input[type="checkbox"]:checked + label::after {
-        display: none !important;
-    }
-}
-
-
 @media only screen and (max-width: 375px) {
-
-
 	.hero {
 	
-	height: 80vh; /* 全画面表示フルなら100 */
-	background-image: url("../images/hyoushi_newnew_sp_2.jpg");
+		height: 80vh; /* 全画面表示フルなら100 */
+		background-image: url("../images/hyoushi_newnew_sp_2.jpg");
+		background-size: contain;
+		  
+	}
+	.spColorBg {
+		margin: 64px 0px;
+	}
+	
+	
+	
+	
+	/*SP*/
+	.Title {
+		font-size: 24px;
+	}
+	
+	/*titlebg*/
+.BGtitle{
+	background-image: url(../images/sp_titlebg.png);
+	background-position: center;
+	background-repeat: no-repeat;
 	background-size: contain;
-	  
 }
+/**/
+/*bottn*/
+.btn_23{
+	width: 343px;
+	height: 69px;
+	/* padding: 20px 0px; */
+}
+/**/
+
+
+
+/*Twinbeeにできること**************************************************************/
+
 .left_yose{
 	text-align: left;
 	display:block;
@@ -294,36 +71,8 @@ margin-top: 10px;
 }
 
 .flex_item_02_02{
-	/* height: 200px; */
 	align-items: center;
 	width: 550px;
-}
-.TextBoxRight {
-	padding: 15% 5% 5% 10%;
-	width: 85%;
-}
-/* .WhtBox{
-	padding: 0%;
-} */
-
-.spColorBg {
-	margin: 64px 0px;
-	/* padding:0 */
-}
-
-
-.touroku_cm{
-	margin-top: -300px;
-	margin-left: 150px;
-	width: 60%;
-	position: absolute;
-}
-
-
-
-/*SP*/
-.Title {
-	font-size: 24px;
 }
 /*section1*/
 .bg_waku{
@@ -355,12 +104,24 @@ margin-top: 32px;
 	height: 220px;
 	padding-top: 20px
 }
-
-a.button .boxopen{
-margin: 0% auto;
+.bg_waku{
+	border-radius: 30px;
+	margin:  5% auto;
+	background-color: #FCF9FF;
 }
-/**/
-/*section2*/
+
+.bg_waku_2{
+	max-width: 980px;
+	border-radius: 30px;
+	padding: 3% 0% 3% 3%;
+	margin:  0% auto;
+	background-color: #FCF9FF;
+
+}
+
+/*Twinbeeにできることend**************************************************************/
+
+/*お仕事紹介**************************************************************/
 .font_s{
 	font-size: 16px;
 	padding-bottom: 20px;
@@ -386,36 +147,178 @@ margin: 0% auto;
 	font-size: 18px;
 	white-space: nowrap;
 }
-/**/
+/*お仕事紹介end**************************************************************/
+	  /*よくある質問**************************************************************/
+  /* アコーディオン全体 */
+  .accordion {
+	width: 375px;
+	margin: 0 auto;
+	margin-top: 20px;
+	box-sizing: border-box;
+  }
+  
+  
+  /* アコーディオン */
+  .accordion__item {
+	/* border: 1px solid #ccc; */
+	margin-bottom: 4px;
+	cursor: pointer;
+	background-color: #FCF9FF;
+	padding:20px;
 
-/*section3*/
+  }
+  
+  /* アコーディオンのタイトル */
+  .accordion__title {
+	position: relative;
+	padding-right: 24px;
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  /* (+)アイコン */
+  .accordion__title::before,
+  .accordion__title::after {
+	content: "";
+	position: absolute;
+	right: 0px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	background-color: #382A3F;
+	width: 20px;
+	height: 2px;
+	transition: all 0.3s;
+  }
+  
+  .accordion__title::after {
+	transform: rotate(90deg);
+  }
+  
+  /* アコーディオンのコンテンツ */
+  .accordion__content {
+	padding: 20px 0px 12px 20px;
+	display: none;
+	cursor: pointer;
+	border-top: #EACFFF solid 1px;
+	font-size: 14px;
+  }
+  
+  .accordion__content.is-open {
+	display: block;
+  }
+  
+  /* アコーディオン展開時の(-)アイコン */
+  .accordion__item.is-active .accordion__title::before {
+	transform: rotate(180deg);
+  }
+  
+  .accordion__item.is-active .accordion__title::after {
+	transform: rotate(180deg);
+	opacity: 0;
+  }
 
+/*よくある質問end**************************************************************/
+
+
+/*ご利用の流れ**************************************************************/
+.flex_box_goriyou_sp{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 15px;
+	max-width: 500px;
+	margin: 0% auto;
+	padding: 2% 0%;
+
+}
+
+.flex_item_goriyou_sp img{
+	width: 150px;
+}
+
+
+.flex_item_goriyou_sp_00{
+	width: 45%;
+	padding-left: 3%;
+}
+
+.custom-image {
+    width: 64px; 
+    height: auto; 
+    margin: 2% auto -2%; /* 上下の余白を設定 */
+	display: block;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	border-top: 15px solid #eacfff;
+	border-bottom: 0;
+	display: block;
+	margin: 1% auto 2%; 
+  }
+
+.dekirukoto_flexbox_01{
+	display: flex;
+	max-width: 700px;
+	align-items: center;
+}
+
+.flexbox_dekirukoto_sp{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btnset {
+	margin: 0 auto;
+	align-items: center;
+}
+.btnset .button {
+	margin: 0px auto;
+	text-align: center;
+	color: #382A3F;
+	display: inline-block;
+	width: 283px;
+	height: 22px;
+	box-sizing: border-box;
+	position: relative;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.flex_item_goriyou_sp_00 h3{
+	font-size: 16px;
+	padding-bottom: 8px;
+}
+.flex_item_goriyou_sp_00 p{
+	font-size: 14px;
+}
 .flex_box_goriyou_sp{
 	width: 343px;
 	height: 160px;
 	padding: 20px 8px;
 }
-/**/
 
-/*section4*/
+/*ご利用の流れend**************************************************************/
 
-.cp_qa{
-	width: 375px;
-	margin: 0px auto;
-}
-label .label_size {
-    font-size: 16px;
-    font-weight: bold;
-}
-.cp_actab label{
-	font-size: 14px;
 
-}
-.cp_actab-content p {
-    font-size: 14px;
-}
-/**/
-/*section5*/
+ /*無料会員登録**************************************************************/
+ /*無料会員登録end**************************************************************/
+
+
+
+
+
+/*アクセスエリア**************************************************************/
+
 .AccessDl{
 	margin: 0px 16px 20px;
 }
@@ -426,8 +329,10 @@ label .label_size {
 .AccessDl dd{
 	font-size: 16px;
 }
-/**/
-/*section6*/
+/*アクセスエリアend**************************************************************/
+
+/*インスタ**************************************************************/
+
 .Insta_flexitem img{
 	width: 161px;
 }
@@ -439,43 +344,20 @@ label .label_size {
     justify-content: space-between;
 	margin: 0px 16px;
 }
-/**/
-
-/*bottn*/
-.btn_23{
-	width: 343px;
-	height: 69px;
-	/* padding: 20px 0px; */
-}
-/**/
-
-/*titlebg*/
-.BGtitle{
-	background-image: url(../images/sp_titlebg.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-}
-/**/
-
-/* デフォルトの画像スタイル */
-#footer_logo_change {
-	max-width: 100%;
-	height: auto;
-}
-
-/* 375px以下の幅のデバイスfooterlogoに表示する画像 */
-	#footer_logo_change {
-		content: url('..//images/sp_footer_logo.png');
-	}
+/*インスタend**************************************************************/
 
 
 	
 }
 
+
+/*footer**************************************************************/
+
 /* 375px以上の幅のデバイスfooterlogoに表示する画像 */
-@media (min-width: 376px) {
+@media (min-width: 375px) {
 	#footer_logo_change {
 		content: url('..//images/footer_logo.png');
 	}
+	
 }
+/*footer end**************************************************************/
