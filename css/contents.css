@@ -473,7 +473,6 @@ body {
   
   /* アコーディオン */
   .accordion__item {
-	/* border: 1px solid #ccc; */
 	max-width: 100%;
 	margin-bottom: 4px;
 	cursor: pointer;
@@ -517,12 +516,13 @@ body {
 	cursor: pointer;
 	border-top: #EACFFF solid 1px;
 	font-size: 16px;
+	display: block; /* アコーディオンが初めから開かれた状態にする */
   }
   
-  .accordion__content.is-open {
+   .accordion__content.is-open {
 	display: block;
   }
-  
+   
   /* アコーディオン展開時の(-)アイコン */
   .accordion__item.is-active .accordion__title::before {
 	transform: rotate(180deg);
@@ -532,7 +532,6 @@ body {
 	transform: rotate(180deg);
 	opacity: 0;
   }
-
   @media only screen and (min-width: 376px) {
 	.accordion__item.is-active .accordion__title::before{
 		display: none;
@@ -540,7 +539,7 @@ body {
 	.accordion__title::before, .accordion__title::after {
 		display: none;
 	}
-  }
+	  }
 
 /*よくある質問end**************************************************************/
 /*無料会員登録*******************************************************************/
