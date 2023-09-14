@@ -272,10 +272,10 @@ text-align: center;
 	align-items: center;
 	background-color: #fff;
 	border-radius: 15px;
-	max-width: 500px;
 	margin: 0% auto;
-	padding: 2% 0%;
-
+	width: 343px;
+	height: 160px;
+	padding: 20px 8px;
 }
 
 .flex_item_goriyou_sp img{
@@ -284,8 +284,8 @@ text-align: center;
 
 
 .flex_item_goriyou_sp_00{
-	width: 45%;
-	padding-left: 3%;
+	padding-left: 20px;
+	width: 163.5px;
 }
 
 .custom-image {
@@ -344,12 +344,6 @@ text-align: center;
 .flex_item_goriyou_sp_00 p{
 	font-size: 14px;
 }
-.flex_box_goriyou_sp{
-	width: 343px;
-	height: 160px;
-	padding: 20px 8px;
-}
-
 /*ご利用の流れend**************************************************************/
 
 
