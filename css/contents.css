@@ -5,6 +5,9 @@ html {
 	/* 一般的なブラウザのデフォルトフォントサイズが16pxと言われており、62.5%にすると10pxになる。
 	  ルートのフォントサイズが10px = 1rem となって今後のフォントサイズが指定しやすくなります */
 	  font-size: 62.5%;
+	  padding: 0% auto;
+	  margin: 0% auto;
+  
 	}
 	
 body {
@@ -17,6 +20,8 @@ body {
 	overflow-x: hidden;  /*  横スクロールバーを消します。 */
 	height: 100%;
 	letter-spacing: .1em;
+	padding: 0% auto;
+	margin: 0% auto;
 }
 
 
@@ -45,14 +50,6 @@ body {
   content: "";
 }
 
-.title {
-  font-size: 32px;
-	font-weight: normal;
-  line-height: 1.5;
-  padding: 0 3%;
-  text-align: center;
-  color: #fff;
-}
 
 .description {
   color: white;
@@ -108,7 +105,7 @@ body {
 }
 
 .TitleDownText {
-	font-size: 120%;
+	font-size: 16px;
 }
 
 /* 全画面表示CSS END */
@@ -892,14 +889,15 @@ input#agree {
 footer {
 	background: #8DA5FA;
 	text-align: center;
-	padding: 40px 0px;
 }
-
-
-.Copy {
+picture img{
+	margin-top: 40px;
+}
+.Copy{
 	font-family: -apple-system,BlinkMacSystemFont, "Source Sans Pro", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
 	font-size: 12px;
 	margin-top: 10px;
 	color:#382A3F;
+	padding-bottom: 40px;
 }
 /*footer end**************************************************************/

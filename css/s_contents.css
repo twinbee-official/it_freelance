@@ -97,7 +97,7 @@ margin-top: 32px;
 }
 
 .flexitem_dekirukoto_sp img{
-	width: 32px;
+	width: 59px;
 	height: 64px;
 	max-width: 0px auto;
 }
@@ -105,7 +105,7 @@ margin-top: 32px;
 .flexitem_dekirukoto_sp h3{
 	font-size: 18px;
 	font-weight: bold;
-	/* width: 151px; */
+	padding-left: 20px;
 }
 .dekirukoto_img_sp{
 	width: 283px;
@@ -464,12 +464,14 @@ text-align: center;
 
 
 /*footer**************************************************************/
-
-/* 375px以上の幅のデバイスfooterlogoに表示する画像 */
-@media (min-width: 375px) {
-	#footer_logo_change {
-		content: url('..//images/footer_logo.png');
-	}
-	
+picture img{
+	margin-top: 20px;
 }
+
+
+.Copy {
+	padding-bottom: 20px;
+}
+
+
 /*footer end**************************************************************/
