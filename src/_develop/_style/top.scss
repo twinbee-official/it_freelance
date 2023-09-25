@@ -1,0 +1,17 @@
+@import "var"; // 変数設定
+@import "mixin"; // mixin設定
+
+/* ------------------------------
+* フリーランス求人　トップ用SCSS
+------------------------------ */
+/* common st */
+body {
+	color: $cl_text;
+	font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
+	font-size: 16px;
+}
+
+.-en {
+	font-family: "Helvetica Neue", "Arial", sans-serif;
+}
+

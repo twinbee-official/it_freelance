@@ -1,0 +1,24 @@
+/* ------------------------------
+* 変数設定用SCSS
+------------------------------ */
+
+/* カラー */
+$cl_wt: #fff;
+$cl_bk: #000;
+$cl_text: #382A3F;
+$cl_plPurple: #EACFFF;
+
+/* 画面幅 */
+$minWin: 1280px;
+
+/* break point */
+$breakPoint: (
+	sp: 'screen and (max-width: 420px)',
+	tab: 'screen and (max-width: 768px)',
+);
+
+@mixin mq($bp) {
+	@media #{map-get($breakPoint,$bp)} {
+		@content;
+	}
+}
