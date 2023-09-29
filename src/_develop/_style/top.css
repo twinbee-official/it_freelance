@@ -26,7 +26,6 @@ body {
 .header_inner {
   background-color: #EACFFF;
 }
-
 /*リスト*/
 /* header en */
 /* sectionTitle st */
@@ -57,14 +56,9 @@ body {
   background-color: #fcf9ff;
   margin-top: 96px;
 }
-
 .flow_list {
   width: 1072px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0%;
   margin: 0% auto;
@@ -75,7 +69,6 @@ body {
   margin-top: 64px;
   position: relative;
 }
-
 .flow_listItem::after {
   content: "";
   position: absolute;
@@ -88,7 +81,6 @@ body {
   border-right: 0;
   margin: 0px 8px;
 }
-
 .flow_listItem_inner {
   width: 188.85px;
   text-align: center;
@@ -96,20 +88,17 @@ body {
   border-radius: 8px;
   margin-bottom: 10px;
 }
-
 .flow_listItem_title {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
 }
-
 .flow_listItem_text {
   width: 188.5px;
   font-size: 14px;
 }
 
 .flow_listItem_num {
-  -webkit-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
 
@@ -128,24 +117,20 @@ body {
   width: 890px;
   margin: 40px auto 0px;
 }
-
 .faq_listItem {
   margin-bottom: 4px;
   padding: 20px;
   background-color: #fcf9ff;
 }
-
 .faq_listItem:last-child {
   margin-bottom: 0px;
 }
-
 .faq_listItem_title {
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 20px;
   border-bottom: 1px solid #EACFFF;
 }
-
 .faq_listItem_text {
   font-size: 16px;
   padding: 20px 0px 12px 20px;
@@ -161,3 +146,4 @@ body {
 /* instagram en */
 /* footer st */
 /* footer en */
+/*# sourceMappingURL=top.css.map */
