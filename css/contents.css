@@ -285,7 +285,7 @@ body {
     font-weight: bold;
 }
 
-.tab-004 {
+.job_introduct_tab {
     display: flex;
   margin: 0% auto;
     align-items: center;
@@ -295,7 +295,7 @@ body {
     margin-bottom: 96px;
 }
 
-.tab-004 > label {
+.job_introduct_tab > label {
     flex: 1 1;
     order: -1;
     position: relative;
@@ -309,13 +309,13 @@ body {
     cursor: pointer;
 }
 
-.tab-004 > label:hover,
-.tab-004 label:has(:checked) {
+.job_introduct_tab > label:hover,
+.job_introduct_tab label:has(:checked) {
     background-color: #DAADFF;
     color: #382A3F;
 }
 
-.tab-004 label:has(:checked)::before {
+.job_introduct_tab label:has(:checked)::before {
     position: absolute;
     bottom: -8px;
     left: 50%;
@@ -327,17 +327,17 @@ body {
     clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
-.tab-004 input {
+.job_introduct_tab input {
     display: none;
 }
 
-.tab-004 > div {
+.job_introduct_tab > div {
     display: none;
     width: 100%;
     padding: 40px 91px 64px ;
 }
 
-.tab-004 label:has(:checked) + div {
+.job_introduct_tab label:has(:checked) + div {
     display: block;
 }
 

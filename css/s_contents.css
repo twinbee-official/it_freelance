@@ -135,10 +135,10 @@ margin-top: 32px;
 	padding-bottom: 20px;
 }
 
-.tab-004{
+.job_introduct_tab{
 	width: 343px;
 }
-.tab-004 > label{
+.job_introduct_tab > label{
 	font-size: 16px;
 	font-weight: bolder;
 	white-space: nowrap;
@@ -178,7 +178,7 @@ display: block;
 text-align: center;
 font-size: 140%;
 }
-.tab-004>div{
+.job_introduct_tab>div{
 padding: 40px 16px;
 }
 
