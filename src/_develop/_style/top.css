@@ -1,0 +1,251 @@
+@charset "UTF-8";
+/* ------------------------------
+* 変数設定用SCSS
+------------------------------ */
+/* カラー */
+/* 画面幅 */
+/* break point */
+/* ------------------------------
+* mixin設定用SCSS
+------------------------------ */
+/* ------------------------------
+* フリーランス求人　トップ用SCSS
+------------------------------ */
+/* common st */
+body {
+  color: #382A3F;
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 16px;
+}
+
+.-en {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+}
+
+/* header st */
+.header_inner {
+  background-color: #EACFFF;
+}
+/*リスト*/
+/* header en */
+/* sectionTitle st */
+.sectionTitle {
+  margin: 0% auto;
+  text-align: center;
+  height: 64px;
+  width: 100%;
+  font-size: 32px;
+  font-weight: bold;
+  background-image: url(../images/bg_title_image.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0px -8px;
+  width: 100%;
+}
+
+.h2_sub {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* sectionTitle en */
+/* free_memberRegist_anchor st */
+/* free_memberRegist_anchor en */
+/* canDo_twinbee st */
+.canDo_twinbee {
+  margin-top: 64px;
+}
+
+.canDo_twinbee_content {
+  width: 1072px;
+  height: 483px;
+  padding: 24px 30px;
+  margin: 0px auto;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fcf9ff;
+  background-image: url(../images/canDo_twinbee_content_1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.canDo_twinbee_content:nth-child(2) {
+  margin-top: 40px;
+  background-position: 30px 0px;
+}
+.canDo_twinbee_content:nth-child(3) {
+  justify-content: flex-start;
+  background-image: url(../images/canDo_twinbee_content_2.png);
+  background-position: right;
+}
+.canDo_twinbee_content:nth-child(4) {
+  margin-bottom: 0px;
+  background-image: url(../images/canDo_twinbee_content_3.png);
+  background-size: cover;
+}
+
+.canDo_twinbee_content_inner {
+  width: 496px;
+}
+.canDo_twinbee_content_title {
+  font-size: 24px;
+  font-weight: bold;
+  align-items: center;
+}
+.canDo_twinbee_content_text {
+  font-size: 16px;
+}
+
+/* canDo_twinbee en */
+/* job_introduct st */
+.job_introduct_tab {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 890px;
+}
+.job_introduct_tab .job_introduct_tab > label {
+  flex: 1 1;
+  order: -1;
+  position: relative;
+  min-width: 70px;
+  padding: 20px;
+  background-color: #fcf9ff;
+  color: #fcf9ff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.job_introduct_tab > label:hover,
+.job_introduct_tab label:has(:checked) {
+  background-color: #2589d0;
+  color: #fff;
+}
+
+.job_introduct_tab label:has(:checked)::before {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 9px;
+  background-color: #2589d0;
+  content: "";
+  -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+          clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.job_introduct_tab input {
+  display: none;
+}
+
+.job_introduct_tab > div {
+  display: none;
+  width: 100%;
+  padding: 1.5em 1em;
+}
+
+.job_introduct_tab label:has(:checked) + div {
+  display: block;
+}
+
+/* job_introduct en */
+/* flow st */
+.flow {
+  background-color: #fcf9ff;
+  margin-top: 96px;
+}
+.flow_list {
+  width: 1072px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0%;
+  margin: 0% auto;
+  list-style: none;
+}
+
+.flow_listItem {
+  margin-top: 64px;
+  position: relative;
+}
+.flow_listItem::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 17.32px solid #EACFFF;
+  border-right: 0;
+  margin: 0px 8px;
+}
+.flow_listItem_inner {
+  width: 188.85px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.flow_listItem_title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+.flow_listItem_text {
+  width: 188.5px;
+  font-size: 14px;
+}
+
+.flow_listItem_num {
+  transform: rotate(-10deg);
+}
+
+.flow_listItem_img {
+  width: 148.85px;
+  height: auto;
+}
+
+/* flow en */
+/* faq st */
+.faq {
+  padding: 96px 0px;
+}
+
+.faq_list {
+  width: 890px;
+  margin: 40px auto 0px;
+}
+.faq_listItem {
+  margin-bottom: 4px;
+  padding: 20px;
+  background-color: #fcf9ff;
+}
+.faq_listItem:last-child {
+  margin-bottom: 0px;
+}
+.faq_listItem_title {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EACFFF;
+}
+.faq_listItem_text {
+  font-size: 16px;
+  padding: 20px 0px 12px 20px;
+  margin-left: 0px;
+}
+
+/* faq en */
+/* free_memberRegist st */
+/* free_memberRegist en */
+/* access st */
+/* access en */
+/* instagram st */
+/* instagram en */
+/* footer st */
+/* footer en */
+/*# sourceMappingURL=top.css.map */

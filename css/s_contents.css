@@ -1,0 +1,471 @@
+@charset "utf-8";
+/* デバイスの横幅が1000px以下の場合 */
+
+	
+@media only screen and (max-width: 375px) {
+	.hero {
+	
+		height: 80vh; /* 全画面表示フルなら100 */
+		background-image: url("../images/hyoushi_newnew_sp_2.jpg");
+		background-size: contain;
+		  
+	}
+	.spColorBg {
+		margin: 64px 0px;
+	}
+	
+	
+	
+	
+	/*SP*/
+	.Title {
+		font-size: 24px;
+	}
+	
+	/*titlebg*/
+.BGtitle{
+	background-image: url(../images/sp_titlebg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+/**/
+/*bottn*/
+.btn_23{
+	width: 343px;
+	height: 69px;
+	/* padding: 20px 0px; */
+}
+
+.ColorBg {
+	padding: 64px 0px;
+}
+
+.ColorBg_0{
+	padding-bottom: 64px;
+}
+
+
+
+
+/*Twinbeeにできること**************************************************************/
+
+.left_yose{
+	text-align: left;
+	display:block;
+	column-count:1;
+}
+	.box{
+	display: block;
+	width: 100%;
+	height: 110vh;
+}
+
+.flex_box_02{
+display: flex;
+height: 120px;
+}
+
+.flex_item_02{
+height: 100px;
+align-items: center;
+text-align: left;
+margin-top: 10px;
+}
+.flex_item_02 img{
+	width: 100px;
+	height: auto;
+	padding-top: 10px;
+}
+
+.flex_item_02_02{
+	align-items: center;
+	width: 550px;
+}
+/*section1*/
+.bg_waku{
+	width: 283px;
+	height: auto;
+	padding: 24px 30px;
+margin: 0% auto;
+margin-top: 32px;
+
+}
+
+.flexbox_dekirukoto_sp{
+	justify-content: center;
+}
+
+.flexitem_dekirukoto_sp img{
+	width: 59px;
+	height: 64px;
+	max-width: 0px auto;
+}
+
+.flexitem_dekirukoto_sp h3{
+	font-size: 18px;
+	font-weight: bold;
+	padding-left: 20px;
+}
+.dekirukoto_img_sp{
+	width: 283px;
+	height: 220px;
+	padding-top: 20px
+}
+.bg_waku{
+	border-radius: 30px;
+	margin:  5% auto;
+	background-color: #FCF9FF;
+}
+
+.bg_waku_2{
+	max-width: 980px;
+	border-radius: 30px;
+	padding: 3% 0% 3% 3%;
+	margin:  0% auto;
+	background-color: #FCF9FF;
+
+}
+
+/*Twinbeeにできることend**************************************************************/
+
+/*お仕事紹介**************************************************************/
+.font_s{
+	font-size: 16px;
+	padding-bottom: 20px;
+}
+
+.job_introduct_tab{
+	width: 343px;
+}
+.job_introduct_tab > label{
+	font-size: 16px;
+	font-weight: bolder;
+	white-space: nowrap;
+	letter-spacing: normal;
+	padding: 8px 0px;
+}
+.os_bg{
+	width:343px;
+	padding:40px 16px;
+}
+.os_Title{
+	font-size: 18px;
+	white-space: nowrap;
+	text-align: center;
+}
+.os_flexitem_02 li{
+	font-size: 100%;
+  }
+.os_flexitem_02{
+font-size: 14px;
+padding-bottom: 16px;
+width: 100%;
+
+}
+.os_flexitem_01{
+font-size: 14px;
+padding-bottom: 8px;
+padding-top: 20px;
+width: 100%;
+}
+.os_flexbox{
+display: block;
+}
+
+
+.os_title{
+text-align: center;
+font-size: 140%;
+}
+.job_introduct_tab>div{
+padding: 40px 16px;
+}
+
+.ckd {
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+}
+
+
+/*お仕事紹介end**************************************************************/
+
+/*よくある質問**************************************************************/
+  /* アコーディオン全体 */
+  .accordion {
+	width: 375px;
+	margin: 0 auto;
+	margin-top: 20px;
+	box-sizing: border-box;
+  }
+  
+  
+  /* アコーディオン */
+  .accordion__item {
+	/* border: 1px solid #ccc; */
+	margin-bottom: 4px;
+	cursor: pointer;
+	background-color: #FCF9FF;
+	padding:20px;
+
+  }
+  
+  /* アコーディオンのタイトル */
+  .accordion__title {
+	position: relative;
+	padding-right: 24px;
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  /* (+)アイコン */
+  .accordion__title::before,
+  .accordion__title::after {
+	content: "";
+	position: absolute;
+	right: 0px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	background-color: #382A3F;
+	width: 20px;
+	height: 2px;
+	transition: all 0.3s;
+  }
+  
+  .accordion__title::after {
+	transform: rotate(90deg);
+  }
+  
+  /* アコーディオンのコンテンツ */
+  .accordion__content {
+	padding: 20px 0px 12px 20px;
+	display: none;
+	cursor: pointer;
+	border-top: #EACFFF solid 1px;
+	font-size: 14px;
+  }
+  
+  .accordion__content.is-open {
+	display: block;
+  }
+  
+  /* アコーディオン展開時の(-)アイコン */
+  .accordion__item.is-active .accordion__title::before {
+	transform: rotate(180deg);
+  }
+  
+  .accordion__item.is-active .accordion__title::after {
+	transform: rotate(180deg);
+	opacity: 0;
+  }
+
+/*よくある質問end**************************************************************/
+
+
+/*ご利用の流れ**************************************************************/
+.flex_box_goriyou_sp{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 15px;
+	margin: 0% auto;
+	width: 343px;
+	height: 160px;
+	padding: 20px 8px;
+}
+
+.flex_item_goriyou_sp img{
+	width: 150px;
+}
+
+
+.flex_item_goriyou_sp_00{
+	padding-left: 20px;
+	width: 163.5px;
+}
+
+.custom-image {
+    width: 64px; 
+    height: auto; 
+    margin: 2% auto -2%; /* 上下の余白を設定 */
+	display: block;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	border-top: 15px solid #eacfff;
+	border-bottom: 0;
+	display: block;
+	margin: 1% auto 2%; 
+  }
+
+.dekirukoto_flexbox_01{
+	display: flex;
+	align-items: center;
+}
+
+.flexbox_dekirukoto_sp{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btnset {
+	margin: 0 auto;
+	align-items: center;
+}
+.btnset .button {
+	margin: 0px auto;
+	text-align: center;
+	color: #382A3F;
+	display: inline-block;
+	width: 283px;
+	height: 22px;
+	box-sizing: border-box;
+	position: relative;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top:28px;
+}
+
+.flex_item_goriyou_sp_00 h3{
+	font-size: 16px;
+	padding-bottom: 8px;
+}
+.flex_item_goriyou_sp_00 p{
+	font-size: 14px;
+}
+/*ご利用の流れend**************************************************************/
+
+
+ /*無料会員登録**************************************************************/
+
+ .touroku_inner {
+	width: 375px;
+	padding:40px 16px;
+  }
+  div.touroku_flexbox{
+	display: block;
+  }
+  .touroku_flexitem p {
+	font-size: 16px;
+	padding-left: 8px;
+  }
+  
+  .waku_input {
+	width: 343px;
+	height: 42px;
+	border-radius: 4px;
+  }
+  .waku_input_1 {
+	width: 343px;
+	height: 42px;
+	padding: 5px;
+	/* margin-bottom: 20px; */
+	border-radius: 4px;
+	margin-top: 8px;
+  }
+  
+  
+   .touroku_bgimg {
+	background-repeat: no-repeat;
+	background-image: url(../images/touroku_haikei.png);
+	position: relative;
+	margin: 0% auto;
+	padding: 64px 0px;
+	background-size: cover;
+	width: 100%;
+	height: auto;
+  }
+  
+  .privacy-policy{
+	width: 303px;
+	height: 240px;
+	padding: 20px;
+  }
+  
+  /* placeholderのフォントサイズを設定 */
+  .waku_input::placeholder {
+	font-size: 16px;
+  }
+  
+  /* 入力テキストのフォントサイズを設定 */
+  .waku_input {
+	font-size: 16px;
+  
+  }
+  
+  /* placeholderのフォントサイズを設定 */
+  .waku_input_1::placeholder {
+	font-size: 16px;
+  
+  }
+  
+  /* 入力テキストのフォントサイズを設定 */
+  .waku_input_1 {
+	font-size: 16px;
+  
+  }
+  
+  
+ /*無料会員登録end**************************************************************/
+
+
+
+
+
+/*アクセスエリア**************************************************************/
+
+.AccessDl{
+	margin: 0px 16px 20px;
+}
+.AccessDl dt {
+    font-weight: bold;
+    font-size: 16px;
+}
+.AccessDl dd{
+	font-size: 16px;
+}
+/*アクセスエリアend**************************************************************/
+
+/*インスタ**************************************************************/
+
+.Insta_flexitem img{
+	width: 161px;
+}
+
+.Insta_flexbox {
+    width: 343px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	margin: 0px 16px;
+}
+/*インスタend**************************************************************/
+
+}
+	
+
+
+
+/*footer**************************************************************/
+picture img{
+	margin-top: 20px;
+}
+
+
+.Copy {
+	padding-bottom: 20px;
+}
+
+
+/*footer end**************************************************************/

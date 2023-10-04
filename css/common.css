@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+a {
+	color:#382A3F;
+}
+
+a:hover {
+	color:#382A3F;
+}
+
+a img:hover {
+	opacity: 0.7 ;
+    transition: 0.5s;
+}
+
+#wrapper {
+	width:100%;
+	position:relative;
+	overflow:hidden;
+}
+
+#wrapper img {
+	max-width: 100%;
+	height: auto;
+}
+
+.Center {
+	text-align: center !important;
+	margin: 0 auto !important;
+}
+
+.TextCenter {
+	text-align: center;
+}
+
+
+
+.MgnTop3 {
+	margin-top: 3% !important;
+}
+.Max890 {
+	max-width: 890px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+/*========= 1文字ずつ出現させるためのCSS ===============*/
+
+.eachTextAnime span{opacity: 0;}
+.eachTextAnime.appeartext span{ animation:text_anime_on 1s ease-out forwards; }
+@keyframes text_anime_on {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+/*========= 1文字ずつ出現させるためのCSS END ===============*/
+
