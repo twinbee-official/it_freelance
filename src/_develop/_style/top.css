@@ -26,7 +26,6 @@ body {
 .header_inner {
   background-color: #EACFFF;
 }
-
 /*リスト*/
 /* header en */
 /* sectionTitle st */
@@ -65,34 +64,23 @@ body {
   margin: 0px auto;
   margin-bottom: 40px;
   border-radius: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   background-color: #fcf9ff;
   background-image: url(../images/canDo_twinbee_content_1.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
-
 .canDo_twinbee_content:nth-child(2) {
   margin-top: 40px;
   background-position: 30px 0px;
 }
-
 .canDo_twinbee_content:nth-child(3) {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   background-image: url(../images/canDo_twinbee_content_2.png);
   background-position: right;
 }
-
 .canDo_twinbee_content:nth-child(4) {
   margin-bottom: 0px;
   background-image: url(../images/canDo_twinbee_content_3.png);
@@ -102,15 +90,11 @@ body {
 .canDo_twinbee_content_inner {
   width: 496px;
 }
-
 .canDo_twinbee_content_title {
   font-size: 24px;
   font-weight: bold;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
 .canDo_twinbee_content_text {
   font-size: 16px;
 }
@@ -123,14 +107,9 @@ body {
   background-color: #fcf9ff;
   margin-top: 96px;
 }
-
 .flow_list {
   width: 1072px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0%;
   margin: 0% auto;
@@ -141,7 +120,6 @@ body {
   margin-top: 64px;
   position: relative;
 }
-
 .flow_listItem::after {
   content: "";
   position: absolute;
@@ -154,7 +132,6 @@ body {
   border-right: 0;
   margin: 0px 8px;
 }
-
 .flow_listItem_inner {
   width: 188.85px;
   text-align: center;
@@ -162,20 +139,17 @@ body {
   border-radius: 8px;
   margin-bottom: 10px;
 }
-
 .flow_listItem_title {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
 }
-
 .flow_listItem_text {
   width: 188.5px;
   font-size: 14px;
 }
 
 .flow_listItem_num {
-  -webkit-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
 
@@ -194,24 +168,20 @@ body {
   width: 890px;
   margin: 40px auto 0px;
 }
-
 .faq_listItem {
   margin-bottom: 4px;
   padding: 20px;
   background-color: #fcf9ff;
 }
-
 .faq_listItem:last-child {
   margin-bottom: 0px;
 }
-
 .faq_listItem_title {
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 20px;
   border-bottom: 1px solid #EACFFF;
 }
-
 .faq_listItem_text {
   font-size: 16px;
   padding: 20px 0px 12px 20px;
@@ -225,50 +195,27 @@ body {
 }
 
 .free_memberRegist_formBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 45px;
   margin-bottom: 20px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
-
 .free_memberRegist_formBox_title {
   width: 252px;
   margin: 0px 20px 0px 8px;
   font-size: 18px;
   font-weight: bold;
 }
-
 .free_memberRegist_formBox_input {
   width: 436px;
   height: 45px;
   border: 1px solid #EACFFF;
   border-radius: 4px;
 }
-
-.free_memberRegist_formBox_input::-webkit-input-placeholder {
-  font-size: 18px;
-  padding: 8px;
-}
-
 .free_memberRegist_formBox_input::-moz-placeholder {
   font-size: 18px;
   padding: 8px;
 }
-
-.free_memberRegist_formBox_input:-ms-input-placeholder {
-  font-size: 18px;
-  padding: 8px;
-}
-
-.free_memberRegist_formBox_input::-ms-input-placeholder {
-  font-size: 18px;
-  padding: 8px;
-}
-
 .free_memberRegist_formBox_input::placeholder {
   font-size: 18px;
   padding: 8px;
@@ -288,7 +235,7 @@ body {
   width: 708px;
   height: 240px;
   font-size: 12px;
-  border: 1px solid #EACFFF;
+  border: 1px solid #fcf9ff;
   border-radius: 4px;
   line-height: 160%;
   margin: 0% auto;
@@ -297,28 +244,19 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-
 .free_memberRegist_form_privacyPolicy::-webkit-scrollbar {
   display: none;
 }
-
 .free_memberRegist_form_checkBox {
   font-size: 18px;
   font-weight: bold;
   margin-top: 20px;
   text-align: center;
 }
-
 .free_memberRegist_form_submitBtn input[type=submit] {
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   text-decoration: none;
   font-size: 20px;
@@ -328,7 +266,6 @@ body {
   height: 72px;
   margin: 0% auto;
   margin-top: 40px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgb(154, 176, 255)), color-stop(52%, rgb(239, 207, 255)), color-stop(78%, rgb(234, 207, 255)), to(rgb(218, 173, 255)));
   background-image: linear-gradient(90deg, rgb(154, 176, 255), rgb(239, 207, 255) 52%, rgb(234, 207, 255) 78%, rgb(218, 173, 255));
   border: none;
   padding: 0px;
@@ -354,22 +291,13 @@ h2.-en {
 }
 
 .instagram_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0px auto;
   margin-top: 40px;
 }
-
 .instagram_moreBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   text-decoration: none;
   font-size: 20px;
@@ -379,15 +307,14 @@ h2.-en {
   height: 72px;
   margin: 0% auto;
   margin-top: 40px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgb(154, 176, 255)), color-stop(52%, rgb(239, 207, 255)), color-stop(78%, rgb(234, 207, 255)), to(rgb(218, 173, 255)));
   background-image: linear-gradient(90deg, rgb(154, 176, 255), rgb(239, 207, 255) 52%, rgb(234, 207, 255) 78%, rgb(218, 173, 255));
 }
-
 .instagram_moreBtn_link {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 
 /* instagram en */
 /* footer st */
 /* footer en */
+/*# sourceMappingURL=top.css.map */
