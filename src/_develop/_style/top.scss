@@ -1,5 +1,4 @@
-@import "var"; // 変数設定
-@import "mixin"; // mixin設定
+@use '../_style/style' as *; // 変数設定
 
 /* ------------------------------
 * フリーランス求人　トップ用SCSS
