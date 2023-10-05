@@ -44,14 +44,13 @@ body {
 	background-image: url(../images/bg_title_image.png);
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-position: 0px -8px;
 	width: 100%;
-	position: relative;
-	z-index: 0;
 }
-.h2_sub {
+.h2_sub{
 	font-size: 16px;
 	margin-top: 20px;
-  }
+}
 /* sectionTitle en */
 
 
@@ -61,11 +60,11 @@ body {
 /* free_memberRegist_anchor en */
 
 /* canDo_twinbee st */
-.canDo_twinbee {
+.canDo_twinbee{
 	margin-top: 64px;
-  }
-  
-  .canDo_twinbee_content {
+	
+}
+.canDo_twinbee_content{
 	width: 1072px;
 	height: 483px;
 	padding: 24px 30px;
@@ -75,42 +74,193 @@ body {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	background-color: #fcf9ff;
+	background-color: $cl_fadePurple;
 	background-image: url(../images/canDo_twinbee_content_1.png);
 	background-repeat: no-repeat;
 	background-size: contain;
-	&:nth-child(2) {
+	
+	&:nth-child(2){
 		margin-top: 40px;
 		background-position: 30px 0px;
 	}
-	&:nth-child(3) {
-	justify-content: flex-start;
-	background-image: url(../images/canDo_twinbee_content_2.png);
-	background-position: right;
+	&:nth-child(3){
+		justify-content: flex-start;
+		background-image: url(../images/canDo_twinbee_content_2.png);
+		background-position: right;
 	}
-	&:nth-child(4) {
+	&:nth-child(4){
 		margin-bottom: 0px;
 		background-image: url(../images/canDo_twinbee_content_3.png);
 		background-size: cover;
 	}
-  }
-  .canDo_twinbee_content {
-	&_inner {
+}
+.canDo_twinbee_content{
+	&_inner{
 		width: 496px;
+		// height: 435px;
 	}
-	&_title {
+	&_title{
 		font-size: 24px;
 		font-weight: bold;
 		align-items: center;
 	}
-	&_text {
+	&_text{
 		font-size: 16px;
-  }
-}
-/* canDo_twinbee en */
+	}
+}/* canDo_twinbee en */
 
 /* job_introduct st */
+// .job_introduct{
+// 	margin-top: 96px;
+// }
+// label{
+// 		flex: 1 1;
+// 		order: -1;
+// 		position: relative;
+// 		min-width: 70px;
+// 		padding: 10px;
+// 		background-color: $cl_fadePurple;
+// 		color: $cl_plPurple;
+// 		font-size: 18px;
+// 		font-weight: bold;
+// 		text-align: center;
+// 		cursor: pointer;
+// 		&:hover{
+// 			background-color: #DAADFF;
+// 			color: $cl_text;
+// 			&::before{
+// 				content: "";
+// 				position:absolute;
+// 				bottom: -8px;
+// 				left: 50%;
+// 				transform: translateX(150%);
+// 				width: 18px;
+// 				height: 9px;
+// 				background-color: $cl_plPurple;
+// 				clip-path: polygon(0 0, 100% 0, 50% 100%);
+// 			}
+	
+// 		}
+// 		&:has(:checked){
+// 			background-color: $cl_fadePurple;
+// 			color: $cl_plPurple;
+// 		}
+// 	}
+// input{
+// 	display: none;
+// }	
+// .job_introduct_tab{
+// 	display: flex;
+// 	flex-wrap: wrap;
+// 	max-width: 890px;
+	
+// }
+// .job_introduct_tab{
+// 	&_inner{
+// 		width: 1072px;
+// 		margin: 0px auto;
+// 		margin-top: 20px;
+// 		padding-bottom: 64px;
+// 		padding-top: 40px;
+// 		border-radius: 12px;
+// 		background-color: $cl_fadePurple;
+// 	}
+// 	&_content{
+// 		width: 890px;
+// 		height: 220px;
+// 		display: flex;
+// 		justify-content: space-between;
+// 		margin: 0px auto;
+// 		align-items: center;
+// 		padding-bottom: 12px;
+// 		&_title{
+// 			font-size: 24px;
+// 			font-weight: bold;
+// 		}
+// 	}
+// 	& img{
+// 		width: 334px;
+// 		height: 220px;
+// 	}
+// }
+// .job_introduct_example{
+// 	display: flex;
+// 	flex-wrap: wrap;
+// 	margin: 0px auto;
+// 	align-items: center;
+// 	justify-content: center;
+// 	font-size: 16px;
+// 	&_title{
+// 		width: 253px;
+// 		padding-top: 20px;
+// 		padding-bottom: 12px;
+// 		font-weight: bold;
+// 		border-bottom: $cl_plPurple solid 1px;
+// 	}
+// 	&_text{
+// 		margin: 0px;
+// 		padding-left: 20px;
+// 		padding-top: 20px;
+// 		padding-bottom: 12px;
+// 		width: 617px;
+// 		border-bottom: $cl_plPurple solid 1px;
+// 		&_content{
+// 			padding-left: 20px;
+// 		}
+// 	}
+// }
+.job_introduct_tab {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 890px;
+	.job_introduct_tab > label {
+		flex: 1 1;
+		order: -1;
+		position: relative;
+		min-width: 70px;
+		padding: 20px;
+		background-color: $cl_fadePurple;
+		color: $cl_fadePurple;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		cursor: pointer;
+	}
+	
+}
 
+
+.job_introduct_tab > label:hover,
+.job_introduct_tab label:has(:checked) {
+	background-color: #2589d0;
+	color: #fff;
+}
+
+.job_introduct_tab label:has(:checked)::before {
+	position: absolute;
+	bottom: -8px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 18px;
+	height: 9px;
+	background-color: #2589d0;
+	content: '';
+	clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.job_introduct_tab input {
+	display: none;
+}
+
+.job_introduct_tab > div {
+	display: none;
+	width: 100%;
+	padding: 1.5em 1em;
+}
+
+.job_introduct_tab label:has(:checked) + div {
+	display: block;
+}
 /* job_introduct en */
 
 /* flow st */
@@ -201,84 +351,6 @@ body {
 /* faq en */
 
 /* free_memberRegist st */
-.free_memberRegist{
-  padding: 64px 0px;
-}
-
-.free_memberRegist_formBox{
-  display: flex;
-  height: 45px;
-  margin-bottom: 20px;
-  justify-content: center;
-	&_title{
-		width: 252px;
-		margin: 0px 20px 0px 8px;
-		font-size: 18px;
-		font-weight: bold;
-	}
-	&_input{
-		width: 436px;
-		height: 45px;
-		border: 1px solid $cl_plPurple;
-		border-radius: 4px;
-		&::placeholder{
-			font-size: 18px;
-			padding: 8px;
-		}
-	}
-}
-.-require::before{
-  content: "必須";
-  font-size: 12px;
-  letter-spacing: 10%;
-  padding: 4px 8px 5px;
-  color: $cl_wt;
-  background-color: #8DA5FA;
-  border-radius: 4px;
-}
-.free_memberRegist_form{
-  &_privacyPolicy{
-		width: 708px;
-		height: 240px;
-		font-size: 12px;
-		border: 1px solid $cl_plPurple;
-		border-radius: 4px;
-		line-height: 160%;
-		margin: 0% auto;
-		padding: 20px;
-		overflow: auto;
-		scrollbar-width: none;
-		-ms-overflow-style: none;
-		&::-webkit-scrollbar {
-			display: none;
-		}
-	}
-	&_checkBox{
-		font-size: 18px;
-		font-weight: bold;
-		margin-top: 20px;
-		text-align: center;
-	}
-	&_submitBtn input[type=submit]{
-		color: $cl_wt;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-decoration: none;
-		font-size:20px;
-		font-weight: bold;
-		border-radius: 12px;
-		width: 526px;
-		height: 72px;
-		margin: 0% auto;
-		margin-top: 40px;
-		background-image: linear-gradient(90deg, rgba(154, 176, 255, 1), rgba(239, 207, 255, 1) 52%, rgba(234, 207, 255, 1) 78%, rgba(218, 173, 255, 1));
-		border: none;
-		padding: 0px;
-	}
-}
-
-
 
 /* free_memberRegist en */
 
@@ -287,45 +359,6 @@ body {
 /* access en */
 
 /* instagram st */
-h2.-en{
-  margin: 0% auto;
-  text-align: center;
-  height: 64px;
-  width: 100%;
-  font-size: 32px;
-  font-weight: bold;
-  background-image: url(../images/bg_title_image.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  position: relative;
-  z-index: 0;
-}
-.instagram{
-  &_list{
-		display: flex;
-		margin: 0px auto;
-		margin-top: 40px;
-	}
-	&_moreBtn{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-decoration: none;
-		font-size:20px;
-		font-weight: bold;
-		border-radius: 12px;
-		width: 526px;
-		height: 72px;
-		margin: 0% auto;
-		margin-top: 40px;
-		background-image: linear-gradient(90deg, rgba(154, 176, 255, 1), rgba(239, 207, 255, 1) 52%, rgba(234, 207, 255, 1) 78%, rgba(218, 173, 255, 1));
-		&_link{
-			color: $cl_wt;
-			text-decoration: none;
-		}
-	}
-}
 
 /* instagram en */
 

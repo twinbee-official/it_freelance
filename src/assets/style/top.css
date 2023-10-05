@@ -40,9 +40,8 @@ body {
   background-image: url(../images/bg_title_image.png);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: 0px -8px;
   width: 100%;
-  position: relative;
-  z-index: 0;
 }
 
 .h2_sub {
@@ -117,6 +116,67 @@ body {
 
 /* canDo_twinbee en */
 /* job_introduct st */
+.job_introduct_tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 890px;
+}
+
+.job_introduct_tab .job_introduct_tab > label {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
+  position: relative;
+  min-width: 70px;
+  padding: 20px;
+  background-color: #fcf9ff;
+  color: #fcf9ff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.job_introduct_tab > label:hover,
+.job_introduct_tab label:has(:checked) {
+  background-color: #2589d0;
+  color: #fff;
+}
+
+.job_introduct_tab label:has(:checked)::before {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 18px;
+  height: 9px;
+  background-color: #2589d0;
+  content: "";
+  -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.job_introduct_tab input {
+  display: none;
+}
+
+.job_introduct_tab > div {
+  display: none;
+  width: 100%;
+  padding: 1.5em 1em;
+}
+
+.job_introduct_tab label:has(:checked) + div {
+  display: block;
+}
+
 /* job_introduct en */
 /* flow st */
 .flow {
@@ -220,174 +280,10 @@ body {
 
 /* faq en */
 /* free_memberRegist st */
-.free_memberRegist {
-  padding: 64px 0px;
-}
-
-.free_memberRegist_formBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 45px;
-  margin-bottom: 20px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.free_memberRegist_formBox_title {
-  width: 252px;
-  margin: 0px 20px 0px 8px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.free_memberRegist_formBox_input {
-  width: 436px;
-  height: 45px;
-  border: 1px solid #EACFFF;
-  border-radius: 4px;
-}
-
-.free_memberRegist_formBox_input::-webkit-input-placeholder {
-  font-size: 18px;
-  padding: 8px;
-}
-
-.free_memberRegist_formBox_input::-moz-placeholder {
-  font-size: 18px;
-  padding: 8px;
-}
-
-.free_memberRegist_formBox_input:-ms-input-placeholder {
-  font-size: 18px;
-  padding: 8px;
-}
-
-.free_memberRegist_formBox_input::-ms-input-placeholder {
-  font-size: 18px;
-  padding: 8px;
-}
-
-.free_memberRegist_formBox_input::placeholder {
-  font-size: 18px;
-  padding: 8px;
-}
-
-.-require::before {
-  content: "必須";
-  font-size: 12px;
-  letter-spacing: 10%;
-  padding: 4px 8px 5px;
-  color: #fff;
-  background-color: #8DA5FA;
-  border-radius: 4px;
-}
-
-.free_memberRegist_form_privacyPolicy {
-  width: 708px;
-  height: 240px;
-  font-size: 12px;
-  border: 1px solid #EACFFF;
-  border-radius: 4px;
-  line-height: 160%;
-  margin: 0% auto;
-  padding: 20px;
-  overflow: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.free_memberRegist_form_privacyPolicy::-webkit-scrollbar {
-  display: none;
-}
-
-.free_memberRegist_form_checkBox {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.free_memberRegist_form_submitBtn input[type=submit] {
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 12px;
-  width: 526px;
-  height: 72px;
-  margin: 0% auto;
-  margin-top: 40px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgb(154, 176, 255)), color-stop(52%, rgb(239, 207, 255)), color-stop(78%, rgb(234, 207, 255)), to(rgb(218, 173, 255)));
-  background-image: linear-gradient(90deg, rgb(154, 176, 255), rgb(239, 207, 255) 52%, rgb(234, 207, 255) 78%, rgb(218, 173, 255));
-  border: none;
-  padding: 0px;
-}
-
 /* free_memberRegist en */
 /* access st */
 /* access en */
 /* instagram st */
-h2.-en {
-  margin: 0% auto;
-  text-align: center;
-  height: 64px;
-  width: 100%;
-  font-size: 32px;
-  font-weight: bold;
-  background-image: url(../images/bg_title_image.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  position: relative;
-  z-index: 0;
-}
-
-.instagram_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0px auto;
-  margin-top: 40px;
-}
-
-.instagram_moreBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 12px;
-  width: 526px;
-  height: 72px;
-  margin: 0% auto;
-  margin-top: 40px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgb(154, 176, 255)), color-stop(52%, rgb(239, 207, 255)), color-stop(78%, rgb(234, 207, 255)), to(rgb(218, 173, 255)));
-  background-image: linear-gradient(90deg, rgb(154, 176, 255), rgb(239, 207, 255) 52%, rgb(234, 207, 255) 78%, rgb(218, 173, 255));
-}
-
-.instagram_moreBtn_link {
-  color: #fff;
-  text-decoration: none;
-}
-
 /* instagram en */
 /* footer st */
 /* footer en */
