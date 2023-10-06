@@ -241,9 +241,9 @@ label {
 		color: $cl_plPurple;
 	}
 }
-input {
-	display: none;
-}	
+// input {
+// 	display: none;
+// }	
 .job_introduct_tab {
 	display: flex;
 	flex-wrap: wrap;
@@ -267,7 +267,6 @@ input {
 		margin: 0px auto;
 		align-items: center;
 		padding-top: 40px;
-		// padding-bottom: 12px;
 		&_title {
 			font-size: 24px;
 			font-weight: bold;
@@ -373,7 +372,7 @@ input {
 		content: "";
 		position: absolute;
 		right: -30px;
-		top: 85px;
+		top: 120px;
 		width: 0px;
 		height: 0px;
 		border-style: solid;
@@ -443,6 +442,14 @@ input {
 /* free_memberRegist st */
 .free_memberRegist {
   padding: 64px 0px;
+	width: 1072px;
+	margin: 0px auto;
+	border-radius: 12px;
+	background-image: url(../_images/bg_free_memberRegist.png);
+	background-color: $cl_fadePurple;
+	background-position: center center;
+	background-size: contain;
+	background-repeat: repeat;
 }
 .free_memberRegist_formBox {
   display: flex;
@@ -460,6 +467,7 @@ input {
 		height: 45px;
 		border: 1px solid #EACFFF;
 		border-radius: 4px;
+		background-color: $cl_wt;
 		&::placeholder{
 			font-size: 18px;
 			padding: 8px;
@@ -490,6 +498,7 @@ input {
 		overflow: auto;
 		scrollbar-width: none;
 		-ms-overflow-style: none;
+		background-color: $cl_wt;
 		&::-webkit-scrollbar {
 			display: none;
 		}
@@ -522,11 +531,41 @@ input {
 /* free_memberRegist en */
 
 /* access st */
+.access {
+	height: 680px;
+	padding-top: 96px;
+	margin: 0px auto;
+	&_map_body {
+		display: block;
+		text-align: center;
+		width: 1280px;
+		height: 480px;
+	}
+}
+
+.access_map{
+	&_content{
+		&_data{
+			width: 435px;
+			height: 246px;
+			border-radius: 12px;
+			padding: 20px;
+			background-color: $cl_wt;
+			&box{
+				&_title{
+					font-size: 16px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
 
 /* access en */
 
 /* instagram st */
 .instagram {
+	margin-top: 96px;
 	&_list {
 		display: flex;
 		margin: 0px auto;

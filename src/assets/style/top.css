@@ -666,10 +666,6 @@ label:has(:checked) {
   color: #EACFFF;
 }
 
-input {
-  display: none;
-}
-
 .job_introduct_tab {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -841,7 +837,7 @@ input {
   content: "";
   position: absolute;
   right: -30px;
-  top: 85px;
+  top: 120px;
   width: 0px;
   height: 0px;
   border-style: solid;
@@ -922,6 +918,14 @@ input {
 /* free_memberRegist st */
 .free_memberRegist {
   padding: 64px 0px;
+  width: 1072px;
+  margin: 0px auto;
+  border-radius: 12px;
+  background-image: url(../_images/bg_free_memberRegist.png);
+  background-color: #fcf9ff;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: repeat;
 }
 
 .free_memberRegist_formBox {
@@ -947,6 +951,7 @@ input {
   height: 45px;
   border: 1px solid #EACFFF;
   border-radius: 4px;
+  background-color: #fff;
 }
 
 .free_memberRegist_formBox_input::-webkit-input-placeholder {
@@ -996,6 +1001,7 @@ input {
   overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  background-color: #fff;
 }
 
 .free_memberRegist_form_privacyPolicy::-webkit-scrollbar {
@@ -1036,8 +1042,38 @@ input {
 
 /* free_memberRegist en */
 /* access st */
+.access {
+  height: 680px;
+  padding-top: 96px;
+  margin: 0px auto;
+}
+
+.access_map_body {
+  display: block;
+  text-align: center;
+  width: 1280px;
+  height: 480px;
+}
+
+.access_map_content_data {
+  width: 435px;
+  height: 246px;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.access_map_content_databox_title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 /* access en */
 /* instagram st */
+.instagram {
+  margin-top: 96px;
+}
+
 .instagram_list {
   display: -webkit-box;
   display: -ms-flexbox;
