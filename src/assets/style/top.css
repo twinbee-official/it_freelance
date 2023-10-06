@@ -13,6 +13,7 @@
 /* ------------------------------
 * mixin設定用SCSS
 ------------------------------ */
+/* 画像パス */
 /* リセットCSS */
 /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
@@ -399,6 +400,7 @@ body {
   color: #382A3F;
   font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 16px;
+  position: relative;
 }
 
 .-en {
@@ -407,89 +409,92 @@ body {
 
 /* header st */
 .header {
-  height: 84px;
-  padding: 16px 64px 8px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .header_inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.header_logo {
-  width: 180px;
-  height: 60px;
+  padding: 16px 64px 8px;
 }
 
 .header_logo_link {
-  width: 180px;
+  display: block;
+}
+
+.header_logo_img {
   height: 60px;
+  width: 180px;
 }
 
 .header_menu {
-  padding: 0px 16px 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.header_menuList {
-  font-size: 16px;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
+.header_menuList:not(:first-child) {
+  margin-left: 32px;
 }
 
-a.header_menuList_link {
-  padding: 0px 16px 8px;
+.header_menuList_link {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .header_menuList_link.-igIcon {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url(../_images/Instagram_icon.svg);
-  background-position: center center;
+  background-image: url("../images/ig_icon.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  display: block;
+  height: 24px;
   text-indent: -9999px;
-  vertical-align: middle;
+  width: 24px;
+}
+
+.header_menuList_link:hover {
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 /* header en */
 /* mainVisual st */
 .mainVisual {
-  width: 1280px;
-  height: 700px;
-  position: relative;
-  background-image: url(../images/mainVisual.jpg);
+  background-image: url("../images/mainVisual.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  height: 87.5vh;
+  min-width: 1280px;
+  width: 100%;
+}
+
+.mainVisual_titleBox {
+  padding-left: 3.5vw;
+  padding-top: 20vh;
 }
 
 .mainVisual_titleBox_sub {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 200%;
-  letter-spacing: 20%;
-  position: absolute;
-  left: calc(1280px - 96.377%);
-  top: 501px;
-}
-
-.mainVisual_titleBox_main {
-  width: 762.69px;
-  height: 300.87px;
-  position: absolute;
-  left: calc(1280px - 94.375%);
-  top: 165.98px;
+  letter-spacing: 0.2rem;
+  margin-top: 32px;
+  margin-left: 5%;
 }
 
 /* mainVisual en */

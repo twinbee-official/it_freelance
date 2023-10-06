@@ -7,85 +7,90 @@
 body {
 	color: $cl_text;
 	font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
-	font-size: 16px;
+	font-size: 16px; // remの基準値
+	position: relative;
 }
 
+// 英字フォント
 .-en {
 	font-family: "Helvetica Neue", "Arial", sans-serif;
 }
 
-
 /* header st */
 .header {
-	height: 84px;
-	padding: 16px 64px 8px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
 	&_inner {
-		// background-color: $cl_plPurple;
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
+		padding: 16px 64px 8px;
 	}
 	&_logo {
-width: 180px;
-height: 60px;
-	}
-}
-.header_logo_link {
-	width: 180px;
-  height: 60px;
-}
-.header_menu {
-	padding: 0px 16px 8px;
-	display: flex;
-	align-items: flex-end;
-	&List{
-		font-size: 16px;
-		align-items: end;
+		// ロゴ
+		&_link {
+			display: block;
+		}
+		&_img {
+			height: 60px;
+			width: 180px;
 		}
 	}
-a.header_menuList_link {
-	padding: 0px 16px 8px;
-}
-.header_menuList_link.-igIcon {
-	display: inline-block;
-	width: 24px;
-	height: 24px;
-	background-image: url(../_images/Instagram_icon.svg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	text-indent: -9999px;
-	vertical-align: middle;
-
 }
 
+// メニュー
+.header_menu {
+	display: flex;
+	align-items: center;
+	&List {
+		&:not(:first-child) {
+			// 初めの要素以外
+			margin-left: 32px;
+		}
+		&_link {
+			font-size: 1rem;
+			font-weight: 600;
+			&.-igIcon {
+				@include imgPath('ig_icon','.svg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: block;
+				height: 24px;
+				text-indent: -9999px;
+				width: 24px;
+			}
+			&:hover {
+				opacity: .5;
+				transition: all .3s ease-out;
+			}
+		}
+	}
+}
 /* header en */
+
 /* mainVisual st */
 .mainVisual {
-	width: 1280px;
-	height: 700px;
-	position: relative;
-	background-image: url(../images/mainVisual.jpg);
+	@include imgPath('mainVisual');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+	height: 87.5vh;
+	min-width: 1280px;
+	width: 100%;
 	&_titleBox {
+		padding-left: 3.5vw;
+		padding-top: 20vh;
 		&_sub {
-			font-size: 16px;
+			font-size: 1rem;
 			line-height: 200%;
-			letter-spacing: 20%;
-			position: absolute;
-			left: calc(1280px - 96.377%);
-			top:501px;
+			letter-spacing: .2rem;
+			margin-top: 32px;
+			margin-left: 5%;
 		}
-
 	}
-}
-.mainVisual_titleBox_main {
-	width: 762.69px;
-	height: 300.87px;
-	position: absolute;
-	left: calc(1280px - 94.375%);
-	top:165.98px;
 }
 /* mainVisual en */
 
