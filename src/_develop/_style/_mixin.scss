@@ -3,6 +3,6 @@
 ------------------------------ */
 
 /* 画像パス */
-@mixin imgPath($name,$type:'.jpg') {
-	background-image: url('../images/' + $name+ $type);
+@mixin imgPath($name,$type:'jpg') {
+	background-image: url('../images/' + $name+ '.' + $type);
 }

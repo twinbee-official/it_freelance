@@ -66,7 +66,7 @@ body {
 				}
 			}
 			&.-igIcon {
-				@include imgPath('ig_icon','.svg');
+				@include imgPath('ig_icon','svg');
 				background-repeat: no-repeat;
 				background-size: cover;
 				display: block;
