@@ -412,7 +412,6 @@ body {
 }
 
 .header_inner {
-  background-color: #EACFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,7 +431,7 @@ body {
 }
 
 .header_menu {
-  padding-bottom: 0px 16px 8px;
+  padding: 0px 16px 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,22 +442,27 @@ body {
 
 .header_menuList {
   font-size: 16px;
-  height: 36px;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: end;
-  padding-bottom: 0px 16px 8px;
-}
-
-.header_menuList a {
-  padding-bottom: 0px 16px 8px;
 }
 
 a.header_menuList_link {
-  padding-bottom: 0px 16px 8px;
+  padding: 0px 16px 8px;
 }
 
-/*リスト*/
+.header_menuList_link.-igIcon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../_images/Instagram_icon.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+  vertical-align: middle;
+}
+
 /* header en */
 /* mainVisual st */
 .mainVisual {
@@ -493,29 +497,56 @@ a.header_menuList_link {
 .free_memberRegist_anchor {
   position: absolute;
   left: calc(1280px - 20.16%);
+  z-index: 1;
   top: 600px;
+  background-image: url(../_images/free_memberRegist_anchor.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 154px;
+}
+
+.free_memberRegist_anchor_link {
+  display: inline-block;
+  text-indent: -9999px;
+  vertical-align: middle;
+  width: 154px;
+  height: 154px;
+  background-image: url(../_images/free_memberRegist_anchor.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+a.free_memberRegist_anchor_link {
+  width: 154px;
+  height: 154px;
+  background-image: url(../_images/free_memberRegist_anchor.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* free_memberRegist_anchor en */
 /* sectionTitle st */
 .sectionTitle {
-  margin: 0% auto;
+  display: block;
   text-align: center;
-  height: 64px;
-  width: 100%;
   font-size: 32px;
   font-weight: bold;
   background-image: url(../images/bg_title_image.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 0px -8px;
-  width: 100%;
+  background-size: 100%;
+  background-position: 0px -15px;
+  height: 64px;
 }
 
 .h2_sub {
+  display: block;
   font-size: 16px;
   margin-top: 20px;
   display: block;
+  height: 26px;
 }
 
 /* sectionTitle en */
@@ -648,6 +679,8 @@ input {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  top: 40px;
 }
 
 .job_introduct_tab_inner {
@@ -783,6 +816,7 @@ input {
 .flow {
   background-color: #fcf9ff;
   margin-top: 96px;
+  padding: 96px 0px;
 }
 
 .flow_list {
@@ -1004,21 +1038,6 @@ input {
 /* access st */
 /* access en */
 /* instagram st */
-h2.-en {
-  margin: 0% auto;
-  text-align: center;
-  height: 64px;
-  width: 100%;
-  font-size: 32px;
-  font-weight: bold;
-  background-image: url(../images/bg_title_image.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  position: relative;
-  z-index: 0;
-}
-
 .instagram_list {
   display: -webkit-box;
   display: -ms-flexbox;

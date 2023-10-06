@@ -20,7 +20,7 @@ body {
 	height: 84px;
 	padding: 16px 64px 8px;
 	&_inner {
-		background-color: $cl_plPurple;
+		// background-color: $cl_plPurple;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -35,27 +35,34 @@ height: 60px;
 
 }
 .header_menu{
-	padding-bottom: 0px 16px 8px;
+	padding: 0px 16px 8px;
 	display: flex;
 	align-items: flex-end;
 	&List{
 		font-size: 16px;
-		height: 36px;
+		// height: 36px;
 		align-items: end;
-		padding-bottom: 0px 16px 8px;
-		& a{padding-bottom: 0px 16px 8px;
+		// padding: 0px 16px 8px;
+		// & a{padding: 0px 16px 8px;
 
 		}
 	}
 	
-}
 a.header_menuList_link{
-	padding-bottom: 0px 16px 8px;
+	padding: 0px 16px 8px;
 }
-/*リスト*/
-.header_menuList {
-	&item{
-	}
+
+.header_menuList_link.-igIcon{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-image: url(../_images/Instagram_icon.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+	vertical-align: middle;
+
 }
 
 /* header en */
@@ -93,28 +100,60 @@ a.header_menuList_link{
 .free_memberRegist_anchor{
 	position: absolute;
 	left: calc(1280px - 20.16%);
+	z-index: 1;
 	top:600px;
+	background-image: url(../_images/free_memberRegist_anchor.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 154px;
+	&_link{
+		display: inline-block;
+		text-indent: -9999px;
+		vertical-align: middle;
+		width: 154px;
+		height: 154px;
+		background-image: url(../_images/free_memberRegist_anchor.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		
+		
+	
+	}
+}
+a.free_memberRegist_anchor_link{
+	width: 154px;
+	height: 154px;
+	background-image: url(../_images/free_memberRegist_anchor.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+
 }
 /* free_memberRegist_anchor en */
 
 /* sectionTitle st */
 .sectionTitle {
-	margin: 0% auto;
+	display: block;
+	// margin: 0% auto;
 	text-align: center;
-	height: 64px;
-	width: 100%;
+	// width: 100%;
 	font-size: 32px;
 	font-weight: bold;
 	background-image: url(../images/bg_title_image.png);
 	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: 0px -8px;
-	width: 100%;
+	background-size: 100%;
+	background-position: 0px -15px;
+	height: 64px;
+	// width: 100%;
 }
 .h2_sub {
+	display: block;
 	font-size: 16px;
 	margin-top: 20px;
 	display: block;
+	height: 26px;
 }
 /* sectionTitle en */
 
@@ -177,6 +216,7 @@ a.header_menuList_link{
 .job_introduct{
 	margin: 0px auto;
 	margin-top: 96px;
+	
 }
 label{
 		// flex: 1 1;
@@ -224,6 +264,8 @@ input{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	position: relative;
+	top: 40px;
 	&_inner{
 		width: 1072px;
 		margin: 0px auto;
@@ -329,6 +371,7 @@ input{
 .flow{
 	background-color: $cl_fadePurple;
 	margin-top: 96px;
+	padding: 96px 0px;
 	&_list{
 		width: 1072px;
 		display: flex;
@@ -502,20 +545,20 @@ input{
 /* access en */
 
 /* instagram st */
-h2.-en{
-	margin: 0% auto;
-	text-align: center;
-	height: 64px;
-	width: 100%;
-	font-size: 32px;
-	font-weight: bold;
-	background-image: url(../images/bg_title_image.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 100%;
-	position: relative;
-	z-index: 0;
-}
+// h2.-en{
+// 	margin: 0% auto;
+// 	text-align: center;
+// 	height: 64px;
+// 	width: 100%;
+// 	font-size: 32px;
+// 	font-weight: bold;
+// 	background-image: url(../images/bg_title_image.png);
+// 	background-repeat: no-repeat;
+// 	background-size: contain;
+// 	width: 100%;
+// 	position: relative;
+// 	z-index: 0;
+// }
 .instagram{
 	&_list{
 	display: flex;
