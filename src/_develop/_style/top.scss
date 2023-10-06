@@ -53,6 +53,18 @@ body {
 		&_link {
 			font-size: 1rem;
 			font-weight: 600;
+			&.-current {
+				// 現在位置
+				&::after {
+					content: '';
+					background-color: $cl_plPurple;
+					display: block;
+					height: 1px;
+					width: 166.9px; // 初期値
+					position: absolute;
+					bottom: 0;
+				}
+			}
 			&.-igIcon {
 				@include imgPath('ig_icon','.svg');
 				background-repeat: no-repeat;

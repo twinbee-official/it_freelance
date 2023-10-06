@@ -456,6 +456,16 @@ body {
   font-weight: 600;
 }
 
+.header_menuList_link.-current::after {
+  content: "";
+  background-color: #EACFFF;
+  display: block;
+  height: 1px;
+  width: 166.9px;
+  position: absolute;
+  bottom: 0;
+}
+
 .header_menuList_link.-igIcon {
   background-image: url("../images/ig_icon.svg");
   background-repeat: no-repeat;
