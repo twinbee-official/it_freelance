@@ -2,3 +2,7 @@
 * mixin設定用SCSS
 ------------------------------ */
 
+/* 画像パス */
+@mixin imgPath($name,$type:'jpg') {
+	background-image: url('../images/' + $name+ '.' + $type);
+}

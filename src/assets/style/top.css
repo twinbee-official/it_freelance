@@ -13,6 +13,7 @@
 /* ------------------------------
 * mixin設定用SCSS
 ------------------------------ */
+/* 画像パス */
 /* リセットCSS */
 /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
@@ -455,7 +456,7 @@ a.header_menuList_link {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url(../_images/Instagram_icon.svg);
+  background-image: url("../images/Instagram_iconv.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -469,7 +470,7 @@ a.header_menuList_link {
   width: 1280px;
   height: 700px;
   position: relative;
-  background-image: url(../images/mainVisual.jpg);
+  background-image: url("../images/mainVisual.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -499,7 +500,7 @@ a.header_menuList_link {
   left: calc(1280px - 20.16%);
   z-index: 1;
   top: 600px;
-  background-image: url(../_images/free_memberRegist_anchor.png);
+  background-image: url("../images/free_memberRegist_anchor.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -512,7 +513,7 @@ a.header_menuList_link {
   vertical-align: middle;
   width: 154px;
   height: 154px;
-  background-image: url(../_images/free_memberRegist_anchor.png);
+  background-image: url("../images/free_memberRegist_anchor.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -521,7 +522,7 @@ a.header_menuList_link {
 a.free_memberRegist_anchor_link {
   width: 154px;
   height: 154px;
-  background-image: url(../_images/free_memberRegist_anchor.png);
+  background-image: url("../images/free_memberRegist_anchor.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -534,7 +535,7 @@ a.free_memberRegist_anchor_link {
   text-align: center;
   font-size: 32px;
   font-weight: bold;
-  background-image: url(../images/bg_title_image.png);
+  background-image: url("../images/bg_title_image.png");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 0px -15px;
@@ -572,7 +573,7 @@ a.free_memberRegist_anchor_link {
   -ms-flex-align: center;
   align-items: center;
   background-color: #fcf9ff;
-  background-image: url(../images/canDo_twinbee_content_1.png);
+  background-image: url("../images/canDo_twinbee_content_1.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -586,13 +587,13 @@ a.free_memberRegist_anchor_link {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  background-image: url(../images/canDo_twinbee_content_2.png);
+  background-image: url("../images/canDo_twinbee_content_2.png");
   background-position: right;
 }
 
 .canDo_twinbee_content:nth-child(4) {
   margin-bottom: 0px;
-  background-image: url(../images/canDo_twinbee_content_3.png);
+  background-image: url("../images/canDo_twinbee_content_3.png");
   background-size: cover;
 }
 
@@ -921,11 +922,24 @@ label:has(:checked) {
   width: 1072px;
   margin: 0px auto;
   border-radius: 12px;
-  background-image: url(../_images/bg_free_memberRegist.png);
-  background-color: #fcf9ff;
+  background-image: url("../images/bg_free_memberRegist.png");
+  background-color: rgb(249, 245, 251);
   background-position: center center;
   background-size: contain;
   background-repeat: repeat;
+  background-blend-mode: overlay;
+  position: relative;
+  z-index: 1;
+}
+
+.free_memberRegist > h2 {
+  position: relative;
+  z-index: 2;
+}
+
+.free_memberRegist_form {
+  position: relative;
+  z-index: 3;
 }
 
 .free_memberRegist_formBox {
