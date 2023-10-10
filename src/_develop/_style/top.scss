@@ -441,40 +441,52 @@ label {
 /* faq en */
 /* free_memberRegist st */
 .free_memberRegist {
-  padding: 64px 0px;
-	width: 1072px;
-	margin: 0px auto;
-	border-radius: 12px;
-	background-image: url(../_images/bg_free_memberRegist.png);
-	background-color: $cl_fadePurple;
-	background-position: center center;
-	background-size: contain;
-	background-repeat: repeat;
-}
-.free_memberRegist_formBox {
-  display: flex;
-  height: 45px;
-  margin-bottom: 20px;
-  justify-content: center;
-  &_title{
-		width: 252px;
-		margin: 0px 20px 0px 8px;
-		font-size: 18px;
-		font-weight: bold;
-	}
-	&_input {
-		width: 436px;
-		height: 45px;
-		border: 1px solid #EACFFF;
-		border-radius: 4px;
-		background-color: $cl_wt;
-		&::placeholder{
-			font-size: 18px;
-			padding: 8px;
-		}
-	}
-
-}
+	padding: 64px 0px;
+	  width: 1072px;
+	  margin: 0px auto;
+	  border-radius: 12px;
+	  @include imgPath('bg_free_memberRegist','png');
+	  background-color: rgba(249,245,251,1);
+	  background-position: center center;
+	  background-size: contain;
+	  background-repeat: repeat;
+	  background-blend-mode: overlay;
+	  position: relative;
+	  z-index: 1;
+	  &>h2{
+  position: relative;
+  z-index: 2;
+	  }
+  &_form{
+	  position: relative;
+	  z-index: 3;
+  }
+  }
+  .free_memberRegist_formBox {
+	display: flex;
+	height: 45px;
+	margin-bottom: 20px;
+	justify-content: center;
+	&_title{
+		  width: 252px;
+		  margin: 0px 20px 0px 8px;
+		  font-size: 18px;
+		  font-weight: bold;
+	  }
+	  &_input {
+		  width: 436px;
+		  height: 45px;
+		  border: 1px solid $cl_plPurple;
+		  border-radius: 4px;
+		  background-color: $cl_wt;
+		  &::placeholder{
+			  font-size: 18px;
+			  padding: 8px;
+		  }
+	  }
+  
+  }
+  
 .-require::before {
   content: "必須";
   font-size: 12px;
