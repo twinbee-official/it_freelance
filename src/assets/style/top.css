@@ -413,7 +413,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
-  width: 100%;
+  width: min(100%, 1280px);
   height: 84px;
   padding: 16px 64px 8px;
   background-color: rgba(255, 255, 255, 0);
@@ -453,6 +453,7 @@ body {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: end;
+  white-space: nowrap；;
 }
 
 a.header_menuList_link {
@@ -539,12 +540,14 @@ a.free_memberRegist_anchor_link {
 .sectionTitle {
   display: block;
   text-align: center;
+  width: min(100%, 1280px);
+  margin: 0px auto;
   font-size: 32px;
   font-weight: bold;
   background-image: url("../images/bg_title_image.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: 0px -15px;
+  background-position: 0px -10px;
   padding-bottom: 15px;
 }
 
@@ -562,8 +565,9 @@ a.free_memberRegist_anchor_link {
 }
 
 .canDo_twinbee_content {
-  width: 1072px;
+  width: min(100%, 1072px);
   height: 483px;
+  height: auto;
   padding: 24px 30px;
   margin: 0px auto;
   margin-bottom: 40px;
@@ -600,7 +604,7 @@ a.free_memberRegist_anchor_link {
   position: relative;
   margin-bottom: 0px;
   background-image: url("../images/canDo_twinbee_content_3.png");
-  background-size: cover;
+  background-size: contain;
 }
 
 .canDo_twinbee_content:nth-child(4)::before {
@@ -628,6 +632,10 @@ a.free_memberRegist_anchor_link {
   z-index: 5;
 }
 
+.canDo_twinbee_content_title_num {
+  font-size: 80px;
+}
+
 .canDo_twinbee_content_text {
   font-size: 16px;
   line-height: 180%;
@@ -639,7 +647,6 @@ a.free_memberRegist_anchor_link {
 /* canDo_twinbee en */
 /* job_introduct st */
 .job_introduct {
-  margin: 0px auto;
   margin-top: 96px;
 }
 
@@ -648,7 +655,7 @@ label {
   -ms-flex-order: -1;
   order: -1;
   position: relative;
-  width: 296.67px;
+  width: min(100%, 296.67px);
   height: 45px;
   padding: 10px;
   background-color: #fcf9ff;
@@ -689,7 +696,7 @@ label:has(:checked) {
 }
 
 .job_introduct_tab {
-  width: 1072px;
+  width: min(100%, 1072px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -708,7 +715,7 @@ label:has(:checked) {
 }
 
 .job_introduct_tab_inner {
-  width: 1072px;
+  width: min(100%, 1072px);
   margin: 0px auto;
   margin-top: 20px;
   padding-bottom: 64px;
@@ -718,7 +725,7 @@ label:has(:checked) {
 }
 
 .job_introduct_tab_content {
-  width: 890px;
+  width: min(100%, 890px);
   height: 220px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -783,7 +790,7 @@ label:has(:checked) {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
-  width: 296.67px;
+  width: min(100%, 296.67px);
   height: 45px;
   text-align: center;
 }
@@ -813,13 +820,13 @@ label:has(:checked) {
 .job_introduct_tab_inner {
   display: none;
   padding-bottom: 64px;
-  width: 1072px;
+  width: min(100%, 1072px);
   padding-bottom: 64px;
   background-color: #fcf9ff;
 }
 
 .job_introduct_example {
-  width: 890px;
+  width: min(100%, 890px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -840,7 +847,7 @@ label:has(:checked) {
 }
 
 .flow_list {
-  width: 1072px;
+  width: min(100%, 1072px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -915,7 +922,7 @@ label:has(:checked) {
 }
 
 .faq_list {
-  width: 890px;
+  width: min(100%, 890px);
   margin: 40px auto 0px;
 }
 
@@ -946,8 +953,7 @@ label:has(:checked) {
 /* free_memberRegist st */
 .free_memberRegist {
   padding: 64px 0px;
-  width: 1072px;
-  margin: 0px auto;
+  position: absolute;
   border-radius: 12px;
   background-image: url("../images/bg_free_memberRegist.png");
   background-color: rgb(249, 245, 251);
@@ -1095,7 +1101,7 @@ label:has(:checked) {
 .access_map_body {
   display: block;
   text-align: center;
-  width: 1280px;
+  width: 100%;
   height: 480px;
 }
 
