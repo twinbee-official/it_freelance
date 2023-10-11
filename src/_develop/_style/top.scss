@@ -191,7 +191,7 @@ a.free_memberRegist_anchor_link {
 		margin-bottom: 0px;
 		@include imgPath('canDo_twinbee_content_3','png');
 		background-size: contain;
-		&::before{
+		&::before {
 			content: "";
 			position: absolute;
 			top: 0;
@@ -199,8 +199,8 @@ a.free_memberRegist_anchor_link {
 			width: 100%;
 			height: 100%;
 			background-image: linear-gradient(90deg, rgba(249, 245, 251, 0) 41%, rgba(249, 245, 251, 0.4) 49%, rgba(249, 245, 251, 0.9) 58% 79%, rgba(249, 245, 251, 0.9) 91%);	
+		}
 	}
-}
 }
 .canDo_twinbee_content {
 	&_inner {
@@ -212,7 +212,7 @@ a.free_memberRegist_anchor_link {
 		align-items: center;
 		position: relative;
 		z-index: 5;
-		&_num{
+		&_num {
 			font-size: 80px;
 		}
 	}
@@ -278,7 +278,7 @@ label {
 	margin: 0px auto;
 	// position: relative;
 	// top: 40px;
-	&::after{
+	&::after {
 		content: "";
 		display: block;
 		clear: both;
@@ -391,7 +391,7 @@ label {
 	background-color: $cl_fadePurple;
 	padding: 96px 0px;
 	margin-top: 96px;
-	&_list{
+	&_list {
 		// width: 1072px;
 		width: min(100%, 1072px);
 		display: flex;
@@ -401,7 +401,6 @@ label {
 		list-style: none;
 	}
 }
-
 .flow_listItem {
 	margin-top: 64px;
 	position: relative;
@@ -439,18 +438,18 @@ label {
 		line-height: 180%;
 	}
 }
-	.flow_listItem_num {
-		line-height: 100%;
-		letter-spacing: 5%;
-		font-size: 40px;
-		transform: translate(-17px,-0.28px) rotate(-10deg);
-		-moz-transform: rotate(-10deg);
-    -webkit-transform: rotate(-10deg);
-	}
-	.flow_listItem_img {
-		width: 148.85px;
-		height: auto;
-	}
+.flow_listItem_num {
+	line-height: 100%;
+	letter-spacing: 5%;
+	font-size: 40px;
+	transform: translate(-17px,-0.28px) rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+}
+.flow_listItem_img {
+	width: 148.85px;
+	height: auto;
+}
 /* flow en */
 
 /* faq st */
@@ -495,11 +494,13 @@ label {
 	background-blend-mode: overlay;
 	position: relative;
 	z-index: 1;
-	&>h2{
+	width: min(100%, 1072px);
+	margin: 0px auto;
+	&>h2 {
 		position: relative;
 		z-index: 2;
 	}
-	&_form{
+	&_form {
 		position: relative;
 		z-index: 3;
 	}
@@ -584,7 +585,6 @@ justify-content: center;
 /* access st */
 .access {
 	// height: 680px;
-
 	padding-top: 96px;
 	margin: 0px auto;
 	&_map_body {
@@ -596,8 +596,8 @@ justify-content: center;
 		height: 480px;
 	}
 }
-.access_map_content{
-	&_data{
+.access_map_content {
+	&_data {
 		width: 435px;
 		height: 246px;
 		border-radius: 12px;
@@ -607,7 +607,7 @@ justify-content: center;
 		border-radius: 12px;
 		// position: absolute;
 		// right: calc(1280px - 57.89%);
-		&box{
+		&box {
 			padding-bottom: 12px;
 			&:last-child {
 				padding-bottom: none;
@@ -622,10 +622,7 @@ justify-content: center;
 		}
 	}
 }
-
-
 /* access en */
-
 /* instagram st */
 .instagram {
 	// height: 1275.66px;

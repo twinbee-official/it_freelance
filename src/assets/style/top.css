@@ -963,6 +963,8 @@ label:has(:checked) {
   background-blend-mode: overlay;
   position: relative;
   z-index: 1;
+  width: min(100%, 1072px);
+  margin: 0px auto;
 }
 
 .free_memberRegist > h2 {
