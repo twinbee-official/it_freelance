@@ -473,7 +473,7 @@ a.header_menuList_link {
 /* header en */
 /* mainVisual st */
 .mainVisual {
-  width: 1280px;
+  width: 100%;
   height: 700px;
   position: relative;
   background-image: url("../images/mainVisual.jpg");
@@ -487,7 +487,7 @@ a.header_menuList_link {
   line-height: 200%;
   letter-spacing: 20%;
   position: absolute;
-  left: calc(1280px - 96.377%);
+  left: 3.623%;
   top: 501px;
 }
 
@@ -495,7 +495,7 @@ a.header_menuList_link {
   width: 762.69px;
   height: 300.87px;
   position: absolute;
-  left: calc(1280px - 94.375%);
+  left: 5.625%;
   top: 165.98px;
 }
 
@@ -503,7 +503,7 @@ a.header_menuList_link {
 /* free_memberRegist_anchor st */
 .free_memberRegist_anchor {
   position: absolute;
-  left: calc(1280px - 20.16%);
+  left: 79.84%;
   z-index: 1;
   top: 600px;
   background-image: url("../images/free_memberRegist_anchor.png");
@@ -689,6 +689,7 @@ label:has(:checked) {
 }
 
 .job_introduct_tab {
+  width: 1072px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -697,7 +698,7 @@ label:has(:checked) {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
+  margin: 0px auto;
 }
 
 .job_introduct_tab::after {
@@ -894,8 +895,12 @@ label:has(:checked) {
 }
 
 .flow_listItem_num {
+  line-height: 100%;
+  letter-spacing: 5%;
+  font-size: 40px;
+  transform: translate(-17px, -0.28px) rotate(-10deg);
+  -moz-transform: rotate(-10deg);
   -webkit-transform: rotate(-10deg);
-  transform: rotate(-10deg);
 }
 
 .flow_listItem_img {
