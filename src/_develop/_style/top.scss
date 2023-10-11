@@ -17,6 +17,11 @@ body {
 
 /* header st */
 .header {
+	position: absolute;
+	z-index: 9999;
+	left: 50%;
+	transform: translate(-50%,0%);
+	width: 100%;
 	height: 84px;
 	padding: 16px 64px 8px;
 	background-color: rgba(255,255,255,0);
@@ -35,7 +40,7 @@ body {
   height: 60px;
 }
 .header_menu {
-	padding: 0px 16px 8px;
+	padding-bottom: 8px;
 	display: flex;
 	align-items: flex-end;
 	&List{
@@ -48,9 +53,8 @@ a.header_menuList_link {
 }
 .header_menuList_link.-igIcon {
 	display: inline-block;
-	width: 24px;
-	height: 24px;
-	@include imgPath('Instagram_iconv','svg');
+	padding-bottom: 0px;
+	@include imgPath('Instagram_icon','svg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -63,7 +67,9 @@ a.header_menuList_link {
 /* mainVisual st */
 .mainVisual {
 	width: 1280px;
+	// width: 100%;
 	height: 700px;
+	// height: auto;
 	position: relative;
 	@include imgPath('mainVisual');
 	background-size: cover;
