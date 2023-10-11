@@ -597,9 +597,21 @@ a.free_memberRegist_anchor_link {
 }
 
 .canDo_twinbee_content:nth-child(4) {
+  position: relative;
   margin-bottom: 0px;
   background-image: url("../images/canDo_twinbee_content_3.png");
   background-size: cover;
+}
+
+.canDo_twinbee_content:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(41%, rgba(249, 245, 251, 0)), color-stop(49%, rgba(249, 245, 251, 0.4)), color-stop(58%, rgba(249, 245, 251, 0.9)), color-stop(91%, rgba(249, 245, 251, 0.9)));
+  background-image: linear-gradient(90deg, rgba(249, 245, 251, 0) 41%, rgba(249, 245, 251, 0.4) 49%, rgba(249, 245, 251, 0.9) 58% 79%, rgba(249, 245, 251, 0.9) 91%);
 }
 
 .canDo_twinbee_content_inner {
@@ -612,12 +624,16 @@ a.free_memberRegist_anchor_link {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
+  z-index: 5;
 }
 
 .canDo_twinbee_content_text {
   font-size: 16px;
   line-height: 180%;
   margin-top: 20px;
+  position: relative;
+  z-index: 5;
 }
 
 /* canDo_twinbee en */
