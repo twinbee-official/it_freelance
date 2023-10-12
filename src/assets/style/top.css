@@ -400,111 +400,119 @@ body {
   color: #382A3F;
   font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 16px;
+  position: relative;
 }
 
 .-en {
   font-family: "Helvetica Neue", "Arial", sans-serif;
 }
 
+/* common en */
 /* header st */
 .header {
+  width: 100%;
   position: absolute;
-  z-index: 9999;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0%);
-  transform: translate(-50%, 0%);
-  width: min(100%, 1280px);
-  height: 84px;
-  padding: 16px 64px 8px;
-  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .header_inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.header_logo {
-  width: 180px;
-  height: 60px;
+  padding: 16px 64px 8px;
 }
 
 .header_logo_link {
-  width: 180px;
+  display: block;
+}
+
+.header_logo_img {
   height: 60px;
+  width: 180px;
 }
 
 .header_menu {
-  padding-bottom: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.header_menuList {
-  font-size: 16px;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
-  white-space: nowrap；;
+.header_menuList:not(:first-child) {
+  margin-left: 32px;
 }
 
-a.header_menuList_link {
-  padding: 0px 16px 8px;
+.header_menuList_link {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.header_menuList_link.-current::after {
+  content: "";
+  background-color: #EACFFF;
+  display: block;
+  height: 1px;
+  width: 166.9px;
+  position: absolute;
+  bottom: 0;
 }
 
 .header_menuList_link.-igIcon {
-  display: inline-block;
-  padding-bottom: 0px;
-  background-image: url("../images/Instagram_icon.svg");
-  background-position: center center;
+  background-image: url("../images/ig_icon.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  display: block;
+  height: 24px;
   text-indent: -9999px;
-  vertical-align: middle;
+  width: 24px;
+}
+
+.header_menuList_link:hover {
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 /* header en */
 /* mainVisual st */
 .mainVisual {
-  width: 100%;
-  height: 700px;
-  position: relative;
   background-image: url("../images/mainVisual.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  height: 87.5vh;
+  min-width: 1280px;
+  width: 100%;
+}
+
+.mainVisual_titleBox {
+  padding-left: 3.5vw;
+  padding-top: 20vh;
 }
 
 .mainVisual_titleBox_sub {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 200%;
-  letter-spacing: 20%;
-  position: absolute;
-  left: 3.623%;
-  top: 501px;
-}
-
-.mainVisual_titleBox_main {
-  width: 762.69px;
-  height: 300.87px;
-  position: absolute;
-  left: 5.625%;
-  top: 165.98px;
+  letter-spacing: 0.2rem;
+  margin-top: 32px;
+  margin-left: 5%;
 }
 
 /* mainVisual en */
 /* free_memberRegist_anchor st */
 .free_memberRegist_anchor {
   position: absolute;
-  left: 79.84%;
+  left: calc(1280px - 20.16%);
   z-index: 1;
   top: 600px;
   background-image: url("../images/free_memberRegist_anchor.png");
@@ -542,7 +550,7 @@ a.free_memberRegist_anchor_link {
   text-align: center;
   width: min(100%, 1280px);
   margin: 0px auto;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
   background-image: url("../images/bg_title_image.png");
   background-repeat: no-repeat;
@@ -553,7 +561,7 @@ a.free_memberRegist_anchor_link {
 
 .h2_sub {
   display: block;
-  font-size: 16px;
+  font-size: 1rem;
   margin-top: 20px;
   display: block;
 }
@@ -567,7 +575,6 @@ a.free_memberRegist_anchor_link {
 .canDo_twinbee_content {
   width: min(100%, 1072px);
   height: 483px;
-  height: auto;
   padding: 24px 30px;
   margin: 0px auto;
   margin-bottom: 40px;
@@ -623,7 +630,7 @@ a.free_memberRegist_anchor_link {
 }
 
 .canDo_twinbee_content_title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -633,11 +640,11 @@ a.free_memberRegist_anchor_link {
 }
 
 .canDo_twinbee_content_title_num {
-  font-size: 80px;
+  font-size: 5rem;
 }
 
 .canDo_twinbee_content_text {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 180%;
   margin-top: 20px;
   position: relative;
@@ -660,7 +667,7 @@ label {
   padding: 10px;
   background-color: #fcf9ff;
   color: #EACFFF;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   text-align: center;
   border-left: dashed 1px #EACFFF;
@@ -741,7 +748,7 @@ label:has(:checked) {
 }
 
 .job_introduct_tab_content_title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -757,7 +764,7 @@ label:has(:checked) {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0px auto;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .job_introduct_example_title {
@@ -788,7 +795,7 @@ label:has(:checked) {
 .job_introduct_tab label:has(:checked) {
   background-color: #DAADFF;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   width: min(100%, 296.67px);
   height: 45px;
@@ -889,7 +896,7 @@ label:has(:checked) {
 }
 
 .flow_listItem_title {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
   padding-top: 20px;
@@ -897,14 +904,14 @@ label:has(:checked) {
 
 .flow_listItem_text {
   width: 188.5px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 180%;
 }
 
 .flow_listItem_num {
   line-height: 100%;
   letter-spacing: 5%;
-  font-size: 40px;
+  font-size: 2.5rem;
   transform: translate(-17px, -0.28px) rotate(-10deg);
   -moz-transform: rotate(-10deg);
   -webkit-transform: rotate(-10deg);
@@ -937,14 +944,14 @@ label:has(:checked) {
 }
 
 .faq_listItem_title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   padding-bottom: 20px;
   border-bottom: 1px solid #EACFFF;
 }
 
 .faq_listItem_text {
-  font-size: 16px;
+  font-size: 1rem;
   padding: 20px 0px 12px 20px;
   margin-left: 0px;
 }
@@ -991,7 +998,7 @@ label:has(:checked) {
 .free_memberRegist_formBox_title {
   width: 252px;
   margin: 0px 20px 0px 8px;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
 }
 
@@ -1004,33 +1011,33 @@ label:has(:checked) {
 }
 
 .free_memberRegist_formBox_input::-webkit-input-placeholder {
-  font-size: 18px;
+  font-size: 1.125rem;
   padding: 8px;
 }
 
 .free_memberRegist_formBox_input::-moz-placeholder {
-  font-size: 18px;
+  font-size: 1.125rem;
   padding: 8px;
 }
 
 .free_memberRegist_formBox_input:-ms-input-placeholder {
-  font-size: 18px;
+  font-size: 1.125rem;
   padding: 8px;
 }
 
 .free_memberRegist_formBox_input::-ms-input-placeholder {
-  font-size: 18px;
+  font-size: 1.125rem;
   padding: 8px;
 }
 
 .free_memberRegist_formBox_input::placeholder {
-  font-size: 18px;
+  font-size: 1.125rem;
   padding: 8px;
 }
 
 .-require::before {
   content: "必須";
-  font-size: 12px;
+  font-size: 0.75rem;
   letter-spacing: 10%;
   padding: 4px 8px 5px;
   color: #fff;
@@ -1045,7 +1052,7 @@ label:has(:checked) {
 .free_memberRegist_form_privacyPolicy {
   width: 708px;
   height: 240px;
-  font-size: 12px;
+  font-size: 0.75rem;
   border: 1px solid #EACFFF;
   border-radius: 4px;
   line-height: 160%;
@@ -1062,7 +1069,7 @@ label:has(:checked) {
 }
 
 .free_memberRegist_form_checkBox {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   margin-top: 20px;
   text-align: center;
@@ -1127,7 +1134,7 @@ label:has(:checked) {
 }
 
 .access_map_content_databox_title {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -1194,7 +1201,7 @@ footer_logo {
 }
 
 .copyRight {
-  font-size: 12px;
+  font-size: 0.75rem;
   display: block;
   margin-top: 10px;
 }
