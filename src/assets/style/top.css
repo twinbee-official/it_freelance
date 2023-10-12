@@ -407,6 +407,15 @@ body {
   font-family: "Helvetica Neue", "Arial", sans-serif;
 }
 
+@font-face {
+  font-family: "ooohbaby";
+  src: url("../font/OoohBaby-Regular.ttf");
+}
+.-handWriteFont {
+  font-family: "ooohbaby";
+}
+
+/* common  en */
 /* common en */
 /* header st */
 .header {
