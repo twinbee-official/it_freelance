@@ -19,8 +19,14 @@ body {
 	src: url('../font/OoohBaby-Regular.ttf');
 }
 
-.-handWriteFont {
+.-handWriteFont,.-num{
 	font-family: 'ooohbaby';
+}
+.-handWriteFont{
+	color: #DABAF4;
+}
+.-num{
+	color: #DAADFF;
 }
 /* common  en */
 
@@ -119,9 +125,9 @@ body {
 /* free_memberRegist_anchor st */
 .free_memberRegist_anchor {
 	position: absolute;
-	left: calc(1280px - 20.16%);
+	left: calc(100% - 20.16%);
 	z-index: 1;
-	top:600px;
+	top:540px;
 	@include imgPath('free_memberRegist_anchor','png');
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -153,7 +159,6 @@ a.free_memberRegist_anchor_link{
 .sectionTitle {
 	display: block;
 	text-align: center;
-	// width: 1280px;
 	width: min(100%, $minWin);
 	margin: 0px auto;
 	font-size: 2rem;
@@ -175,12 +180,17 @@ a.free_memberRegist_anchor_link{
 /* canDo_twinbee st */
 .canDo_twinbee {
 	margin-top: 64px;
+	@include mp($tab){
+		
+	}
+	@include mp($sp){
+		margin-top: 48px;
+	}
+
 }
 .canDo_twinbee_content {
-	// width: 1072px;
 	width: min(100%, 1072px);
 	height: 483px;
-	// height: auto;
 	padding: 24px 30px;
 	margin: 0px auto;
 	margin-bottom: 40px;

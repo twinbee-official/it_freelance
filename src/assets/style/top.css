@@ -411,8 +411,16 @@ body {
   font-family: "ooohbaby";
   src: url("../font/OoohBaby-Regular.ttf");
 }
-.-handWriteFont {
+.-handWriteFont, .-num {
   font-family: "ooohbaby";
+}
+
+.-handWriteFont {
+  color: #DABAF4;
+}
+
+.-num {
+  color: #DAADFF;
 }
 
 /* common  en */
@@ -521,9 +529,9 @@ body {
 /* free_memberRegist_anchor st */
 .free_memberRegist_anchor {
   position: absolute;
-  left: calc(1280px - 20.16%);
+  left: 79.84%;
   z-index: 1;
-  top: 600px;
+  top: 540px;
   background-image: url("../images/free_memberRegist_anchor.png");
   background-position: center center;
   background-repeat: no-repeat;
