@@ -424,7 +424,6 @@ body {
 }
 
 /* common  en */
-/* common en */
 /* header st */
 .header {
   width: 100%;
@@ -576,6 +575,14 @@ a.free_memberRegist_anchor_link {
   padding-bottom: 15px;
 }
 
+@media screen and (max-width: 420px) {
+  .sectionTitle {
+    width: min(100%, 375px);
+    font-size: 1.5rem;
+    background-image: url("../images/m_bg_title_image.png");
+    background-position: 0px -20px;
+  }
+}
 .h2_sub {
   display: block;
   font-size: 1rem;
@@ -589,6 +596,11 @@ a.free_memberRegist_anchor_link {
   margin-top: 64px;
 }
 
+@media screen and (max-width: 420px) {
+  .canDo_twinbee {
+    padding-top: 48px;
+  }
+}
 .canDo_twinbee_content {
   width: min(100%, 1072px);
   height: 483px;
@@ -656,10 +668,22 @@ a.free_memberRegist_anchor_link {
   z-index: 5;
 }
 
+@media screen and (max-width: 420px) {
+  .canDo_twinbee_content_title {
+    font-size: 18px;
+    margin: 0px auto;
+  }
+}
 .canDo_twinbee_content_title_num {
   font-size: 5rem;
 }
 
+@media screen and (max-width: 420px) {
+  .canDo_twinbee_content_title_num {
+    font-size: 64px;
+    margin: 0px auto;
+  }
+}
 .canDo_twinbee_content_text {
   font-size: 1rem;
   line-height: 180%;
@@ -668,12 +692,24 @@ a.free_memberRegist_anchor_link {
   z-index: 5;
 }
 
+@media screen and (max-width: 420px) {
+  .canDo_twinbee_content_text {
+    font-size: 14px;
+    margin: 0px auto;
+  }
+}
 /* canDo_twinbee en */
 /* job_introduct st */
 .job_introduct {
   margin-top: 96px;
 }
 
+@media screen and (max-width: 420px) {
+  .job_introduct {
+    padding: 64px 0px;
+    margin: 0px auto;
+  }
+}
 label {
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
@@ -691,6 +727,13 @@ label {
   cursor: pointer;
 }
 
+@media screen and (max-width: 420px) {
+  label {
+    width: min(100%, 114.33px);
+    font-size: 1rem;
+    height: 26px;
+  }
+}
 label:first-child {
   border-left: none;
 }
@@ -732,6 +775,11 @@ label:has(:checked) {
   margin: 0px auto;
 }
 
+@media screen and (max-width: 420px) {
+  .job_introduct_tab {
+    width: min(100%, 343px);
+  }
+}
 .job_introduct_tab::after {
   content: "";
   display: block;
@@ -748,6 +796,11 @@ label:has(:checked) {
   display: none;
 }
 
+@media screen and (max-width: 420px) {
+  .job_introduct_tab_inner {
+    width: min(100%, 343px);
+  }
+}
 .job_introduct_tab_content {
   width: min(100%, 890px);
   height: 220px;
@@ -764,11 +817,24 @@ label:has(:checked) {
   padding-top: 40px;
 }
 
+@media screen and (max-width: 420px) {
+  .job_introduct_tab_content {
+    width: min(100%, 311px);
+    display: block;
+    height: 257px;
+  }
+}
 .job_introduct_tab_content_title {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
+@media screen and (max-width: 420px) {
+  .job_introduct_tab_content_title {
+    font-size: 18px;
+    text-align: center;
+  }
+}
 .job_introduct_tab img {
   width: 334px;
   height: 220px;
@@ -784,6 +850,11 @@ label:has(:checked) {
   font-size: 1rem;
 }
 
+@media screen and (max-width: 420px) {
+  .job_introduct_example {
+    display: block;
+  }
+}
 .job_introduct_example_title {
   width: 253px;
   padding-top: 20px;
@@ -793,6 +864,13 @@ label:has(:checked) {
   line-height: 180%;
 }
 
+@media screen and (max-width: 420px) {
+  .job_introduct_example_title {
+    width: 311px;
+    border-bottom: none;
+    padding-bottom: 8px;
+  }
+}
 .job_introduct_example_text {
   margin: 0px;
   padding-left: 20px;
@@ -803,6 +881,15 @@ label:has(:checked) {
   line-height: 180%;
 }
 
+@media screen and (max-width: 420px) {
+  .job_introduct_example_text {
+    width: 311px;
+    font-size: 14px;
+    padding-left: 0px;
+    padding-bottom: 16px;
+    padding-top: 0px;
+  }
+}
 .job_introduct_example_text_content {
   padding-left: 20px;
   list-style-type: disc;
@@ -819,6 +906,13 @@ label:has(:checked) {
   text-align: center;
 }
 
+@media screen and (max-width: 420px) {
+  .job_introduct_tab > label:hover,
+  .job_introduct_tab label:has(:checked) {
+    width: min(100%, 114.33px);
+    height: 52px;
+  }
+}
 .job_introduct_tab label:has(:checked)::before {
   position: absolute;
   bottom: -8px;
@@ -849,6 +943,12 @@ label:has(:checked) {
   background-color: #fcf9ff;
 }
 
+@media screen and (max-width: 420px) {
+  .job_introduct_tab_inner {
+    width: min(100%, 343px);
+    padding-bottom: 40px;
+  }
+}
 .job_introduct_example {
   width: min(100%, 890px);
   display: -webkit-box;
@@ -862,6 +962,11 @@ label:has(:checked) {
   justify-content: center;
 }
 
+@media screen and (max-width: 420px) {
+  .job_introduct_example {
+    width: min(100%, 311px);
+  }
+}
 /* job_introduct en */
 /* flow st */
 .flow {
@@ -870,6 +975,12 @@ label:has(:checked) {
   margin-top: 96px;
 }
 
+@media screen and (max-width: 420px) {
+  .flow {
+    margin-top: 64px;
+    padding: 40px 0px;
+  }
+}
 .flow_list {
   width: min(100%, 1072px);
   display: -webkit-box;
@@ -883,6 +994,12 @@ label:has(:checked) {
   list-style: none;
 }
 
+@media screen and (max-width: 420px) {
+  .flow_list {
+    display: block;
+    width: min(100%, 343px);
+  }
+}
 .flow_listItem {
   margin-top: 64px;
   position: relative;
@@ -903,6 +1020,15 @@ label:has(:checked) {
   margin: 0px 8px;
 }
 
+@media screen and (max-width: 420px) {
+  .flow_listItem:not(:last-child)::after {
+    position: static;
+    border-style: solid;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-top: 15.94px solid #eacfff;
+  }
+}
 .flow_listItem_inner {
   width: 188.85px;
   text-align: center;
@@ -912,6 +1038,17 @@ label:has(:checked) {
   padding: 36px 20px 12px 20px;
 }
 
+@media screen and (max-width: 420px) {
+  .flow_listItem_inner {
+    width: 343px;
+    height: 160px;
+    padding: 20px 8px;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 .flow_listItem_title {
   font-size: 1rem;
   font-weight: bold;
@@ -925,6 +1062,11 @@ label:has(:checked) {
   line-height: 180%;
 }
 
+@media screen and (max-width: 420px) {
+  .flow_listItem_text {
+    font-size: 14px;
+  }
+}
 .flow_listItem_num {
   line-height: 100%;
   letter-spacing: 5%;
@@ -934,17 +1076,36 @@ label:has(:checked) {
   -webkit-transform: rotate(-10deg);
 }
 
+@media screen and (max-width: 420px) {
+  .flow_listItem_num {
+    font-size: 32px;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
 .flow_listItem_img {
   width: 148.85px;
   height: auto;
 }
 
+@media screen and (max-width: 420px) {
+  .flow_listItem_img {
+    width: 143.5px;
+    height: 120px;
+    margin-left: 0%;
+  }
+}
 /* flow en */
 /* faq st */
 .faq {
   padding: 96px 0px;
 }
 
+@media screen and (max-width: 420px) {
+  .faq {
+    padding: 64px 0px;
+  }
+}
 .faq_list {
   width: min(100%, 890px);
   margin: 40px auto 0px;
@@ -967,12 +1128,22 @@ label:has(:checked) {
   border-bottom: 1px solid #EACFFF;
 }
 
+@media screen and (max-width: 420px) {
+  .faq_listItem_title {
+    font-size: 1rem;
+  }
+}
 .faq_listItem_text {
   font-size: 1rem;
   padding: 20px 0px 12px 20px;
   margin-left: 0px;
 }
 
+@media screen and (max-width: 420px) {
+  .faq_listItem_text {
+    font-size: 14px;
+  }
+}
 /* faq en */
 /* free_memberRegist st */
 .free_memberRegist {
@@ -991,6 +1162,12 @@ label:has(:checked) {
   margin: 0px auto;
 }
 
+@media screen and (max-width: 420px) {
+  .free_memberRegist {
+    padding: 40px 16px;
+    width: min(100%, 375px);
+  }
+}
 .free_memberRegist > h2 {
   position: relative;
   z-index: 2;
@@ -1005,20 +1182,34 @@ label:has(:checked) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 45px;
+  height: auto;
   margin-bottom: 20px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
+@media screen and (max-width: 420px) {
+  .free_memberRegist_formBox {
+    display: block;
+  }
+}
 .free_memberRegist_formBox_title {
   width: 252px;
   margin: 0px 20px 0px 8px;
   font-size: 1.125rem;
   font-weight: bold;
+  width: min(100%, 1072px);
 }
 
+@media screen and (max-width: 420px) {
+  .free_memberRegist_formBox_title {
+    width: 343px;
+    font-size: 1rem;
+    margin: 0px;
+    margin-bottom: 8px;
+  }
+}
 .free_memberRegist_formBox_input {
   width: 436px;
   height: 45px;
@@ -1027,31 +1218,50 @@ label:has(:checked) {
   background-color: #fff;
 }
 
+@media screen and (max-width: 420px) {
+  .free_memberRegist_formBox_input {
+    width: 343px;
+    height: 42px;
+  }
+}
 .free_memberRegist_formBox_input::-webkit-input-placeholder {
   font-size: 1.125rem;
   padding: 8px;
 }
-
 .free_memberRegist_formBox_input::-moz-placeholder {
   font-size: 1.125rem;
   padding: 8px;
 }
-
 .free_memberRegist_formBox_input:-ms-input-placeholder {
   font-size: 1.125rem;
   padding: 8px;
 }
-
 .free_memberRegist_formBox_input::-ms-input-placeholder {
   font-size: 1.125rem;
   padding: 8px;
 }
-
 .free_memberRegist_formBox_input::placeholder {
   font-size: 1.125rem;
   padding: 8px;
 }
 
+@media screen and (max-width: 420px) {
+  .free_memberRegist_formBox_input::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  .free_memberRegist_formBox_input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .free_memberRegist_formBox_input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .free_memberRegist_formBox_input::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .free_memberRegist_formBox_input::placeholder {
+    font-size: 1rem;
+  }
+}
 .-require::before {
   content: "必須";
   font-size: 0.75rem;
@@ -1062,6 +1272,13 @@ label:has(:checked) {
   border-radius: 4px;
 }
 
+@media screen and (max-width: 420px) {
+  .-require::before {
+    font-size: 12px;
+    line-height: 100%;
+    margin-right: 8px;
+  }
+}
 .free_memberRegist_form {
   padding-top: 25px;
 }
@@ -1081,6 +1298,11 @@ label:has(:checked) {
   background-color: #fff;
 }
 
+@media screen and (max-width: 420px) {
+  .free_memberRegist_form_privacyPolicy {
+    width: 343px;
+  }
+}
 .free_memberRegist_form_privacyPolicy::-webkit-scrollbar {
   display: none;
 }
@@ -1092,6 +1314,11 @@ label:has(:checked) {
   text-align: center;
 }
 
+@media screen and (max-width: 420px) {
+  .free_memberRegist_form_checkBox {
+    font-size: 1rem;
+  }
+}
 .free_memberRegist_form_submitBtn input[type=submit] {
   color: #fff;
   display: -webkit-box;
@@ -1117,6 +1344,13 @@ label:has(:checked) {
   padding: 0px;
 }
 
+@media screen and (max-width: 420px) {
+  .free_memberRegist_form_submitBtn input[type=submit] {
+    width: 343px;
+    font-size: 18px;
+    padding: 20px 0px;
+  }
+}
 /* free_memberRegist en */
 /* access st */
 .access {
@@ -1125,6 +1359,11 @@ label:has(:checked) {
   height: auto;
 }
 
+@media screen and (max-width: 420px) {
+  .access {
+    padding: 64px 0px;
+  }
+}
 .access_map_body {
   display: block;
   text-align: center;
@@ -1135,6 +1374,12 @@ label:has(:checked) {
   margin-top: 40px;
 }
 
+@media screen and (max-width: 420px) {
+  .access_map_body {
+    height: 375px;
+    margin-top: 0px;
+  }
+}
 .access_map_content_data {
   width: 435px;
   height: 246px;
@@ -1155,6 +1400,17 @@ label:has(:checked) {
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 420px) {
+  .access_map_content_data {
+    display: block;
+    position: static;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: none;
+    box-shadow: none;
+    padding: 20px 16px;
+  }
+}
 .access_map_content_data_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1167,6 +1423,11 @@ label:has(:checked) {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 420px) {
+  .access_map_content_data_wrap {
+    display: block;
+  }
+}
 .access_map_content_dataBox {
   padding-bottom: 12px;
 }
@@ -1207,12 +1468,27 @@ a.access_map_content_expandBtn {
   margin-right: 0px;
 }
 
+@media screen and (max-width: 420px) {
+  a.access_map_content_expandBtn {
+    position: relative;
+    left: 18.93%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 2;
+    top: 340px;
+  }
+}
 /* access en */
 /* instagram st */
 .instagram {
   margin-top: 96px;
 }
 
+@media screen and (max-width: 420px) {
+  .instagram {
+    padding: 64px 0px;
+  }
+}
 .instagram_list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1243,6 +1519,11 @@ a.access_map_content_expandBtn {
   background-image: linear-gradient(90deg, rgb(154, 176, 255), rgb(239, 207, 255) 52%, rgb(234, 207, 255) 78%, rgb(218, 173, 255));
 }
 
+@media screen and (max-width: 420px) {
+  .instagram_moreBtn {
+    width: 343px;
+  }
+}
 .instagram_moreBtn_link {
   color: #fff;
   text-decoration: none;
@@ -1258,6 +1539,12 @@ footer {
   margin-top: 96px;
 }
 
+@media screen and (max-width: 420px) {
+  footer {
+    height: 134px;
+    padding: 20px 0px;
+  }
+}
 footer_logo {
   width: 80px;
   height: 80px;
@@ -1265,6 +1552,12 @@ footer_logo {
   margin: 0px auto;
 }
 
+@media screen and (max-width: 420px) {
+  footer_logo {
+    width: 65px;
+    height: 65px;
+  }
+}
 .copyRight {
   font-size: 0.75rem;
   display: block;
