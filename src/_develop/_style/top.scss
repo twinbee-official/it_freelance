@@ -10,6 +10,12 @@ body {
 	font-size: 16px; // remの基準値(16px=1rem)
 	position: relative;
 }
+br{
+	display: none;
+	@include mq(sp) {
+	display: block;
+	}
+}
 // 英字フォント
 .-en {
 	font-family: "Helvetica Neue", "Arial", sans-serif;
@@ -40,6 +46,11 @@ body {
 		display: flex;
 		justify-content: space-between;
 		padding: 16px 64px 8px;
+		@include mq(sp) {
+		align-items: flex-start;
+		padding-left: 16.5px;
+		padding-top: 16px;
+		}
 	}
 	&_logo {
 		// ロゴ
@@ -49,6 +60,10 @@ body {
 		&_img {
 			height: 60px;
 			width: 180px;
+			@include mq(sp) {
+			height: auto;
+			width: max(100px, 162px);
+			}
 		}
 	}
 }
@@ -101,6 +116,9 @@ body {
 	background-size: cover;
 	height: 87.5vh;
 	width: min(100%, 1280px);
+	@include mq(sp) {
+	width: min(100%, 375px);
+	}
 	&_titleBox {
 		padding-left: 3.5vw;
 		padding-top: 20vh;
@@ -110,6 +128,10 @@ body {
 			line-height: 200%;
 			margin-left: 5%;
 			margin-top: 32px;
+			@include mq(sp) {
+			line-height: 160%;
+			text-align: center
+			}
 		}
 	}
 }
@@ -167,7 +189,8 @@ body {
 .canDo_twinbee {
 	margin-top: 64px;
 	@include mq(sp) {
-	padding-top:48px;
+	margin: 0px auto;
+	padding-top: 48px;
 	}
 }
 .canDo_twinbee_content {
@@ -184,20 +207,39 @@ body {
 	margin-bottom: 40px;
 	padding: 24px 30px;
 	width: min(100%, 1072px);
+	@include mq(sp) {
+	background-image: none;
+	height: auto;
+	justify-content: center;
+	width: min(100%, 343px);
+	}
 	&:nth-child(2) {
 		background-position: 30px 0px;
 		margin-top: 40px;
+		@include mq(sp) {
+		background-position: center;
+		}
 	}
 	&:nth-child(3) {
 		@include imgPath('canDo_twinbee_content_2','png');
 		background-position: right;
 		justify-content: flex-start;
+		@include mq(sp) {
+		background-image: none;
+		background-position: center;
+		justify-content: center;
+		}
 	}
 	&:nth-child(4) {
 		@include imgPath('canDo_twinbee_content_3','png');
 		background-size: contain;
 		margin-bottom: 0px;
 		position: relative;
+		@include mq(sp) {
+		background-image: none;
+		background-position: center;
+		position: static;
+		}
 		&::before {
 			content: "";
 			background-image: linear-gradient(90deg, rgba(249, 245, 251, 0) 41%, rgba(249, 245, 251, 0.4) 49%, rgba(249, 245, 251, 0.9) 58% 79%, rgba(249, 245, 251, 0.9) 91%);	
@@ -206,6 +248,10 @@ body {
 			position: absolute;
 			top: 0;
 			width: 100%;
+			@include mq(sp) {
+			background-image: none;
+			position: static;
+			}
 		}
 	}
 }
@@ -222,12 +268,13 @@ body {
 		@include mq(sp) {
 		font-size: 1.125rem;
 		margin: 0px auto;
+		text-align: center;
 		}
 		&_num {
 			font-size: 5rem;
+			margin-right: 20px;
 			@include mq(sp) {
 			font-size: 4rem;
-			margin: 0px auto;
 			}
 		}
 	}
@@ -240,18 +287,77 @@ body {
 		@include mq(sp) {
 		font-size: 0.875rem;
 		margin: 0px auto;
+		width: min(100%, 283px);
 		}
 	}
-}/* canDo_twinbee en */
+}
+.canDo_twinbee_content_title{
+	@include mq(sp) {
+	justify-content: center;
+	}
+	&:nth-child(1)::after{
+		@include mq(sp) {
+		align-items: center;
+		content: url(../images/m_canDo_twinbee_content_1.png);
+		display: flex;
+		height: 304px;
+		justify-content: center;
+		transform: scale(0.5);
+		}
+	}
+	&:nth-child(2)::after{
+		@include mq(sp) {
+		align-items: center;
+		content: url(../images/m_canDo_twinbee_content_2.png);
+		display: flex;
+		height: 304px;
+		justify-content: center;
+		transform: scale(0.5);
+		}
+	}
+	&:nth-child(2)::after{
+		@include mq(sp) {
+		align-items: center;
+		content: url(../images/m_canDo_twinbee_content_3.png);
+		display: flex;
+		height: 304px;
+		justify-content: center;
+		transform: scale(0.5);
+		}
+	}
+}
+.canDo_twinbee_content_text{
+	&::before{
+		@include mq(sp) {
+		content: url(../images/m_plus.svg)"タップで詳しく見る";
+		display: flex;
+		font-size: 0.875rem;
+		font-weight: bold;
+		justify-content: center;
+		vertical-align: middle;
+		}
+	}
+	&::after{
+		@include mq(sp) {
+		content: url(../images/m_minus.svg)"タップで閉じる";
+		display: flex;
+		font-size: 0.875rem;
+		font-weight: bold;
+		justify-content: center;
+		margin-top: 28px;
+		}
+	}
+}
+/* canDo_twinbee en */
 /* job_introduct st */
 .job_introduct {
 	margin-top: 96px;
 	@include mq(sp) {
 	margin: 0px auto;
-	padding:64px 0px;
+	padding: 64px 0px;
 	}
 }
-label {
+.job_introduct_tab_label {
 	background-color: $cl_fadePurple;
 	border-left: dashed 1px $cl_plPurple;
 	color: $cl_plPurple;
@@ -266,11 +372,12 @@ label {
 	width: min(100%, 296.67px);
 	@include mq(sp) {
 	font-size: 1rem;
-	height: 26px;
+	height: 42px;
 	width: min(100%, 114.33px);
+	white-space: nowrap;
 	}
 	&:first-child {
-		border-left:none;
+		border-left: none;
 	}
 	&:hover {
 		background-color: #DAADFF;
@@ -282,7 +389,7 @@ label {
 			content: "";
 			height: 9px;
 			left: 50%;
-			position:absolute;
+			position: absolute;
 			transform: translateX(150%);
 			width: 18px;
 		}
@@ -321,6 +428,8 @@ label {
 	&_content {
 		align-items: center;
 		display: flex;
+		font-size: 1.5rem;
+		font-weight: bold;
 		height: 220px;
 		justify-content: space-between;
 		margin: 0px auto;
@@ -331,18 +440,19 @@ label {
 		height: 257px;
 		width: min(100%, 311px);
 		}
-	}
-	&_title {
-		font-size: 1.5rem;
-		font-weight: bold;
-		@include mq(sp) {
+		&_title {
+			font-size: 1.5rem;
+			font-weight: bold;
+			@include mq(sp) {
 			font-size: 1.125rem;
+			padding-bottom: 8px;
 			text-align: center;
+			}
 		}
-	}
-	& img {
-		height: 220px;
-		width: 334px;
+		& img {
+			height: 220px;
+			width: 334px;
+		}
 	}
 }
 .job_introduct_example {
@@ -387,8 +497,8 @@ label {
 		padding-left: 20px;
 	}
 }
-.job_introduct_tab > label:hover,
-.job_introduct_tab label:has(:checked) {
+.job_introduct_tab > .job_introduct_tab_label:hover,
+.job_introduct_tab .job_introduct_tab_label:has(:checked) {
 	background-color: #DAADFF;
 	color: $cl_wt;
 	font-size: 1.125rem;
@@ -397,11 +507,11 @@ label {
 	text-align: center;
 	width: min(100%, 296.67px);
 	@include mq(sp) {
-	height: 52px;
+	height: 42px;
 	width: min(100%, 114.33px);
 	}
 }
-.job_introduct_tab label:has(:checked)::before {
+.job_introduct_tab .job_introduct_tab_label:has(:checked)::before {
 	background-color: #DAADFF;
 	bottom: -8px;
 	clip-path: polygon(0 0, 100% 0, 50% 100%);
@@ -415,7 +525,7 @@ label {
 .job_introduct_tab input {
 	display: none;
 }
-.job_introduct_tab label:has(:checked) + div {
+.job_introduct_tab .job_introduct_tab_label:has(:checked) + div {
 	display: block;
 }
 .job_introduct_tab_inner {
@@ -437,14 +547,14 @@ label {
 	@include mq(sp) {
 	width: min(100%, 311px);
 	}
-}
-/* job_introduct en */
+}/* job_introduct en */
 /* flow st */
 .flow {
 	background-color: $cl_fadePurple;
 	margin-top: 96px;
 	padding: 96px 0px;
 	@include mq(sp) {
+	margin: 0px auto;
 	margin-top:64px;
 	padding: 40px 0px;
 	}
@@ -457,13 +567,18 @@ label {
 		width: min(100%, 1072px);
 		@include mq(sp) {
 		display: block;
-		width: min(100%, 343px);
+		margin: 20px 16px 0px;
+		width: min(100%, 375px);
 		}
 	}
 }
 .flow_listItem {
 	margin-top: 64px;
 	position: relative;
+	@include mq(sp) {
+	margin-top: 0px;
+	text-align: center;
+	}
 	&:not(:last-child)::after {
 		border-bottom: 7px solid transparent;
 		border-left: 17.32px solid $cl_plPurple;
@@ -482,8 +597,10 @@ label {
 		border-right: 8px solid transparent;
 		border-style: solid;
 		border-top: 15.94px solid #eacfff;
-		position: static;
-		}
+		margin: 0px;
+		top: 208px;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);		}
 	}
 	&_inner {
 		background-color: $cl_wt;
@@ -505,11 +622,22 @@ label {
 		font-weight: bold;
 		padding-top: 20px;
 		text-align: center;
+		@include mq(sp) {
+		padding-left: 20px;
+		padding-top: 5px;
+		}
 	}
 	&_text {
 		font-size: 0.875rem;
 		line-height: 180%;
 		width: 188.5px;
+		@include mq(sp) {
+			left: 171.5px;
+			position: relative;
+			text-align: left;
+			top: -120px;
+			width: min(100%, 163.5px);
+		}
 	}
 }
 .flow_listItem_num {
@@ -518,25 +646,28 @@ label {
 	line-height: 100%;
 	transform: translate(-17px,-0.28px) rotate(-10deg);
 	@include mq(sp) {
-		font-size: 32px;
-		transform: none;
+	font-size: 32px;
+	top: 16px;
+	transform: none;
+	position: relative;
 	}
 }
 .flow_listItem_img {
 	height: auto;
 	width: 148.85px;
 	@include mq(sp) {
-		height: 120px;
-		margin-left: 0%;
-		width: min(100%, 143.5px);
+	height: 120px;
+	margin-left: 0%;
+	width: min(100%, 143.5px);
 	}
 }
+
 /* flow en */
 /* faq st */
 .faq {
 	padding: 96px 0px;
 	@include mq(sp) {
-		padding: 64px 0px;
+	padding: 64px 0px;
 	}
 }
 .faq_list {
@@ -566,6 +697,72 @@ label {
 			font-size: 0.875rem;
 			}
 		}
+	}
+}
+.faq_list{
+	@include mq(sp) {
+	position: relative;
+	overflow: hidden;
+	}
+	&>input{
+		@include mq(sp) {
+			display: none;
+		}
+	}
+	&:checked+.aq_listItem_accordion+.faq_listItem_text{
+		@include mq(sp) {
+		position: relative;
+		visibility: visible;
+		transform: translateY(0);
+		}
+	}
+	&>.faq_listItem_title::after{
+		@include mq(sp) {
+		transform: translateY(-50%) rotate(180deg);
+		}
+	}
+}
+.faq_listItem_title{
+	@include mq(sp) {
+	border-bottom: none;
+	position: relative;
+	width: min(100%, 315px);
+	z-index: 1;
+	}
+	&::before{
+		@include mq(sp) {
+		background: #333;
+		content: '';
+		position: absolute;
+		height: 3px;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 20px;
+		}
+	}
+	&::after{
+		@include mq(sp) {
+		background: #333;
+		content: '';
+		height: 3px;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%) rotate(90deg);
+		transition: .4s;
+		width: 20px;
+		}
+	}
+}
+
+.faq_listItem_text{
+	@include mq(sp) {
+	position: absolute;
+	transform: translateY(-100%);
+	transition: .4s;
+	visibility: hidden;
+	width: 315px;
 	}
 }
 /* faq en */
@@ -784,10 +981,10 @@ a.access_map_content_expandBtn {
 	text-decoration: none;
 	width: 233px;
 	@include mq(sp) {
-	left: calc(100% - 81.07%);
+	left: 50%;
 	position: relative;
 	top: 340px;
-	transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 	z-index: 2;
 	}
 }
@@ -796,7 +993,7 @@ a.access_map_content_expandBtn {
 .instagram {
 	margin-top: 96px;
 	@include mq(sp) {
-	padding:64px 0px;
+	margin-top:64px;
 	}
 	&_list {
 		display: flex;
@@ -835,6 +1032,7 @@ footer {
 	text-align: center;
 	@include mq(sp) {
 	height: 134px;
+	margin-top: 64px;
 	padding: 20px 0px;
 	}
 	&_logo {
