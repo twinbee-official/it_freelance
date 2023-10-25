@@ -403,15 +403,6 @@ body {
   position: relative;
 }
 
-br {
-  display: none;
-}
-
-@media screen and (max-width: 420px) {
-  br {
-    display: block;
-  }
-}
 .-en {
   font-family: "Helvetica Neue", "Arial", sans-serif;
 }
@@ -455,13 +446,12 @@ br {
   padding: 16px 64px 8px;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
   .header_inner {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    padding-left: 16.5px;
-    padding-top: 16px;
+    padding: 0px;
   }
 }
 .header_logo_link {
@@ -476,7 +466,7 @@ br {
 @media screen and (max-width: 420px) {
   .header_logo_img {
     height: auto;
-    width: 162px;
+    width: max(100%, 162px);
   }
 }
 .header_menu {
@@ -486,17 +476,63 @@ br {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  white-space: nowrap;
 }
 
+@media screen and (max-width: 768px) {
+  .header_menu {
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+    background-blend-mode: overlay;
+    background-color: rgb(249, 245, 251);
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 667px;
+    background-image: url("../images/bg_free_memberRegist.png");
+    padding: 32px 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_menuList {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-right: solid 24px #EACFFF;
+    border-top: solid 1px #EACFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 62px;
+    padding-left: 18.67%;
+    width: 100%;
+  }
+}
 .header_menuList:not(:first-child) {
   margin-left: 32px;
 }
 
+@media screen and (max-width: 768px) {
+  .header_menuList:not(:first-child) {
+    margin-left: 0px;
+  }
+}
 .header_menuList_link {
   font-size: 1rem;
   font-weight: 600;
 }
 
+@media screen and (max-width: 768px) {
+  .header_menuList_link {
+    font-size: 1.125rem;
+    font-weight: normal;
+  }
+}
 .header_menuList_link.-current::after {
   content: "";
   background-color: #EACFFF;
@@ -517,25 +553,184 @@ br {
   width: 24px;
 }
 
+@media screen and (max-width: 768px) {
+  .header_menuList_link.-igIcon {
+    text-indent: 0;
+  }
+}
 .header_menuList_link:hover {
   opacity: 0.5;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
+@media screen and (max-width: 768px) {
+  .header_menuList:first-child::before {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    content: url(../_images/header_logo.svg);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_menuList:last-child {
+    border-bottom: solid 1px #EACFFF;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m_header_menu_icon {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 60px;
+    position: fixed;
+    top: 32px;
+    right: 0;
+    z-index: 100;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m_header_menu_iconLine, .m_header_menu_iconLine::before, .m_header_menu_iconLine::after {
+    background-color: #EACFFF;
+    border-radius: 3px;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 25px;
+    position: absolute;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m_header_menu_iconLine::before {
+    bottom: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m_header_menu_iconLine::after {
+    top: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #m_header_menu_icon_check {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  #m_header_menu_icon_check:checked ~ .m_header_menu_iconLine {
+    background: rgba(255, 255, 255, 0);
+  }
+}
+@media screen and (max-width: 768px) {
+  #m_header_menu_icon_check:checked ~ .m_header_menu_iconLine::before {
+    bottom: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+@media screen and (max-width: 768px) {
+  #m_header_menu_icon_check:checked ~ .m_header_menu_iconLine::after {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_menuList {
+    position: relative;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_menuList::before {
+    border-top: 1.5px solid #fcf9ff;
+    border-right: 1.5px solid #fcf9ff;
+    content: "";
+    height: 13px;
+    margin: auto;
+    width: 13px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_menu {
+    left: -100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: 80;
+  }
+}
+@media screen and (max-width: 768px) {
+  #m_header_menu_icon_check ~ .header_menu {
+    position: fixed;
+    left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_menuList_link {
+    position: relative;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_menuList_link::after {
+    content: "";
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_menuList_link:hover::after {
+    content: url(../_images/m_header_hoverImg.png);
+    display: block;
+    height: 18.25px;
+    opacity: 1;
+    width: 25.65px;
+    position: absolute;
+    top: -40%;
+    left: -30%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
 /* header en */
 /* メインビジュアル st */
 .mainVisual {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 87.5vh;
+  height: min(100%, 87.5vh);
   background-image: url("../images/mainVisual.jpg");
+  margin: 0px auto;
   width: min(100%, 1280px);
 }
 
 @media screen and (max-width: 420px) {
   .mainVisual {
+    height: min(100%, 46.875vh);
+    background-image: url("../images/m_bg_mainVisual.jpg");
     width: min(100%, 375px);
   }
 }
@@ -544,6 +739,21 @@ br {
   padding-top: 20vh;
 }
 
+@media screen and (max-width: 420px) {
+  .mainVisual_titleBox {
+    padding-left: 0.5113vw;
+  }
+}
+.mainVisual_titleBox_main {
+  width: 59.58%;
+}
+
+@media screen and (max-width: 420px) {
+  .mainVisual_titleBox_main {
+    top: 33.81225vh;
+    width: 94.15%;
+  }
+}
 .mainVisual_titleBox_sub {
   font-size: 1rem;
   letter-spacing: 0.2rem;
@@ -554,23 +764,42 @@ br {
 
 @media screen and (max-width: 420px) {
   .mainVisual_titleBox_sub {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .mainVisual::after {
+    content: "株式会社TwinBeeでは\a企業側へのお悩み相談、交渉など\a架け橋となってフリーランスを\a応援いたします。";
+    font-size: 1rem;
+    letter-spacing: 5%;
     line-height: 160%;
     text-align: center;
+    margin-top: 28px;
+    white-space: pre;
+    position: absolute;
+    top: 50.46875vh;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
   }
 }
 /* メインビジュアル en */
 /* 会員登録動線バナー st */
 .free_memberRegist_anchor {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("../images/free_memberRegist_anchor.png");
-  position: absolute;
-  height: calc(87.5vh - 85.71%);
+  width: min(100%, 154px);
+  position: relative;
+  bottom: -55px;
   left: 79.84%;
   z-index: 1;
 }
 
+@media screen and (max-width: 420px) {
+  .free_memberRegist_anchor {
+    width: min(100%, 124px);
+    bottom: 29px;
+    left: 37.07%;
+  }
+}
 .free_memberRegist_anchor_link {
   background-position: center center;
   background-repeat: no-repeat;
@@ -583,6 +812,13 @@ br {
   width: min(100%, 154px);
 }
 
+@media screen and (max-width: 420px) {
+  .free_memberRegist_anchor_link {
+    height: 124px;
+    background-image: url("../images/m_free_memberRegist_anchor.png");
+    width: min(100%, 124px);
+  }
+}
 /* 会員登録動線バナー en */
 /* 見出し関連 st */
 .sectionTitle {
@@ -599,6 +835,11 @@ br {
   width: min(100%, 1280px);
 }
 
+@media screen and (max-width: 768px) {
+  .sectionTitle {
+    background-position: 0px -6px;
+  }
+}
 @media screen and (max-width: 420px) {
   .sectionTitle {
     background-position: 0px -20px;
@@ -622,7 +863,7 @@ br {
 @media screen and (max-width: 420px) {
   .canDo_twinbee {
     margin: 0px auto;
-    padding-top: 48px;
+    margin-top: 180px;
   }
 }
 .canDo_twinbee_content {
@@ -688,7 +929,7 @@ br {
   }
 }
 .canDo_twinbee_content:last-child {
-  background-size: contain;
+  background-size: cover;
   background-image: url("../images/canDo_twinbee_content_3.png");
   margin-bottom: 0px;
   position: relative;
@@ -854,12 +1095,12 @@ br {
 /* twinbeeができること en */
 /* お仕事紹介 st */
 .job_introduct {
+  margin: 0px auto;
   margin-top: 96px;
 }
 
 @media screen and (max-width: 420px) {
   .job_introduct {
-    margin: 0px auto;
     padding: 64px 0px;
   }
 }
@@ -876,16 +1117,22 @@ br {
   order: -1;
   padding: 10px;
   text-align: center;
-  width: min(100%, 296.67px);
+  white-space: nowrap;
+  width: 33.37%;
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  .job_introduct_tab_label {
+    width: 33.2857%;
+  }
+}
 @media screen and (max-width: 420px) {
   .job_introduct_tab_label {
     font-size: 1rem;
     height: 42px;
-    width: min(100%, 114.33px);
     white-space: nowrap;
+    width: min(100%, 114.33px);
   }
 }
 .job_introduct_tab_label:first-child {
@@ -929,6 +1176,11 @@ br {
   width: min(100%, 1072px);
 }
 
+@media screen and (max-width: 768px) {
+  .job_introduct_tab {
+    width: min(100%, 700px);
+  }
+}
 @media screen and (max-width: 420px) {
   .job_introduct_tab {
     width: min(100%, 343px);
@@ -962,17 +1214,24 @@ br {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   font-size: 1.5rem;
   font-weight: bold;
   height: 220px;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   margin: 0px auto;
   padding-top: 40px;
-  width: min(100%, 890px);
+  width: 96.53%;
 }
 
+@media screen and (max-width: 768px) {
+  .job_introduct_tab_content {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
 @media screen and (max-width: 420px) {
   .job_introduct_tab_content {
     display: block;
@@ -1004,12 +1263,18 @@ br {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   font-size: 1rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 0px auto;
+  padding: 32px 16px 0px;
+  width: min(100%, 890px);
 }
 
 @media screen and (max-width: 420px) {
   .job_introduct_example {
     display: block;
+    width: min(100%, 311px);
   }
 }
 .job_introduct_example_title {
@@ -1018,12 +1283,17 @@ br {
   line-height: 180%;
   padding-bottom: 12px;
   padding-top: 20px;
-  width: 253px;
+  width: 28.43%;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
   .job_introduct_example_title {
     border-bottom: none;
+    width: min(100%, 600px);
+  }
+}
+@media screen and (max-width: 420px) {
+  .job_introduct_example_title {
     padding-bottom: 8px;
     width: min(100%, 311px);
   }
@@ -1035,19 +1305,24 @@ br {
   padding-bottom: 12px;
   padding-left: 20px;
   padding-top: 20px;
-  width: 617px;
+  width: 69.44%;
 }
 
+@media screen and (max-width: 768px) {
+  .job_introduct_example_text {
+    padding-left: 0px;
+    width: min(100%, 600px);
+  }
+}
 @media screen and (max-width: 420px) {
   .job_introduct_example_text {
     font-size: 0.875rem;
     padding-bottom: 16px;
-    padding-left: 0px;
     padding-top: 0px;
     width: min(100%, 311px);
   }
 }
-.job_introduct_example_content {
+.job_introduct_example_content_list {
   list-style-type: disc;
   padding-left: 20px;
 }
@@ -1061,13 +1336,19 @@ br {
   font-weight: bold;
   height: 45px;
   text-align: center;
-  width: min(100%, 296.67px);
+  width: 33.37%;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
   .job_introduct_tab > .job_introduct_tab_label:hover,
   .job_introduct_tab .job_introduct_tab_label:has(:checked) {
     height: 42px;
+    width: min(100%, 233px);
+  }
+}
+@media screen and (max-width: 420px) {
+  .job_introduct_tab > .job_introduct_tab_label:hover,
+  .job_introduct_tab .job_introduct_tab_label:has(:checked) {
     width: min(100%, 114.33px);
   }
 }
@@ -1108,24 +1389,6 @@ br {
     width: min(100%, 343px);
   }
 }
-.job_introduct_example {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-top: 32px;
-  width: min(100%, 890px);
-}
-
-@media screen and (max-width: 420px) {
-  .job_introduct_example {
-    width: min(100%, 311px);
-  }
-}
 /* お仕事紹介 en */
 /* ご利用の流れ st */
 .flow {
@@ -1154,10 +1417,16 @@ br {
   width: min(100%, 1072px);
 }
 
+@media screen and (max-width: 768px) {
+  .flow_list {
+    display: block;
+    width: min(100%, 700px);
+  }
+}
 @media screen and (max-width: 420px) {
   .flow_list {
     display: block;
-    margin: 20px 16px 0px;
+    margin-top: 20px;
     width: min(100%, 375px);
   }
 }
@@ -1183,7 +1452,7 @@ br {
   margin: 0px 8px;
   width: 0px;
   position: absolute;
-  right: -30px;
+  right: calc(100% - 220px);
   top: 120px;
 }
 
@@ -1206,7 +1475,7 @@ br {
   margin-bottom: 10px;
   padding: 36px 20px 12px 20px;
   text-align: center;
-  width: 188.85px;
+  width: min(100%, 188.85px);
 }
 
 @media screen and (max-width: 420px) {
@@ -1216,6 +1485,7 @@ br {
     display: flex;
     height: 160px;
     padding: 20px 8px;
+    margin: 0px auto;
     text-align: left;
     width: min(100%, 343px);
   }
@@ -1244,8 +1514,8 @@ br {
     text-align: left;
     width: min(100%, 163.5px);
     position: relative;
-    left: 171.5px;
-    top: -120px;
+    left: 185.5px;
+    top: -113px;
   }
 }
 .flow_listItem_num {
@@ -1267,7 +1537,7 @@ br {
 }
 .flow_listItem_img {
   height: auto;
-  width: 148.85px;
+  width: min(100%, 148.85px);
 }
 
 @media screen and (max-width: 420px) {
@@ -1333,16 +1603,16 @@ br {
   }
 }
 @media screen and (max-width: 420px) {
-  .faq_list > .checkbox {
+  .faq_listItem_checkbox {
     display: none;
   }
 }
 @media screen and (max-width: 420px) {
-  .faq_list:checked + .aq_listItem_accordion + .faq_listItem_text {
+  .faq_list:checked + .faq_listItem_accordion + .faq_listItem_text {
     position: relative;
-    visibility: visible;
     -webkit-transform: translateY(0);
     transform: translateY(0);
+    visibility: visible;
   }
 }
 @media screen and (max-width: 420px) {
@@ -1532,7 +1802,7 @@ br {
   }
 }
 .free_memberRegist_form {
-  padding-top: 25px;
+  padding: 25px 16px 0px;
 }
 
 .free_memberRegist_form_privacyPolicy {
@@ -1546,7 +1816,7 @@ br {
   overflow: auto;
   padding: 20px;
   scrollbar-width: none;
-  width: 708px;
+  width: min(100%, 708px);
 }
 
 @media screen and (max-width: 420px) {
@@ -1592,7 +1862,7 @@ br {
   margin-top: 40px;
   padding: 0px;
   text-decoration: none;
-  width: 526px;
+  width: min(100%, 526px);
 }
 
 @media screen and (max-width: 420px) {
@@ -1615,6 +1885,11 @@ br {
     padding: 64px 0px;
   }
 }
+@media screen and (max-width: 420px) {
+  .access_map_content {
+    margin-top: 20px;
+  }
+}
 .access_map_body {
   display: block;
   height: 480px;
@@ -1632,98 +1907,28 @@ br {
   }
 }
 .access_map_content_data {
-  background-color: #fff;
-  border-radius: 12px;
-  -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  height: 246px;
-  padding: 20px;
-  width: 435px;
-  position: relative;
-  left: 57.89%;
-  top: 470px;
-  z-index: 2;
+  display: none;
 }
 
 @media screen and (max-width: 420px) {
   .access_map_content_data {
-    background-color: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
     display: block;
-    padding: 20px 16px;
-    position: static;
+    margin: 0px 16px;
   }
 }
-.access_map_content_data_wrap {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
 @media screen and (max-width: 420px) {
-  .access_map_content_data_wrap {
-    display: block;
+  .access_map_content_dataBox {
+    padding-bottom: 12px;
   }
 }
-.access_map_content_dataBox {
-  padding-bottom: 12px;
-}
-
-.access_map_content_dataBox:last-child {
-  padding-bottom: none;
-}
-
-.access_map_content_dataBox_title {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.access_map_content_dataBox_text {
-  line-height: 160%;
-}
-
-.access_map_content_expandBtn {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgb(154, 176, 255)), color-stop(52%, rgb(239, 207, 255)), color-stop(78%, rgb(234, 207, 255)), to(rgb(218, 173, 255)));
-  background-image: linear-gradient(90deg, rgb(154, 176, 255), rgb(239, 207, 255) 52%, rgb(234, 207, 255) 78%, rgb(218, 173, 255));
-  border-radius: 0.75rem;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1rem;
-  font-weight: bold;
-  height: 50px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-right: 0px;
-  text-decoration: none;
-  width: 233px;
-}
-
 @media screen and (max-width: 420px) {
-  .access_map_content_expandBtn {
-    position: relative;
-    left: 50%;
-    top: 340px;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 2;
+  .access_map_content_dataBox_title {
+    line-height: 160%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .access_map_content_dataBox_text {
+    line-height: 160%;
   }
 }
 /* アクセス en */
@@ -1764,7 +1969,7 @@ br {
   margin: 0% auto;
   margin-top: 40px;
   text-decoration: none;
-  width: 526px;
+  width: min(100%, 526px);
 }
 
 @media screen and (max-width: 420px) {
