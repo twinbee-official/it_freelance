@@ -2146,7 +2146,7 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin: 0% auto;
+  margin: 0 auto;
   margin-top: 40px;
   text-decoration: none;
   width: min(100%, 526px);
