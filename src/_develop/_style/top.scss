@@ -177,8 +177,14 @@ body {
 		@include mq(tab) {
 		display: block;
 		margin-left: 16px;
-		margin-top: 93px;
-		width: min(300px, 54%);
+		width: min(300px, 30%);
+		position: relative;
+		top: -130px
+		}
+		@include mq(sp) {
+			margin-top: 93px;
+			width: min(300px, 54%);
+			position: static;
 		}
 	}
 	&_anchor {

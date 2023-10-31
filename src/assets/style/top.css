@@ -613,8 +613,16 @@ body {
   .m_header_menuList_logo {
     display: block;
     margin-left: 16px;
+    width: min(300px, 30%);
+    position: relative;
+    top: -130px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .m_header_menuList_logo {
     margin-top: 93px;
     width: min(300px, 54%);
+    position: static;
   }
 }
 @media screen and (max-width: 768px) {
