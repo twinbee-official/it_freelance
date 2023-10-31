@@ -28,6 +28,20 @@ body {
 .-num {
 	color: #DAADFF;
 }
+
+//改行操作
+.desktop_none {
+	display: none;
+	@include mq(tab) {
+		display: block;
+	}
+}
+.mobile_none {
+	display: block;
+	@include mq(sp) {
+		display: none;
+	}
+}
 /* common  en */
 
 /* header st */
@@ -36,7 +50,7 @@ body {
 	position: absolute;
 	left: 0;
 	top: 0;
-	z-index: 1;
+	z-index: 50;
 	&_inner {
 		align-items: center;
 		display: flex;
@@ -44,7 +58,7 @@ body {
 		padding: 16px 64px 8px;
 		@include mq(tab) {
 			align-items: flex-start;
-			padding: 0px;
+			padding: 0;
 		}
 	}
 	&_logo {
@@ -71,15 +85,19 @@ body {
 	@include mq(tab) {
 		align-content: flex-end;
 		background-blend-mode: overlay;
-    background-color: rgb(249, 245, 251);
-    background-position: center center;
-    background-repeat: repeat;
-    background-size: cover;
+		background-color: rgb(249, 245, 251);
+		background-position: center center;
+		background-repeat: repeat;
+		background-size: cover;
 		display: flex;
 		flex-wrap: wrap;
 		height: 667px;
 		@include imgPath('bg_free_memberRegist','png');
-		padding: 32px 0px;
+		padding: 32px 0;
+		width: min(100%, 80%);
+		@include mq(sp) {
+			width: min(100%, 80%);
+		}
 	}
 	&List {
 		@include mq(tab) {
@@ -95,7 +113,7 @@ body {
 			// 初めの要素以外
 			margin-left: 32px;
 			@include mq(tab) {
-				margin-left: 0px;
+				margin-left: 0;
 			}
 		}
 		&_link {
@@ -115,6 +133,13 @@ body {
 					height: 1px;
 					position: absolute;
 					width: 166.9px; // 初期値
+					@include mq(tab) {
+						background-color: none;
+						background-position: 5% 95%;
+						background-repeat: no-repeat;
+						background-size: contain;
+						@include imgPath('footer_logo','svg');
+					}
 				}
 			}
 			&.-igIcon {
@@ -130,6 +155,9 @@ body {
 				}
 			}
 			&:hover {
+				@include mq(tab) {
+					opacity: 1;
+				}
 				opacity: .5;
 				transition: all .3s ease-out;
 			}
@@ -137,21 +165,33 @@ body {
 	}
 }
 
-// モバイルメニュー
-.header_menuList {
-	&:first-child {
-		&::before {
-			@include mq(tab) {
-				align-items: center;
-				content: url(../_images/header_logo.svg);
-				display: flex;
-				justify-content: center;
-			}
+//hoverしたら紙飛行機
+.header_menuList:hover {
+	background-position: 5% 95%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	@include imgPath('m_header_current','svg');
+}
+.m_header_menuList {
+	&_logo {
+		@include mq(tab) {
+		display: block;
+		margin-left: 16px;
+		width: min(300px, 30%);
+		position: relative;
+		top: -130px
+		}
+		@include mq(sp) {
+			margin-top: 93px;
+			width: min(300px, 54%);
+			position: static;
 		}
 	}
-	&:last-child {
+	&_anchor {
 		@include mq(tab) {
-			border-bottom: solid 1px $cl_plPurple;
+		display: block;
+		text-align: center;
+		width: min(100%, 89.33%);
 		}
 	}
 }
@@ -189,13 +229,13 @@ body {
 		}
 	}
 }
-#m_header_menu_icon_check{
+.m_header_menu_icon {
 	@include mq(tab) {
 		display: block;
 	}
 
 	//チェック後のアイコンの動き
-	&:checked ~ .m_header_menu_iconLine{
+	&:checked ~ .m_header_menu_iconLine {
 		@include mq(tab) {
 			background: rgba(255, 255, 255, 0);
 		}
@@ -214,10 +254,25 @@ body {
 	}
 }
 
-//くの字矢印
+//モバイルheader
 .header_menuList {
 	@include mq(tab) {
 		position: relative;
+	}
+	&:first-child {
+		&::before {
+			@include mq(tab) {
+				align-items: center;
+				content: url(../_images/header_logo.svg);
+				display: flex;
+				justify-content: center;
+			}
+		}
+	}
+	&:last-child {
+		@include mq(tab) {
+			border-bottom: solid 1px $cl_plPurple;
+		}
 	}
 	&::before {
 		@include mq(tab) {
@@ -245,44 +300,13 @@ body {
 	}
 }
 //チェックされたら画面内へ
-#m_header_menu_icon_check ~ .header_menu {
+.m_header_menu_icon ~ .header_menu {
 	@include mq(tab) {
 		position: fixed;
 		left: 0;
 	}
 }
-//紙飛行機ホバー
-.header_menuList_link {
-	@include mq(tab) {
-		position: relative;
-	}
-	&::after{
-		@include mq(tab) {
-			content: "";
-			opacity: 0;
-			transition: opacity 0.3s ease;
-			position: absolute;
-			top: 100%;
-			left: 0%;
-			transform: translateX(-50%);
-		}
-	}
-	&:hover::after {
-		@include mq(tab) {
-			content: url(../_images/m_header_hoverImg.png);
-			display: block;
-			height: 18.25px;
-			opacity: 1;
-			width: 25.65px;
-			position: absolute;
-			top: -40%;
-			left: -30%;
-			transform: translateX(-50%);
-			z-index: 1;
-		}
-	}
-}
-  /* header en */
+/* header en */
 
 /* メインビジュアル st */
 .mainVisual {
@@ -291,24 +315,25 @@ body {
 	background-size: cover;
 	height: min(100%, 87.5vh);
 	@include imgPath('mainVisual');
-	margin: 0px auto;
-	width: min(100%, 1280px);
+	margin: 0 auto;
+	width: 100%;
 	@include mq(sp) {
 		height: min(100%, 46.875vh);
 		@include imgPath('m_bg_mainVisual');
-		width: min(100%, 375px);
 	}
 	&_titleBox {
 		padding-left: 3.5vw;
 		padding-top: 20vh;
 		@include mq(sp) {
 			padding-left: 0.5113vw;
+			padding-top: 0;
 		}
-		&_main{
+		&_main {
 			width: min(100%, 59.58%);
 			@include mq(sp) {
-				top: calc(46.875vh - 13.06275vh);
+				top: calc(46.875vh - 33.06275vh);
 				width: min(100%, 94.15%);
+				position: relative;
 			}
 		}
 		&_sub {
@@ -318,26 +343,18 @@ body {
 			margin-left: 5%;
 			margin-top: 32px;
 			@include mq(sp) {
-				display: none;
+				font-size: 1rem;
+				letter-spacing: 5%;
+				line-height: 160%;
+				text-align: center;
+				margin: 28px 0;
+				white-space: pre;
+				position: relative;
+				left: 50%;
+				top: 34.375vh;
+				transform: translate(-50%);
 			}
 		}
-	}
-}
-
-//モバイルmainVisual_titleBox_sub
-.mainVisual::after {
-	@include mq(sp) {
-		content: "株式会社TwinBeeでは\A企業側へのお悩み相談、交渉など\A架け橋となってフリーランスを\A応援いたします。";
-		font-size: 1rem;
-		letter-spacing: 5%;
-		line-height: 160%;
-		text-align: center;
-		margin-top: 28px;
-		white-space: pre;
-		position: absolute;
-		top: 50.46875vh;
-		left: 50%;
-		transform: translate(-50%);
 	}
 }
 /* メインビジュアル en */
@@ -368,29 +385,31 @@ body {
 			height: 124px;
 			@include imgPath('m_free_memberRegist_anchor','png');
 			width: min(100%, 124px);
+			position: relative;
+			left: calc(100% - 62.933%);
 		}
 	}
 }
 /* 会員登録動線バナー en */
 
 /* 見出し関連 st */
-.sectionTitle {
-	background-position: 0px -10px;
+.h2_main {
+	background-position: calc(100% - 50%) calc(100% + 100%);
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: cover;
 	display: block;
 	font-size: 2rem;
 	font-weight: bold;
 	@include imgPath('bg_title_image','png');
-	margin: 0px auto;
+	margin: 0 auto;
 	padding-bottom: 15px;
 	text-align: center;
 	width: min(100%, $minWin);
 	@include mq(tab) {
-		background-position: 0px -6px;
+		background-position: calc(100% - 50%) calc(100% + 100%);
 	}
 	@include mq(sp) {
-		background-position: 0px -20px;
+		background-position: calc(100% - 50%) calc(100% + 0%);
 		font-size: 1.5rem;
 		@include imgPath('m_bg_title_image','png');
 		width: min(100%, 375px);
@@ -400,6 +419,7 @@ body {
 	display: block;
 	font-size: 1rem;
 	margin-top: 20px;
+	text-align: center;
 }
 /* 見出し関連 en */
 
@@ -407,7 +427,7 @@ body {
 .canDo_twinbee {
 	margin-top: 64px;
 	@include mq(sp) {
-		margin: 0px auto;
+		margin: 0 auto;
 		margin-top: 180px;
 	}
 }
@@ -420,40 +440,86 @@ body {
 	display: flex;
 	height: 483px;
 	justify-content: flex-end;
-	margin: 0px auto;
+	margin: 0 auto;
 	margin-bottom: 40px;
 	padding: 24px 30px;
 	width: min(100%, 1072px);
-	@include mq(sp) {
-		background-image: none;
+	@include mq(tab) {
+		align-items: center;
 		height: auto;
-		justify-content: center;
+		width: min(100%, 690px);
+	}
+	@include mq(sp) {
+		display: block;
+		height: auto;
 		width: min(100%, 343px);
 	}
-	&:first-child {
+	&:first-of-type {
 		@include imgPath('canDo_twinbee_content_1','png');
+		@include mq(sp) {
+			background-image: none;
+		}
 	}
 	&:nth-child(2) {
-		background-position: 30px 0px;
+		background-position: 30px 0;
+		background-size: contain;
 		margin-top: 40px;
+		@include mq(tab) {
+			margin-bottom: 40px;
+			position: relative;
+		}
 		@include mq(sp) {
 			background-position: center;
 		}
+		&::before {
+			@include mq(tab) {
+			content: "";
+			background-image: linear-gradient(90deg, rgba(249, 245, 251, 0) 41%, rgba(249, 245, 251, 0.4) 49%, rgba(249, 245, 251, 0.9) 58% 79%, rgba(249, 245, 251, 0.9) 91%);	
+			border-radius: 12px;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			@include mq(sp) {
+				content: none;
+			}
+		}
+	}
 	}
 	&:nth-child(3) {
 		background-position: right;
 		@include imgPath('canDo_twinbee_content_2','png');
 		justify-content: flex-start;
+		@include mq(tab) {
+			background-size: contain;
+			border-radius: 12px;
+			position: relative;
+		}
 		@include mq(sp) {
 			background-image: none;
 			background-position: center;
 			justify-content: center;
 		}
+		&::before {
+			@include mq(tab) {
+			content: "";
+			background-image: linear-gradient(-90deg, rgba(249, 245, 251, 0) 41%, rgba(249, 245, 251, 0.4) 49%, rgba(249, 245, 251, 0.9) 58% 79%, rgba(249, 245, 251, 0.9) 91%);
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			@include mq(sp) {
+				background-image: none;
+			}
+		}
 	}
+}
 	&:last-child {
 		background-size: cover;
 		@include imgPath('canDo_twinbee_content_3','png');
-		margin-bottom: 0px;
+		margin-bottom: 0;
 		position: relative;
 		@include mq(sp) {
 			background-image: none;
@@ -463,6 +529,7 @@ body {
 		&::before {
 			content: "";
 			background-image: linear-gradient(90deg, rgba(249, 245, 251, 0) 41%, rgba(249, 245, 251, 0.4) 49%, rgba(249, 245, 251, 0.9) 58% 79%, rgba(249, 245, 251, 0.9) 91%);	
+			border-radius: 12px;
 			height: 100%;
 			width: 100%;
 			position: absolute;
@@ -477,7 +544,14 @@ body {
 }
 .canDo_twinbee_content {
 	&_inner {
-		width: 496px;
+		width: min(100%, 46.27%);
+		@include mq(tab) {
+			width: min(100%, 50%);
+		}
+		@include mq(sp) {
+			width: min(100%, 238px);
+			margin: 0 auto
+		}
 	}
 	&_title {
 		align-items: center;
@@ -485,9 +559,13 @@ body {
 		font-weight: bold;
 		position: relative;
 		z-index: 5;
+		@include mq(tab) {
+			display: flex;
+			flex-wrap: wrap;
+		}
 		@include mq(sp) {
 			font-size: 1.125rem;
-			margin: 0px auto;
+			margin: 0 auto;
 			text-align: center;
 		}
 		&_num {
@@ -503,14 +581,18 @@ body {
 		font-size: 1rem;
 		line-height: 180%;
 		margin-top: 20px;
+		width: 100%;
 		position: relative;
 		z-index: 5;
+		@include mq(tab) {
+			width: 100%;
+		}
 		@include mq(sp) {
 			font-size: 0.875rem;
-			margin: 0px auto;
+			margin: 0 auto;
 			width: min(100%, 283px);
 		}
-	}
+	}	
 }
 .canDo_twinbee_content_title {
 	@include mq(sp) {
@@ -547,25 +629,28 @@ body {
 		}
 	}
 }
-.canDo_twinbee_content_text {
-	&::before {
+.canDo_twinbee_content_icon {
+	&_plus,&_minus {
 		@include mq(sp) {
-			content: url(../images/m_plus.svg)"タップで詳しく見る";
-			display: flex;
-			font-size: 0.875rem;
+			font-size: 0.875em;
 			font-weight: bold;
-			justify-content: center;
-			vertical-align: middle;
+			line-height: 160%;
+			padding-top: 28px;
+			text-align: center;
+		}
+		&::before {
+		@include mq(sp) {
+			content: url(../images/m_plus.svg);
+			padding-right: 12px;
+			vertical-align: top;
+			}
 		}
 	}
-	&::after {
+	&_minus::before {
 		@include mq(sp) {
-			content: url(../images/m_minus.svg)"タップで閉じる";
-			display: flex;
-			font-size: 0.875rem;
-			font-weight: bold;
-			justify-content: center;
-			margin-top: 28px;
+			content: url(../images/m_minus.svg);
+			padding-right: 12px;
+			vertical-align: top;
 		}
 	}
 }
@@ -573,10 +658,12 @@ body {
 
 /* お仕事紹介 st */
 .job_introduct {
-	margin: 0px auto;
+	margin: 0 auto;
 	margin-top: 96px;
+	padding: 0 20px;
 	@include mq(sp) {
-		padding: 64px 0px;
+		margin-top: 0;
+		padding: 64px 0;
 	}
 }
 .job_introduct_tab_label {
@@ -629,7 +716,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 0px auto;
+	margin: 0 auto;
 	width: min(100%, 1072px);
 	@include mq(tab) {
 		width: min(100%, 700px);
@@ -646,7 +733,7 @@ body {
 		background-color: $cl_fadePurple;
 		border-radius: 12px;
 		display: none;
-		margin: 0px auto;
+		margin: 0 auto;
 		margin-top: 20px;
 		padding-bottom: 64px;
 		width: min(100%, 1072px);
@@ -662,7 +749,7 @@ body {
 		font-weight: bold;
 		height: 220px;
 		justify-content: space-around;
-		margin: 0px auto;
+		margin: 0 auto;
 		padding-top: 40px;
 		width: min(100%, 96.53%);
 		@include mq(tab) {
@@ -693,8 +780,8 @@ body {
 	flex-wrap: wrap;
 	font-size: 1rem;
 	justify-content: center;
-	margin: 0px auto;
-	padding: 32px 16px 0px;
+	margin: 0 auto;
+	padding: 32px 16px 0;
 	width: min(100%, 890px);
 	@include mq(sp) {
 		display: block;
@@ -705,7 +792,7 @@ body {
 		font-weight: bold;
 		line-height: 180%;
 		padding-bottom: 12px;
-		padding-top: 20px;
+		padding: 20px 0px 20px;
 		width: 28.43%;
 		@include mq(tab) {
 			border-bottom: none;
@@ -719,25 +806,26 @@ body {
 	&_text {
 		border-bottom: $cl_plPurple solid 1px;
 		line-height: 180%;
-		margin: 0px;
-		padding-bottom: 12px;
-		padding-left: 20px;
-		padding-top: 20px;
+		margin: 0;
+		padding: 20px 0 12px 20px;
 		width: 69.44%;
 		@include mq(tab) {
-			padding-left: 0px;
+			padding-left: 0;
 			width: min(100%, 600px);
 		}
 		@include mq(sp) {
 			font-size: 0.875rem;
 			padding-bottom: 16px;
-			padding-top: 0px;
+			padding-top: 0;
 			width: min(100%, 311px);
 		}
-	}
-	&_content_list {
-		list-style-type: disc;
-		padding-left: 20px;
+		&_content_list {
+			list-style: disc;
+			margin-left: 20px;
+		}
+		&_content_list > .-none {
+			list-style: none;
+		}
 	}
 }
 
@@ -790,17 +878,25 @@ body {
 		width: min(100%, 343px);
 	}
 }
+.-en{
+	@include mq(tab) {
+		display: contents;
+	}
+}
 /* お仕事紹介 en */
 
 /* ご利用の流れ st */
 .flow {
 	background-color: $cl_fadePurple;
 	margin-top: 96px;
-	padding: 96px 0px;
+	padding: 96px 0;
+	@include mq(tab) {
+		padding: 96px 20px;
+	}
 	@include mq(sp) {
-		margin: 0px auto;
+		margin: 0 auto;
 		margin-top: 64px;
-		padding: 40px 0px;
+		padding: 40px 0;
 	}
 	&_list {
 		display: flex;
@@ -810,8 +906,9 @@ body {
 		padding: 0%;
 		width: min(100%, 1072px);
 		@include mq(tab) {
-			display: block;
-			width: min(100%, 700px);
+			flex-wrap: wrap;
+			text-align: center;
+			width: min(100%, 768px);
 		}
 		@include mq(sp) {
 			display: block;
@@ -823,9 +920,16 @@ body {
 .flow_listItem {
 	margin-top: 64px;
 	position: relative;
+	@include mq(tab) {
+		margin: 40px 0;
+		width: 40%;
+	}
 	@include mq(sp) {
-		margin-top: 0px;
+		display: block;
+		margin-bottom: 0;
+		margin-top: 0;
 		text-align: center;
+		width: min(100%, 375px);
 	}
 	&:not(:last-child)::after {
 		border-bottom: 7px solid transparent;
@@ -834,18 +938,22 @@ body {
 		border-style: solid;
 		border-top: 7px solid transparent;
 		content: "";
-		height: 0px;
-		margin: 0px 8px;
-		width: 0px;
+		height: 0;
+		margin: 0 8px;
+		width: 0;
 		position: absolute;
 		right: calc(100% - 220px);
 		top: 120px;
+		@include mq(tab) {
+			display: none;
+		}
 		@include mq(sp) {
+			display: block;
 			border-left: 8px solid transparent;
 			border-right: 8px solid transparent;
 			border-style: solid;
 			border-top: 15.94px solid #eacfff;
-			margin: 0px;
+			margin: 0;
 			top: 208px;
 			left: 50%;
 			transform: translateY(-50%) translateX(-50%);
@@ -858,11 +966,15 @@ body {
 		padding: 36px 20px 12px 20px;
 		text-align: center;
 		width: min(100%, 188.85px);
+		@include mq(tab) {
+		margin: 0 auto;
+		width: min(100%, 100%);
+		}
 		@include mq(sp) {
 			display: flex;
 			height: 160px;
 			padding: 20px 8px;
-			margin: 0px auto;
+			margin: 0 auto;
 			text-align: left;
 			width: min(100%, 343px);
 		}
@@ -881,75 +993,84 @@ body {
 		font-size: 0.875rem;
 		line-height: 180%;
 		width: 188.5px;
+		@include mq(tab) {
+			text-align: left;
+			margin: 0 auto;
+			padding-top: 10px;
+			width:70%;
+		}
 		@include mq(sp) {
 			text-align: left;
 			width: min(100%, 163.5px);
 			position: relative;
-			left: 185.5px;
-    	top: -113px;
+			left: 82.5px;
+			top: -118px;
 		}
 	}
 }
-.flow_listItem_num {
-	font-size: 2.5rem;
-	letter-spacing: 5%;
-	line-height: 100%;
-	transform: translate(-17px,-0.28px) rotate(-10deg);
-	@include mq(sp) {
-		font-size: 2rem;
-		position: relative;
-		top: 16px;
-		transform: none;
+.flow_listItem {
+	&_num {
+		font-size: 2.5rem;
+		letter-spacing: 5%;
+		line-height: 100%;
+		transform: translate(-17px,-0.28px) rotate(-10deg);
+		@include mq(sp) {
+			font-size: 2rem;
+			position: relative;
+			top: 16px;
+			transform: none;
+		}
 	}
-}
-.flow_listItem_img {
-	height: auto;
-	width: min(100%, 148.85px);
-	@include mq(sp) {
-		height: 120px;
-		margin-left: 0%;
-		width: min(100%, 143.5px);
+	&_img {
+		height: auto;
+		width: min(100%, 148.85px);
+		@include mq(sp) {
+			height: 120px;
+			margin-left: 0%;
+			width: min(100%, 143.5px);
+		}
 	}
 }
 /* ご利用の流れ en */
 
 /* よくある質問 st */
 .faq {
-	padding: 96px 0px;
+	padding: 96px 0;
 	@include mq(sp) {
-		padding: 64px 0px;
+		padding: 64px 0;
+	}
+	&_list {
+		margin: 40px auto 0;
+		width: min(100%, 890px);
+		&Item {
+			background-color: $cl_fadePurple;
+			margin-bottom: 4px;
+			padding: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&_title {
+				border-bottom: 1px solid $cl_plPurple;
+				font-size: 1.125rem;
+				font-weight: bold;
+				padding-bottom: 20px;
+				@include mq(sp) {
+					font-size: 1rem;
+				}
+			}
+			&_text {
+				font-size: 1rem;
+				margin-left: 0;
+				padding: 20px 0 12px 20px;
+				@include mq(sp) {
+					border-top: $cl_plPurple 1px solid;
+					font-size: 0.875rem;
+				}
+			}
+		}
 	}
 }
 .faq_list {
-	margin: 40px auto 0px;
-	width: min(100%, 890px);
-	&Item {
-		background-color: $cl_fadePurple;
-		margin-bottom: 4px;
-		padding: 20px;
-		&:last-child {
-			margin-bottom: 0px;
-		}
-		&_title {
-			border-bottom: 1px solid $cl_plPurple;
-			font-size: 1.125rem;
-			font-weight: bold;
-			padding-bottom: 20px;
-			@include mq(sp) {
-				font-size: 1rem;
-			}
-		}
-		&_text {
-			font-size: 1rem;
-			margin-left: 0px;
-			padding: 20px 0px 12px 20px;
-			@include mq(sp) {
-				font-size: 0.875rem;
-			}
-		}
-	}
-}
-.faq_list{
 	@include mq(sp) {
 		overflow: hidden;
 		position: relative;
@@ -983,9 +1104,9 @@ body {
 		@include mq(sp) {
 			background: #333;
 			content: '';
-			height: 3px;
-			right: 10px;
-			width: 20px;
+			height: 2px;
+			right: -20px;
+			width: 16px;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
@@ -995,23 +1116,14 @@ body {
 		@include mq(sp) {
 			background: #333;
 			content: '';
-			height: 3px;
+			height: 2px;
 			transform: translateY(-50%) rotate(90deg);
 			transition: .4s;
-			width: 20px;
+			width: 16px;
 			position: absolute;
-			right: 10px;
+			right: -20px;
 			top: 50%;
 		}
-	}
-}
-.faq_listItem_text {
-	@include mq(sp) {
-		transform: translateY(-100%);
-		transition: .4s;
-		visibility: hidden;
-		width: 315px;
-		position: absolute;
 	}
 }
 /* よくある質問 en */
@@ -1025,8 +1137,8 @@ body {
 	background-size: contain;
 	border-radius: 12px;
 	@include imgPath('bg_free_memberRegist','png');
-	margin: 0px auto;
-	padding: 64px 0px;
+	margin: 0 auto;
+	padding: 64px 0;
 	width: min(100%, 1072px);
 	position: relative;
 	z-index: 1;
@@ -1054,11 +1166,11 @@ body {
 	&_title {
 		font-size: 1.125rem;
 		font-weight: bold;
-		margin: 0px 20px 0px 8px;
+		margin: 0 20px 0 8px;
 		width: min(100%, 252px);
 		@include mq(sp) {
 			font-size: 1rem;
-			margin: 0px;
+			margin: 0;
 			margin-bottom: 8px;
 			width: min(100%, 343px);
 		}
@@ -1097,7 +1209,7 @@ body {
 	}
 }
 .free_memberRegist_form {
-	padding: 25px 16px 0px;
+	padding: 25px 16px 0;
 	&_privacyPolicy {
 		background-color: $cl_wt;
 		border: 1px solid $cl_plPurple;
@@ -1139,14 +1251,42 @@ body {
 		justify-content: center;
 		margin: 0% auto;
 		margin-top: 40px;
-		padding: 0px;
+		padding: 0;
 		text-decoration: none;
 		width: min(100%, 526px);
 		@include mq(sp) {
 			font-size: 1.125rem;
-			padding: 20px 0px;
+			padding: 20px 0;
 			width: min(100%, 343px);
 		}
+	}
+}
+
+//チェックボックスデザイン
+.free_memberRegist_form_checkBoxItem {
+	background-color: $cl_wt;
+	border: 1px solid $cl_plPurple;
+	border-radius: 4px;
+	height: 30px;
+	margin-right: 20px;
+	padding: 2px;
+	vertical-align: middle;
+	width: min(100%, 30px);
+	&:checked {
+		background: $cl_plPurple;
+		background-clip: content-box;
+	}
+	&::after {
+		border-bottom: 2px solid $cl_wt; 
+		border-right: 2px solid $cl_wt; 
+		content: '';
+		display: block;
+		height: 13.5px;
+		width: 8.5px; 
+		transform: rotate(45deg); 
+		position: relative;
+		left: 7px;
+		top: 3px;
 	}
 }
 /* 無料会員登録 en */
@@ -1154,12 +1294,12 @@ body {
 /* アクセス st */
 .access {
 	height: auto;
-	margin: 0px auto;
+	margin: 0 auto;
 	padding-top: 96px;
 	@include mq(sp) {
-		padding: 64px 0px;
+		padding: 64px 0;
 	}
-	&_map_content{
+	&_map_content {
 		@include mq(sp) {
 			margin-top: 20px;
 		}
@@ -1174,15 +1314,15 @@ body {
 		z-index: 1;
 		@include mq(sp) {
 			height: 375px;
-			margin-top: 0px;
+			margin-top: 0;
 		}
 	}
 }
-.access_map_content_data{
+.access_map_content_data {
 	display: none;
 	@include mq(sp) {
 		display: block;
-		margin: 0px 16px;
+		margin: 0 16px;
 	}
 	&Box{
 		@include mq(sp) {
@@ -1193,7 +1333,7 @@ body {
 				line-height: 160%;
 			}
 		}
-		&_text{
+		&_text {
 			@include mq(sp) {
 			line-height: 160%;
 			}
@@ -1210,7 +1350,7 @@ body {
 	}
 	&_list {
 		display: flex;
-		margin: 0px auto;
+		margin: 0 auto;
 		margin-top: 40px;
 	}
 	&_moreBtn {
@@ -1222,7 +1362,7 @@ body {
 		font-weight: bold;
 		height: 72px;
 		justify-content: center;
-		margin: 0% auto;
+		margin: 0 auto;
 		margin-top: 40px;
 		text-decoration: none;
 		width: min(100%, 526px);
@@ -1242,17 +1382,17 @@ footer {
 	background-color: #8DA5FA;
 	height: 189px;
 	margin-top: 96px;
-	padding: 40px 0px;
+	padding: 40px 0;
 	text-align: center;
 	@include mq(sp) {
 		height: 134px;
 		margin-top: 64px;
-		padding: 20px 0px;
+		padding: 20px 0;
 	}
 	&_logo {
 		display: block;
 		height: 80px;
-		margin: 0px auto;
+		margin: 0 auto;
 		width: 80px;
 		@include mq(sp) {
 			height: 65px;
