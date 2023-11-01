@@ -573,7 +573,7 @@ body {
     background-position: 5% 95%;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("../images/footer_logo.svg");
+    background-image: url("../images/m_header_current.svg");
   }
 }
 .header_menuList_link.-igIcon {
@@ -602,13 +602,6 @@ body {
     opacity: 1;
   }
 }
-.header_menuList:hover {
-  background-position: 5% 95%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("../images/m_header_current.svg");
-}
-
 @media screen and (max-width: 768px) {
   .m_header_menuList_logo {
     display: block;

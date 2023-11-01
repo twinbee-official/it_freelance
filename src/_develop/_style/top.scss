@@ -138,7 +138,7 @@ body {
 						background-position: 5% 95%;
 						background-repeat: no-repeat;
 						background-size: contain;
-						@include imgPath('footer_logo','svg');
+						@include imgPath('m_header_current','svg');
 					}
 				}
 			}
@@ -163,14 +163,6 @@ body {
 			}
 		}
 	}
-}
-
-//hoverしたら紙飛行機
-.header_menuList:hover {
-	background-position: 5% 95%;
-	background-repeat: no-repeat;
-	background-size: contain;
-	@include imgPath('m_header_current','svg');
 }
 .m_header_menuList {
 	&_logo {
