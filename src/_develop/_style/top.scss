@@ -1324,7 +1324,7 @@ body {
 		display: block;
 		margin: 0 16px;
 	}
-	&Box{
+	&Box {
 		@include mq(sp) {
 			padding-bottom: 12px;
 		}
