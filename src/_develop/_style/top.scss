@@ -164,21 +164,21 @@ body {
 		}
 	}
 }
-.m_header_menuList {
-	&_logo {
-		@include mq(tab) {
+.m_header_logo_link{
+	@include mq(tab) {
 		display: block;
 		margin-left: 16px;
 		width: min(300px, 30%);
 		position: relative;
 		top: -130px
-		}
-		@include mq(sp) {
+	}
+	@include mq(sp) {
 			margin-top: 93px;
 			width: min(300px, 54%);
 			position: static;
-		}
 	}
+}
+.m_header_anchor {
 	&_anchor {
 		@include mq(tab) {
 		display: block;
