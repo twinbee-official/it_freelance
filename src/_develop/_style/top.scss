@@ -1,16 +1,5 @@
 	@use '../_style/style' as *; // 変数設定
 
-<<<<<<< HEAD
-	/* ------------------------------
-	* フリーランス求人　トップ用SCSS
-	------------------------------ */
-	/* common st */
-	body {
-		color: $cl_text;
-		font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
-		font-size: 16px; // remの基準値(16px=1rem)
-		position: relative;
-=======
 /* ------------------------------
 * フリーランス求人　トップ用SCSS
 ------------------------------ */
@@ -71,52 +60,8 @@ body {
 			align-items: flex-start;
 			padding: 0;
 		}
->>>>>>> feature/data_hiramoto_css_231025
 	}
-
-	// 英字フォント
-	.-en {
-		font-family: "Helvetica Neue", "Arial", sans-serif;
-	}
-	@font-face {
-		font-family: 'ooohbaby';
-		src: url('../font/OoohBaby-Regular.ttf');
-	}
-	.-handWriteFont,.-num {
-		font-family: 'ooohbaby';
-	}
-	.-handWriteFont {
-		color: #DABAF4;
-	}
-	.-num {
-		color: #DAADFF;
-	}
-
-	//改行操作
-	.desktop_none {
-		display: none;
-		@include mq(tab) {
-			display: block;
-		}
-	}
-	.mobile_none {
-		display: block;
-		@include mq(sp) {
-			display: none;
-		}
-	}
-	/* common  en */
-
-<<<<<<< HEAD
-	/* header st */
-	.header {
-		width: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
-		z-index: 50;
-		&_inner {
-=======
+}
 // メニュー
 .header_menu {
 	align-items: center;
@@ -141,21 +86,11 @@ body {
 	}
 	&List {
 		@include mq(tab) {
->>>>>>> feature/data_hiramoto_css_231025
 			align-items: center;
 			display: flex;
 			justify-content: space-between;
 			padding: 16px 64px 8px;
 			@include mq(tab) {
-<<<<<<< HEAD
-				align-items: flex-start;
-				padding: 0;
-			}
-		}
-		&_logo {
-			// ロゴ
-			&_link {
-=======
 				margin-left: 0;
 			}
 		}
@@ -188,135 +123,18 @@ body {
 			&.-igIcon {
 				background-repeat: no-repeat;
 				background-size: cover;
->>>>>>> feature/data_hiramoto_css_231025
 				display: block;
 			}
-<<<<<<< HEAD
-			&_img {
-				height: 60px;
-				width: 180px;
-				@include mq(sp) {
-					height: auto;
-					width: max(100%, 162px);
-				}
-=======
 			&:hover {
 				@include mq(tab) {
 					opacity: 1;
 				}
 				opacity: .5;
 				transition: all .3s ease-out;
->>>>>>> feature/data_hiramoto_css_231025
 			}
 		}
 	}
 
-<<<<<<< HEAD
-	// メニュー
-	.header_menu {
-		align-items: center;
-		display: flex;
-		white-space: nowrap;
-		@include mq(tab) {
-			align-content: flex-end;
-			background-blend-mode: overlay;
-			background-color: rgb(249, 245, 251);
-			background-position: center center;
-			background-repeat: repeat;
-			background-size: cover;
-			display: flex;
-			flex-wrap: wrap;
-			height: 667px;
-			@include imgPath('bg_free_memberRegist','png');
-			padding: 32px 0;
-			width: min(100%, 80%);
-			@include mq(sp) {
-				width: min(100%, 80%);
-			}
-		}
-		&List {
-			@include mq(tab) {
-				align-items: center;
-				border-right: solid 24px $cl_plPurple;
-				border-top: solid 1px $cl_plPurple;
-				display: flex;
-				height: 62px;
-				padding-left: 18.67%;
-				width: max(100%, 80%);
-			}
-			&:not(:first-child) {
-				// 初めの要素以外
-				margin-left: 32px;
-				@include mq(tab) {
-					margin-left: 0;
-				}
-			}
-			&_link {
-				font-size: 1rem;
-				font-weight: 600;
-				@include mq(tab) {
-					font-size: 1.125rem;
-					font-weight: normal;
-				}
-				&.-current {
-					// 現在位置
-					&::after {
-						content: '';
-						background-color: $cl_plPurple;
-						bottom: 0;
-						display: block;
-						height: 1px;
-						position: absolute;
-						width: 166.9px; // 初期値
-						@include mq(tab) {
-							background-color: none;
-							background-position: 5% 95%;
-							background-repeat: no-repeat;
-							background-size: contain;
-							@include imgPath('footer_logo','svg');
-						}
-					}
-				}
-				&.-igIcon {
-					background-repeat: no-repeat;
-					background-size: cover;
-					display: block;
-					height: 24px;
-					@include imgPath('ig_icon','svg');
-					text-indent: -9999px;
-					width: 24px;
-					@include mq(tab) {
-						text-indent: 0;
-					}
-				}
-				&:hover {
-					@include mq(tab) {
-						opacity: 1;
-					}
-					opacity: .5;
-					transition: all .3s ease-out;
-				}
-			}
-		}
-	}
-
-	//hoverしたら紙飛行機
-	.header_menuList:hover {
-		background-position: 5% 95%;
-		background-repeat: no-repeat;
-		background-size: contain;
-		@include imgPath('m_header_current','svg');
-	}
-	.m_header_menuList {
-		&_logo {
-			@include mq(tab) {
-			display: block;
-			margin-left: 16px;
-			width: min(300px, 30%);
-			position: relative;
-			top: -130px
-			}
-=======
 //hoverしたら紙飛行機
 .header_menuList:hover {
 	background-position: 5% 95%;
@@ -687,18 +505,12 @@ body {
 			position: absolute;
 			left: 0;
 			top: 0;
->>>>>>> feature/data_hiramoto_css_231025
 			@include mq(sp) {
 				margin-top: 93px;
 				width: min(300px, 54%);
 				position: static;
 			}
 		}
-<<<<<<< HEAD
-		&_anchor {
-			@include mq(tab) {
-			display: block;
-=======
 	}
 }
 .canDo_twinbee_content {
@@ -725,16 +537,11 @@ body {
 		@include mq(sp) {
 			font-size: 1.125rem;
 			margin: 0 auto;
->>>>>>> feature/data_hiramoto_css_231025
 			text-align: center;
 			width: min(100%, 89.33%);
 			}
 		}
 	}
-<<<<<<< HEAD
-	.m_header_menu_icon {
-		@include mq(tab) {
-=======
 	&_text {
 		font-size: 1rem;
 		line-height: 180%;
@@ -758,7 +565,6 @@ body {
 	}
 	&:first-child::after {
 		@include mq(sp) {
->>>>>>> feature/data_hiramoto_css_231025
 			align-items: center;
 			display: flex;
 			height: 60px;
@@ -795,27 +601,6 @@ body {
 		@include mq(tab) {
 			display: block;
 		}
-<<<<<<< HEAD
-
-		//チェック後のアイコンの動き
-		&:checked ~ .m_header_menu_iconLine {
-			@include mq(tab) {
-				background: rgba(255, 255, 255, 0);
-			}
-			&::before {
-				@include mq(tab) {
-					bottom: 0;
-					transform: rotate(45deg);
-				}
-			}
-			&::after {
-				@include mq(tab) {
-					top: 0;
-					transform: rotate(-45deg);
-				}
-			}
-		}
-=======
 	}
 	&:last-child::after {
 		@include mq(sp) {
@@ -863,7 +648,6 @@ body {
 	@include mq(sp) {
 		margin-top: 0;
 		padding: 64px 0;
->>>>>>> feature/data_hiramoto_css_231025
 	}
 
 	//モバイルheader
@@ -887,20 +671,6 @@ body {
 			}
 		}
 		&::before {
-<<<<<<< HEAD
-			@include mq(tab) {
-				border-top: 1.5px solid $cl_fadePurple;
-				border-right: 1.5px solid $cl_fadePurple;
-				content: "";
-				height: 13px;
-				margin: auto;
-				width: 13px;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: calc(100% - 0%);
-				transform: rotate(45deg);    
-=======
 			background-color: $cl_plPurple;
 			bottom: -8px;
 			clip-path: polygon(0 0, 100% 0, 50% 100%);
@@ -972,7 +742,6 @@ body {
 				font-size: 1.125rem;
 				padding-bottom: 8px;
 				text-align: center;
->>>>>>> feature/data_hiramoto_css_231025
 			}
 		}
 	}
@@ -985,106 +754,6 @@ body {
 			z-index: 80;
 		}
 	}
-<<<<<<< HEAD
-	//チェックされたら画面内へ
-	.m_header_menu_icon ~ .header_menu {
-		@include mq(tab) {
-			position: fixed;
-			left: 0;
-		}
-	}
-	/* header en */
-
-	/* メインビジュアル st */
-	.mainVisual {
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: min(100%, 87.5vh);
-		@include imgPath('mainVisual');
-		margin: 0 auto;
-		width: 100%;
-		@include mq(sp) {
-			height: min(100%, 46.875vh);
-			@include imgPath('m_bg_mainVisual');
-		}
-		&_titleBox {
-			padding-left: 3.5vw;
-			padding-top: 20vh;
-			@include mq(sp) {
-				padding-left: 0.5113vw;
-				padding-top: 0;
-			}
-			&_main {
-				width: min(100%, 59.58%);
-				@include mq(sp) {
-					top: calc(46.875vh - 33.06275vh);
-					width: min(100%, 94.15%);
-					position: relative;
-				}
-			}
-			&_sub {
-				font-size: 1rem;
-				letter-spacing: .2rem;
-				line-height: 200%;
-				margin-left: 5%;
-				margin-top: 32px;
-				@include mq(sp) {
-					font-size: 1rem;
-					letter-spacing: 5%;
-					line-height: 160%;
-					text-align: center;
-					margin: 28px 0;
-					white-space: pre;
-					position: relative;
-					left: 50%;
-					top: 34.375vh;
-					transform: translate(-50%);
-				}
-			}
-		}
-	}
-	/* メインビジュアル en */
-
-	/* 会員登録動線バナー st */
-	.free_memberRegist_anchor {
-		width: min(100%, 154px);
-		position: relative;
-		bottom: -55px;
-		left: calc(100% - 20.16%);
-		z-index: 1;
-		@include mq(sp) {
-			width: min(100%, 124px);
-			bottom: 29px;
-			left: calc(100% - 62.93%);
-		}
-		&_link {
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			display: inline-block;
-			height: 154px;
-			@include imgPath('free_memberRegist_anchor','png');
-			text-indent: -9999px;
-			vertical-align: middle;
-			width: min(100%, 154px);
-			@include mq(sp) {
-				height: 124px;
-				@include imgPath('m_free_memberRegist_anchor','png');
-				width: min(100%, 124px);
-				position: relative;
-				left: calc(100% - 62.933%);
-			}
-		}
-	}
-	/* 会員登録動線バナー en */
-
-	/* 見出し関連 st */
-	.h2_main {
-		background-position: calc(100% - 50%) calc(100% + 100%);
-		background-repeat: no-repeat;
-		background-size: cover;
-=======
 }
 .job_introduct_example {
 	display: flex;
@@ -1095,38 +764,17 @@ body {
 	padding: 32px 16px 0;
 	width: min(100%, 890px);
 	@include mq(sp) {
->>>>>>> feature/data_hiramoto_css_231025
 		display: block;
 		font-size: 2rem;
 		font-weight: bold;
-<<<<<<< HEAD
-		@include imgPath('bg_title_image','png');
-		margin: 0 auto;
-		padding-bottom: 15px;
-		text-align: center;
-		width: min(100%, $minWin);
-=======
 		line-height: 180%;
 		padding-bottom: 12px;
 		padding: 20px 0px 20px;
 		width: 28.43%;
->>>>>>> feature/data_hiramoto_css_231025
 		@include mq(tab) {
 			background-position: calc(100% - 50%) calc(100% + 100%);
 		}
 		@include mq(sp) {
-<<<<<<< HEAD
-			background-position: calc(100% - 50%) calc(100% + 0%);
-			font-size: 1.5rem;
-			@include imgPath('m_bg_title_image','png');
-			width: min(100%, 375px);
-		}
-	}
-	.h2_sub {
-		display: block;
-		font-size: 1rem;
-		margin-top: 20px;
-=======
 			padding-bottom: 8px;
 			width: min(100%, 311px);
 		}
@@ -1256,43 +904,9 @@ body {
 		display: block;
 		margin-bottom: 0;
 		margin-top: 0;
->>>>>>> feature/data_hiramoto_css_231025
 		text-align: center;
 		width: min(100%, 375px);
 	}
-<<<<<<< HEAD
-	/* 見出し関連 en */
-
-	/* twinbeeができること st */
-	.canDo_twinbee {
-		margin-top: 64px;
-		@include mq(sp) {
-			margin: 0 auto;
-			margin-top: 180px;
-		}
-	}
-	.canDo_twinbee_content {
-		align-items: center;
-		background-color: $cl_fadePurple;
-		background-repeat: no-repeat;
-		background-size: contain;
-		border-radius: 12px;
-		display: flex;
-		height: 483px;
-		justify-content: flex-end;
-		margin: 0 auto;
-		margin-bottom: 40px;
-		padding: 24px 30px;
-		width: min(100%, 1072px);
-		@include mq(tab) {
-			align-items: center;
-			height: auto;
-			width: min(100%, 690px);
-		}
-		@include mq(sp) {
-			display: block;
-			height: auto;
-=======
 	&:not(:last-child)::after {
 		border-bottom: 7px solid transparent;
 		border-left: 17.32px solid $cl_plPurple;
@@ -1338,7 +952,6 @@ body {
 			padding: 20px 8px;
 			margin: 0 auto;
 			text-align: left;
->>>>>>> feature/data_hiramoto_css_231025
 			width: min(100%, 343px);
 		}
 		&:first-of-type {
@@ -1403,157 +1016,6 @@ body {
 			}
 		}
 	}
-<<<<<<< HEAD
-		&:last-child {
-			background-size: cover;
-			@include imgPath('canDo_twinbee_content_3','png');
-			margin-bottom: 0;
-			position: relative;
-			@include mq(sp) {
-				background-image: none;
-				background-position: center;
-				position: static;
-			}
-			&::before {
-				content: "";
-				background-image: linear-gradient(90deg, rgba(249, 245, 251, 0) 41%, rgba(249, 245, 251, 0.4) 49%, rgba(249, 245, 251, 0.9) 58% 79%, rgba(249, 245, 251, 0.9) 91%);	
-				border-radius: 12px;
-				height: 100%;
-				width: 100%;
-				position: absolute;
-				left: 0;
-				top: 0;
-				@include mq(sp) {
-					background-image: none;
-					position: static;
-				}
-			}
-		}
-	}
-	.canDo_twinbee_content {
-		&_inner {
-			width: min(100%, 46.27%);
-			@include mq(tab) {
-				width: min(100%, 50%);
-			}
-			@include mq(sp) {
-				width: min(100%, 238px);
-				margin: 0 auto
-			}
-		}
-		&_title {
-			align-items: center;
-			font-size: 1.5rem;
-			font-weight: bold;
-			position: relative;
-			z-index: 5;
-			@include mq(tab) {
-				display: flex;
-				flex-wrap: wrap;
-			}
-			@include mq(sp) {
-				font-size: 1.125rem;
-				margin: 0 auto;
-				text-align: center;
-			}
-			&_num {
-				font-size: 5rem;
-				font-weight: normal;
-				margin-right: 20px;
-				@include mq(sp) {
-					font-size: 4rem;
-				}
-			}
-		}
-		&_text {
-			font-size: 1rem;
-			line-height: 180%;
-			margin-top: 20px;
-			width: 100%;
-			position: relative;
-			z-index: 5;
-			@include mq(tab) {
-				width: 100%;
-			}
-			@include mq(sp) {
-				font-size: 0.875rem;
-				margin: 0 auto;
-				width: min(100%, 283px);
-			}
-		}	
-	}
-	.canDo_twinbee_content_title {
-		@include mq(sp) {
-			justify-content: center;
-		}
-		&:first-child::after {
-			@include mq(sp) {
-				align-items: center;
-				content: url(../images/m_canDo_twinbee_content_1.png);
-				display: flex;
-				height: 304px;
-				justify-content: center;
-				transform: scale(0.5);
-			}
-		}
-		&:nth-child(2)::after {
-			@include mq(sp) {
-				align-items: center;
-				content: url(../images/m_canDo_twinbee_content_2.png);
-				display: flex;
-				height: 304px;
-				justify-content: center;
-				transform: scale(0.5);
-			}
-		}
-		&:last-child::after {
-			@include mq(sp) {
-				align-items: center;
-				content: url(../images/m_canDo_twinbee_content_3.png);
-				display: flex;
-				height: 304px;
-				justify-content: center;
-				transform: scale(0.5);
-			}
-		}
-	}
-	.canDo_twinbee_content_icon {
-		&_plus,&_minus {
-			@include mq(sp) {
-				font-size: 0.875em;
-				font-weight: bold;
-				line-height: 160%;
-				padding-top: 28px;
-				text-align: center;
-			}
-			&::before {
-			@include mq(sp) {
-				content: url(../images/m_plus.svg);
-				padding-right: 12px;
-				vertical-align: top;
-				}
-			}
-		}
-		&_minus::before {
-			@include mq(sp) {
-				content: url(../images/m_minus.svg);
-				padding-right: 12px;
-				vertical-align: top;
-			}
-		}
-	}
-	/* twinbeeができること en */
-
-	/* お仕事紹介 st */
-	.job_introduct {
-		margin: 0 auto;
-		margin-top: 96px;
-		padding: 0 20px;
-		@include mq(sp) {
-			margin-top: 0;
-			padding: 64px 0;
-		}
-=======
 	&_text {
 		font-size: 0.875rem;
 		line-height: 180%;
@@ -1710,7 +1172,6 @@ body {
 	@include mq(sp) {
 		padding: 40px 16px;
 		width: min(100%, 375px);
->>>>>>> feature/data_hiramoto_css_231025
 	}
 	.job_introduct_tab_label {
 		background-color: $cl_fadePurple;
@@ -1719,217 +1180,12 @@ body {
 		cursor: pointer;
 		font-size: 1.125rem;
 		font-weight: bold;
-<<<<<<< HEAD
-		height: 45px;
-		order: -1;
-		padding: 10px;
-		text-align: center;
-		white-space: nowrap;
-		width: min(100%, 33.37%);
-		position: relative;
-		@include mq(tab) {
-			width: min(100%, 33.2857%);
-		}
-		@include mq(sp) {
-			font-size: 1rem;
-			height: 42px;
-			white-space: nowrap;
-			width: min(100%, 114.33px);
-		}
-		&:first-child {
-			border-left: none;
-		}
-		&:hover {
-			background-color: $cl_mainPurple;
-			color: $cl_text;
-			&::before {
-				background-color: $cl_plPurple;
-				bottom: -8px;
-				clip-path: polygon(0 0, 100% 0, 50% 100%);
-				content: "";
-				height: 9px;
-				width: 18px;
-				position: absolute;
-				left: 50%;
-				transform: translateX(150%);
-			}
-		}
-		&:has(:checked) {
-			background-color: $cl_fadePurple;
-			color: $cl_plPurple;
-		}
-	}
-	.job_introduct_tab {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin: 0 auto;
-		width: min(100%, 1072px);
-		@include mq(tab) {
-			width: min(100%, 700px);
-		}
-		@include mq(sp) {
-			width: min(100%, 343px);
-		}
-		&::after {
-			content: "";
-			clear: both;
-			display: block;
-		}
-		&_inner {
-			background-color: $cl_fadePurple;
-			border-radius: 12px;
-			display: none;
-			margin: 0 auto;
-			margin-top: 20px;
-			padding-bottom: 64px;
-			width: min(100%, 1072px);
-			@include mq(sp) {
-				width: min(100%, 343px);
-			}
-		}
-		&_content {
-			align-items: center;
-			display: flex;
-			flex-wrap: wrap;
-			font-size: 1.5rem;
-			font-weight: bold;
-			height: 220px;
-			justify-content: space-around;
-			margin: 0 auto;
-			padding-top: 40px;
-			width: min(100%, 96.53%);
-			@include mq(tab) {
-				justify-content: space-around;
-			}
-			@include mq(sp) {
-				display: block;
-				height: 257px;
-				width: min(100%, 311px);
-			}
-			&_title {
-				font-size: 1.5rem;
-				font-weight: bold;
-				@include mq(sp) {
-					font-size: 1.125rem;
-					padding-bottom: 8px;
-					text-align: center;
-				}
-			}
-			& img {
-				height: 220px;
-				width: 334px;
-			}
-		}
-	}
-	.job_introduct_example {
-		display: flex;
-		flex-wrap: wrap;
-		font-size: 1rem;
-		justify-content: center;
-		margin: 0 auto;
-		padding: 32px 16px 0;
-		width: min(100%, 890px);
-		@include mq(sp) {
-			display: block;
-			width: min(100%, 311px);
-		}
-		&_title {
-			border-bottom: $cl_plPurple solid 1px;
-			font-weight: bold;
-			line-height: 180%;
-			padding-bottom: 12px;
-			padding: 20px 0px 20px;
-			width: 28.43%;
-			@include mq(tab) {
-				border-bottom: none;
-				width: min(100%, 600px);
-			}
-			@include mq(sp) {
-				padding-bottom: 8px;
-				width: min(100%, 311px);
-			}
-		}
-		&_text {
-			border-bottom: $cl_plPurple solid 1px;
-			line-height: 180%;
-			margin: 0;
-			padding: 20px 0 12px 20px;
-			width: 69.44%;
-			@include mq(tab) {
-				padding-left: 0;
-				width: min(100%, 600px);
-			}
-			@include mq(sp) {
-				font-size: 0.875rem;
-				padding-bottom: 16px;
-				padding-top: 0;
-				width: min(100%, 311px);
-			}
-			&_content_list {
-				list-style: disc;
-				margin-left: 20px;
-			}
-			&_content_list > .-none {
-				list-style: none;
-			}
-		}
-	}
-
-	/*タブ選択時のタブ自体のスタイル*/
-	.job_introduct_tab > .job_introduct_tab_label:hover,
-	.job_introduct_tab .job_introduct_tab_label:has(:checked) {
-		background-color: $cl_mainPurple;
-		color: $cl_wt;
-		font-size: 1.125rem;
-		font-weight: bold;
-		height: 45px;
-		text-align: center;
-		width: min(100%, 33.37%);
-		@include mq(tab) {
-			height: 42px;
-			width: min(100%, 233px);
-		}
-		@include mq(sp) {
-			width: min(100%, 114.33px);
-		}
-	}
-
-	/*タブ選択時、三角形の要素を描画するためのスタイル*/
-	.job_introduct_tab .job_introduct_tab_label:has(:checked)::before {
-		background-color: $cl_mainPurple;
-		bottom: -8px;
-		clip-path: polygon(0 0, 100% 0, 50% 100%);
-		content: '';
-		height: 10px;
-		width: 18px;
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-	.job_introduct_tab .job_introduct_tabItem {
-		display: none;
-	}
-
-	/*選択されたタブの内容のみを表示する*/
-	.job_introduct_tab .job_introduct_tab_label:has(:checked) + div {
-		display: block;
-	}
-	.job_introduct_tab_inner {
-		background-color: $cl_fadePurple;
-		display: none;
-		padding-bottom : 64px;
-		width: min(100%, 1072px);
-		@include mq(sp) {
-			padding-bottom: 40px;
-=======
 		margin: 0 20px 0 8px;
 		width: min(100%, 252px);
 		@include mq(sp) {
 			font-size: 1rem;
 			margin: 0;
 			margin-bottom: 8px;
->>>>>>> feature/data_hiramoto_css_231025
 			width: min(100%, 343px);
 		}
 	}
@@ -2316,11 +1572,6 @@ body {
 			}
 		}
 	}
-<<<<<<< HEAD
-
-	//チェックボックスデザイン
-	.free_memberRegist_form_checkBoxItem {
-=======
 }
 .-require::before {
 	background-color: $sl_accentBlue;
@@ -2339,7 +1590,6 @@ body {
 .free_memberRegist_form {
 	padding: 25px 16px 0;
 	&_privacyPolicy {
->>>>>>> feature/data_hiramoto_css_231025
 		background-color: $cl_wt;
 		border: 1px solid $cl_plPurple;
 		border-radius: 4px;
@@ -2365,15 +1615,6 @@ body {
 			top: 3px;
 		}
 	}
-<<<<<<< HEAD
-	/* 無料会員登録 en */
-
-	/* アクセス st */
-	.access {
-		height: auto;
-		margin: 0 auto;
-		padding-top: 96px;
-=======
 	&_checkBox {
 		font-size: 1.125rem;
 		font-weight: bold;
@@ -2445,13 +1686,9 @@ body {
 		padding: 64px 0;
 	}
 	&_map_content {
->>>>>>> feature/data_hiramoto_css_231025
 		@include mq(sp) {
 			padding: 64px 0;
 		}
-<<<<<<< HEAD
-		&_map_content {
-=======
 	}
 	&_map_body {
 		display: block;
@@ -2478,7 +1715,6 @@ body {
 			padding-bottom: 12px;
 		}
 		&_title{
->>>>>>> feature/data_hiramoto_css_231025
 			@include mq(sp) {
 				margin-top: 20px;
 			}
@@ -2515,25 +1751,16 @@ body {
 			&_text {
 				@include mq(sp) {
 				line-height: 160%;
-<<<<<<< HEAD
-				}
-=======
 			}
 		}
 		&_text {
 			@include mq(sp) {
 			line-height: 160%;
->>>>>>> feature/data_hiramoto_css_231025
 			}
 		}
 	}
 	/* アクセス en */
 
-<<<<<<< HEAD
-	/* instagram st */
-	.instagram {
-		margin-top: 96px;
-=======
 /* instagram st */
 .instagram {
 	margin-top: 96px;
@@ -2558,7 +1785,6 @@ body {
 		margin-top: 40px;
 		text-decoration: none;
 		width: min(100%, 526px);
->>>>>>> feature/data_hiramoto_css_231025
 		@include mq(sp) {
 			margin-top: 64px;
 		}
@@ -2591,15 +1817,6 @@ body {
 	}
 	/* instagram en */
 
-<<<<<<< HEAD
-	/* footer st */
-	footer {
-		background-color: #8DA5FA;
-		height: 189px;
-		margin-top: 96px;
-		padding: 40px 0;
-		text-align: center;
-=======
 /* footer st */
 footer {
 	background-color: #8DA5FA;
@@ -2617,7 +1834,6 @@ footer {
 		height: 80px;
 		margin: 0 auto;
 		width: 80px;
->>>>>>> feature/data_hiramoto_css_231025
 		@include mq(sp) {
 			height: 134px;
 			margin-top: 64px;
