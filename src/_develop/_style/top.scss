@@ -34,10 +34,10 @@ body {
 	font-family: 'ooohbaby';
 }
 .-handWriteFont {
-	color: #DABAF4;
+	color: $sl_corporatePurple;
 }
 .-num {
-	color: #DAADFF;
+	color: $cl_mainPurple;
 }
 
 //改行操作
@@ -953,12 +953,12 @@ body {
 		font-size: 1.5rem;
 		font-weight: bold;
 		height: 220px;
-		justify-content: space-around;
+		justify-content: space-between;
 		margin: 0 auto;
 		padding-top: 40px;
-		width: min(100%, 96.53%);
+		width: min(100%, 890px);
 		@include mq(tab) {
-			justify-content: space-around;
+			width: 100%;
 		}
 		@include mq(sp) {
 			display: block;
