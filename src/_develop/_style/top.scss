@@ -907,9 +907,9 @@ p.job_introduct_example_text_content_list{
 .flow {
 	background-color: $cl_fadePurple;
 	margin-top: 96px;
-	padding: 96px 0;
+	padding: 96px 20px;
 	@include mq(tab) {
-		padding: 96px 20px;
+		padding: 96px 30px;
 	}
 	@include mq(sp) {
 		margin: 0 auto;
@@ -918,13 +918,15 @@ p.job_introduct_example_text_content_list{
 	}
 	&_list {
 		display: flex;
-		justify-content: space-between;
+		flex-wrap: wrap;
+		justify-content: center;
 		list-style: none;
 		margin: 0% auto;
 		padding: 0%;
-		width: min(100%, 1072px);
+		width: min(100%, 1280px);
 		@include mq(tab) {
 			flex-wrap: wrap;
+			justify-content: space-between;
 			text-align: center;
 			width: min(100%, 768px);
 		}
@@ -937,6 +939,7 @@ p.job_introduct_example_text_content_list{
 }
 .flow_listItem {
 	margin-top: 64px;
+	width: min(100%, 222.17px);
 	position: relative;
 	@include mq(tab) {
 		margin: 40px 0;

@@ -1539,12 +1539,12 @@ p.job_introduct_example_text_content_list {
 .flow {
   background-color: #fcf9ff;
   margin-top: 96px;
-  padding: 96px 0;
+  padding: 96px 20px;
 }
 
 @media screen and (max-width: 768px) {
   .flow {
-    padding: 96px 20px;
+    padding: 96px 30px;
   }
 }
 @media screen and (max-width: 420px) {
@@ -1558,19 +1558,24 @@ p.job_introduct_example_text_content_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   list-style: none;
   margin: 0% auto;
   padding: 0%;
-  width: min(100%, 1072px);
+  width: min(100%, 1280px);
 }
 
 @media screen and (max-width: 768px) {
   .flow_list {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     text-align: center;
     width: min(100%, 768px);
   }
@@ -1584,6 +1589,7 @@ p.job_introduct_example_text_content_list {
 }
 .flow_listItem {
   margin-top: 64px;
+  width: min(100%, 222.17px);
   position: relative;
 }
 
