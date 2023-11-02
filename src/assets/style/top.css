@@ -432,6 +432,20 @@ body {
     display: block;
   }
 }
+.desktop_tablet_none {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop_tablet_none {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .desktop_tablet_none {
+    display: block;
+  }
+}
 .mobile_none {
   display: block;
 }
@@ -808,7 +822,7 @@ body {
     white-space: pre;
     position: relative;
     left: 50%;
-    top: 34.375vh;
+    top: 27.375vh;
     -webkit-transform: translate(-50%);
     transform: translate(-50%);
   }
@@ -1185,7 +1199,7 @@ body {
   }
 }
 @media screen and (max-width: 420px) {
-  .canDo_twinbee_content_icon_plus, .canDo_twinbee_content_icon_minus {
+  .canDo_twinbee_content_icon_plus {
     font-size: 0.875em;
     font-weight: bold;
     line-height: 160%;
@@ -1194,10 +1208,19 @@ body {
   }
 }
 @media screen and (max-width: 420px) {
-  .canDo_twinbee_content_icon_plus::before, .canDo_twinbee_content_icon_minus::before {
+  .canDo_twinbee_content_icon_plus::before {
     content: url(../images/m_plus.svg);
     padding-right: 12px;
     vertical-align: top;
+  }
+}
+@media screen and (max-width: 420px) {
+  .canDo_twinbee_content_icon_minus {
+    font-size: 0.875em;
+    font-weight: bold;
+    line-height: 160%;
+    padding-top: 28px;
+    text-align: center;
   }
 }
 @media screen and (max-width: 420px) {
@@ -1235,7 +1258,7 @@ body {
   padding: 10px;
   text-align: center;
   white-space: nowrap;
-  width: 33.37%;
+  width: 27.68%;
   position: relative;
 }
 
@@ -1346,6 +1369,10 @@ body {
 
 @media screen and (max-width: 768px) {
   .job_introduct_tab_content {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 auto;
     width: 100%;
   }
 }
@@ -1373,6 +1400,11 @@ body {
   width: 334px;
 }
 
+@media screen and (max-width: 768px) {
+  .job_introduct_tab_content img {
+    width: min(100%, 334px);
+  }
+}
 .job_introduct_example {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1399,13 +1431,14 @@ body {
   font-weight: bold;
   line-height: 180%;
   padding-bottom: 12px;
-  padding: 20px 0px 20px;
+  padding: 20px 0;
   width: 28.43%;
 }
 
 @media screen and (max-width: 768px) {
   .job_introduct_example_title {
     border-bottom: none;
+    padding: 10px 0;
     width: min(100%, 600px);
   }
 }
@@ -1426,6 +1459,7 @@ body {
 @media screen and (max-width: 768px) {
   .job_introduct_example_text {
     padding-left: 0;
+    padding-top: 10px;
     width: min(100%, 600px);
   }
 }
@@ -1442,10 +1476,6 @@ body {
   margin-left: 20px;
 }
 
-.job_introduct_example_text_content_list > .-none {
-  list-style: none;
-}
-
 /*タブ選択時のタブ自体のスタイル*/
 .job_introduct_tab > .job_introduct_tab_label:hover,
 .job_introduct_tab .job_introduct_tab_label:has(:checked) {
@@ -1455,22 +1485,13 @@ body {
   font-weight: bold;
   height: 45px;
   text-align: center;
-  width: 33.37%;
+  width: 27.68%;
 }
 
-@media screen and (max-width: 768px) {
-  .job_introduct_tab > .job_introduct_tab_label:hover,
-  .job_introduct_tab .job_introduct_tab_label:has(:checked) {
-    height: 42px;
-    width: min(100%, 233px);
-  }
+p.job_introduct_example_text_content_list {
+  margin-left: 0;
 }
-@media screen and (max-width: 420px) {
-  .job_introduct_tab > .job_introduct_tab_label:hover,
-  .job_introduct_tab .job_introduct_tab_label:has(:checked) {
-    width: min(100%, 114.33px);
-  }
-}
+
 /*タブ選択時、三角形の要素を描画するためのスタイル*/
 .job_introduct_tab .job_introduct_tab_label:has(:checked)::before {
   background-color: #DAADFF;
