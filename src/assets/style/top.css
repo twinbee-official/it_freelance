@@ -546,10 +546,6 @@ body {
 @media screen and (max-width: 768px) and (max-width: 420px) {
   .header_menu {
     width: 80%;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 420px) {
-  .header_menu {
     height: 667px;
   }
 }
@@ -634,13 +630,6 @@ body {
     opacity: 1;
   }
 }
-.header_menuList:hover {
-  background-position: 5% 95%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("../images/m_header_current.svg");
-}
-
 .m_header_menuList {
   width: 100%;
 }

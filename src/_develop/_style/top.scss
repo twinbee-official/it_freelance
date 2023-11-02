@@ -116,8 +116,6 @@ body {
 		width: min(100%, 80%);
 		@include mq(sp) {
 			width: min(100%, 80%);
-		}
-		@include mq(sp) {
 			height: 667px;
 		}
 	}
@@ -186,14 +184,6 @@ body {
 			}
 		}
 	}
-}
-
-//hoverしたら紙飛行機
-.header_menuList:hover {
-	background-position: 5% 95%;
-	background-repeat: no-repeat;
-	background-size: contain;
-	@include imgPath('m_header_current','svg');
 }
 .m_header_menuList {
 	width: 100%;
@@ -847,7 +837,7 @@ body {
 	text-align: center;
 	width: min(100%, 27.68%);
 }
-p.job_introduct_example_text_content_list{
+p.job_introduct_example_text_content_list {
 	margin-left: 0;
 }
 
