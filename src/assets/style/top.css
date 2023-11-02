@@ -1815,7 +1815,7 @@ p.job_introduct_example_text_content_list {
 /* よくある質問 en */
 /* 無料会員登録 st */
 .free_memberRegist {
-  background-blend-mode: overlay;
+  background-blend-mode: soft-light;
   background-color: rgb(249, 245, 251);
   background-position: center center;
   background-repeat: repeat;

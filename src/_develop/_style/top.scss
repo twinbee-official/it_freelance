@@ -623,41 +623,6 @@ body {
 		width: min(100%,283px);
 	}
 }
-// .canDo_twinbee_content_title {
-// 	@include mq(sp) {
-// 		justify-content: center;
-// 	}
-// 	&:first-child::after {
-// 		@include mq(sp) {
-// 			align-items: center;
-// 			content: url(../images/m_canDo_twinbee_content_1.png);
-// 			display: flex;
-// 			height: 304px;
-// 			justify-content: center;
-// 			transform: scale(0.5);
-// 		}
-// 	}
-// 	&:nth-child(2)::after {
-// 		@include mq(sp) {
-// 			align-items: center;
-// 			content: url(../images/m_canDo_twinbee_content_2.png);
-// 			display: flex;
-// 			height: 304px;
-// 			justify-content: center;
-// 			transform: scale(0.5);
-// 		}
-// 	}
-// 	&:last-child::after {
-// 		@include mq(sp) {
-// 			align-items: center;
-// 			content: url(../images/m_canDo_twinbee_content_3.png);
-// 			display: flex;
-// 			height: 304px;
-// 			justify-content: center;
-// 			transform: scale(0.5);
-// 		}
-// 	}
-// }
 .canDo_twinbee_content_icon {
 	&_plus {
 		@include mq(sp) {
@@ -1171,7 +1136,7 @@ p.job_introduct_example_text_content_list{
 
 /* 無料会員登録 st */
 .free_memberRegist {
-	background-blend-mode: overlay;
+	background-blend-mode: soft-light;
 	background-color: rgba(249,245,251,1);
 	background-position: center center;
 	background-repeat: repeat;
