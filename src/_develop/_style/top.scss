@@ -47,6 +47,9 @@ body {
 }
 .mobile_none {
 	display: block;
+	@include mq(tab) {
+		display: block;
+	}
 	@include mq(sp) {
 		display: none;
 	}
@@ -63,11 +66,13 @@ body {
 	&_inner {
 		align-items: center;
 		display: flex;
-		justify-content: space-between;
-		padding: 16px 64px 8px;
+		justify-content: center;
+		padding: 16px 0 8px;
 		@include mq(tab) {
 			align-items: flex-start;
 			padding: 0;
+		}
+		@include mq(sp) {
 		}
 	}
 	&_logo {
@@ -77,10 +82,13 @@ body {
 		}
 		&_img {
 			height: 60px;
-			width: 180px;
+			width: max(100%, 180px);
+			@include mq(tab) {
+				padding: 16px;
+			}
 			@include mq(sp) {
 				height: auto;
-				width: max(100%, 162px);
+				width: min(100%, 162px);
 			}
 		}
 	}
@@ -90,6 +98,8 @@ body {
 .header_menu {
 	align-items: center;
 	display: flex;
+	margin-left: 10px;
+	margin-right: 10px;
 	white-space: nowrap;
 	@include mq(tab) {
 		align-content: flex-end;
@@ -100,12 +110,15 @@ body {
 		background-size: cover;
 		display: flex;
 		flex-wrap: wrap;
-		height: 667px;
+		height: 810px;
 		@include imgPath('bg_free_memberRegist','png');
 		padding: 32px 0;
 		width: min(100%, 80%);
 		@include mq(sp) {
 			width: min(100%, 80%);
+		}
+		@include mq(sp) {
+			height: 667px;
 		}
 	}
 	&List {
@@ -156,10 +169,11 @@ body {
 				background-size: cover;
 				display: block;
 				height: 24px;
-				@include imgPath('ig_icon','svg');
+				@include imgPath('header_ig_icon','svg');
 				text-indent: -9999px;
 				width: 24px;
 				@include mq(tab) {
+					background-image: none;
 					text-indent: 0;
 				}
 			}
@@ -182,23 +196,25 @@ body {
 	@include imgPath('m_header_current','svg');
 }
 .m_header_menuList {
-	&_logo {
+	width: 100%;
+	&_logo_img {
 		@include mq(tab) {
 		display: block;
 		margin-left: 16px;
-		width: min(300px, 30%);
+		width: min(100%, 162px);
 		position: relative;
-		top: -130px
+		top: -80px;
 		}
 		@include mq(sp) {
 			margin-top: 93px;
-			width: min(300px, 54%);
 			position: static;
 		}
 	}
-	&_anchor {
+	&_anchor_img {
 		@include mq(tab) {
 		display: block;
+		margin: 0 auto;
+		padding-bottom: 24px;
 		text-align: center;
 		width: min(100%, 89.33%);
 		}
@@ -327,7 +343,8 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	@include mq(sp) {
-		height: min(100%, 46.875vh);
+		// height: min(100%, 41.67vh);
+		height: 375px;
 		@include imgPath('m_bg_mainVisual');
 	}
 	&_titleBox {
@@ -340,7 +357,7 @@ body {
 		&_main {
 			width: min(100%, 59.58%);
 			@include mq(sp) {
-				top: calc(46.875vh - 33.06275vh);
+				top: calc(46.875vh - 38.06275vh);
 				width: min(100%, 94.15%);
 				position: relative;
 			}
@@ -355,13 +372,11 @@ body {
 				font-size: 1rem;
 				letter-spacing: 5%;
 				line-height: 160%;
+				margin-left: 0;
+				margin-top: 28px;
 				text-align: center;
-				margin: 28px 0;
-				white-space: pre;
-				position: relative;
+				position: static;
 				left: 50%;
-				top: 27.375vh;
-				transform: translate(-50%);
 			}
 		}
 	}
@@ -437,7 +452,7 @@ body {
 	margin-top: 64px;
 	@include mq(sp) {
 		margin: 0 auto;
-		margin-top: 180px;
+		margin-top: 48px;
 	}
 }
 .canDo_twinbee_content {
@@ -603,41 +618,46 @@ body {
 		}
 	}	
 }
-.canDo_twinbee_content_title {
+.m_canDo_twinbee_content_img{
 	@include mq(sp) {
-		justify-content: center;
-	}
-	&:first-child::after {
-		@include mq(sp) {
-			align-items: center;
-			content: url(../images/m_canDo_twinbee_content_1.png);
-			display: flex;
-			height: 304px;
-			justify-content: center;
-			transform: scale(0.5);
-		}
-	}
-	&:nth-child(2)::after {
-		@include mq(sp) {
-			align-items: center;
-			content: url(../images/m_canDo_twinbee_content_2.png);
-			display: flex;
-			height: 304px;
-			justify-content: center;
-			transform: scale(0.5);
-		}
-	}
-	&:last-child::after {
-		@include mq(sp) {
-			align-items: center;
-			content: url(../images/m_canDo_twinbee_content_3.png);
-			display: flex;
-			height: 304px;
-			justify-content: center;
-			transform: scale(0.5);
-		}
+		width: min(100%,283px);
 	}
 }
+// .canDo_twinbee_content_title {
+// 	@include mq(sp) {
+// 		justify-content: center;
+// 	}
+// 	&:first-child::after {
+// 		@include mq(sp) {
+// 			align-items: center;
+// 			content: url(../images/m_canDo_twinbee_content_1.png);
+// 			display: flex;
+// 			height: 304px;
+// 			justify-content: center;
+// 			transform: scale(0.5);
+// 		}
+// 	}
+// 	&:nth-child(2)::after {
+// 		@include mq(sp) {
+// 			align-items: center;
+// 			content: url(../images/m_canDo_twinbee_content_2.png);
+// 			display: flex;
+// 			height: 304px;
+// 			justify-content: center;
+// 			transform: scale(0.5);
+// 		}
+// 	}
+// 	&:last-child::after {
+// 		@include mq(sp) {
+// 			align-items: center;
+// 			content: url(../images/m_canDo_twinbee_content_3.png);
+// 			display: flex;
+// 			height: 304px;
+// 			justify-content: center;
+// 			transform: scale(0.5);
+// 		}
+// 	}
+// }
 .canDo_twinbee_content_icon {
 	&_plus {
 		@include mq(sp) {
