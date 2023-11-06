@@ -505,13 +505,12 @@ body {
 
 @media screen and (max-width: 768px) {
   .header_logo_img {
-    padding: 16px;
+    margin: 16px;
   }
 }
 @media screen and (max-width: 420px) {
   .header_logo_img {
-    height: auto;
-    width: min(100%, 162px);
+    width: max(100%, 162px);
   }
 }
 .header_menu {
@@ -528,8 +527,8 @@ body {
 
 @media screen and (max-width: 768px) {
   .header_menu {
-    -ms-flex-line-pack: end;
-    align-content: flex-end;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
     background-blend-mode: overlay;
     background-color: rgb(249, 245, 251);
     background-position: center center;
@@ -540,17 +539,14 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    height: 810px;
     margin: 0;
     background-image: url("../images/bg_free_memberRegist.png");
     padding: 32px 0;
-    width: 80%;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 420px) {
   .header_menu {
-    width: 80%;
-    height: 667px;
+    height: auto;
   }
 }
 @media screen and (max-width: 768px) {
@@ -641,16 +637,9 @@ body {
 @media screen and (max-width: 768px) {
   .m_header_menuList_logo_img {
     display: block;
+    margin-bottom: 16px;
     margin-left: 16px;
     width: min(100%, 162px);
-    position: relative;
-    top: -80px;
-  }
-}
-@media screen and (max-width: 420px) {
-  .m_header_menuList_logo_img {
-    margin-top: 93px;
-    position: static;
   }
 }
 @media screen and (max-width: 768px) {
@@ -659,6 +648,11 @@ body {
     margin: 0 auto;
     padding-bottom: 24px;
     text-align: center;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .m_header_menuList_anchor_img {
     width: 89.33%;
   }
 }
@@ -700,11 +694,6 @@ body {
 @media screen and (max-width: 768px) {
   .m_header_menu_iconLine::after {
     top: 8px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .m_header_menu_icon {
-    display: block;
   }
 }
 @media screen and (max-width: 768px) {

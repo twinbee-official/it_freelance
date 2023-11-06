@@ -83,11 +83,10 @@ body {
 			height: 60px;
 			width: max(100%, 180px);
 			@include mq(tab) {
-				padding: 16px;
+				margin: 16px;
 			}
 			@include mq(sp) {
-				height: auto;
-				width: min(100%, 162px);
+				width: max(100%, 162px);
 			}
 		}
 	}
@@ -101,7 +100,7 @@ body {
 	margin-right: 10px;
 	white-space: nowrap;
 	@include mq(tab) {
-		align-content: flex-end;
+		align-content: flex-start;
 		background-blend-mode: overlay;
 		background-color: rgb(249, 245, 251);
 		background-position: center center;
@@ -109,14 +108,11 @@ body {
 		background-size: cover;
 		display: flex;
 		flex-wrap: wrap;
-		height: 810px;
 		margin: 0;
 		@include imgPath('bg_free_memberRegist','png');
 		padding: 32px 0;
-		width: min(100%, 80%);
 		@include mq(sp) {
-			width: min(100%, 80%);
-			height: 667px;
+			height: auto;
 		}
 	}
 	&List {
@@ -190,14 +186,9 @@ body {
 	&_logo_img {
 		@include mq(tab) {
 		display: block;
+		margin-bottom: 16px;
 		margin-left: 16px;
 		width: min(100%, 162px);
-		position: relative;
-		top: -80px;
-		}
-		@include mq(sp) {
-			margin-top: 93px;
-			position: static;
 		}
 	}
 	&_anchor_img {
@@ -206,7 +197,10 @@ body {
 		margin: 0 auto;
 		padding-bottom: 24px;
 		text-align: center;
-		width: min(100%, 89.33%);
+		width: min(100%, 70%);
+		}
+		@include mq(sp) {
+			width: min(100%, 89.33%);
 		}
 	}
 }
@@ -245,10 +239,6 @@ body {
 	}
 }
 .m_header_menu_icon {
-	@include mq(tab) {
-		display: block;
-	}
-
 	//チェック後のアイコンの動き
 	&:checked ~ .m_header_menu_iconLine {
 		@include mq(tab) {
@@ -333,7 +323,6 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	@include mq(sp) {
-		// height: min(100%, 41.67vh);
 		height: 375px;
 		@include imgPath('m_bg_mainVisual');
 	}
