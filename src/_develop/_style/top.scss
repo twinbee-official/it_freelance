@@ -70,9 +70,8 @@ body {
 		padding: 16px 0 8px;
 		@include mq(tab) {
 			align-items: flex-start;
+			justify-content: flex-end;
 			padding: 0;
-		}
-		@include mq(sp) {
 		}
 	}
 	&_logo {
@@ -111,6 +110,7 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 		height: 810px;
+		margin: 0;
 		@include imgPath('bg_free_memberRegist','png');
 		padding: 32px 0;
 		width: min(100%, 80%);
@@ -517,19 +517,19 @@ body {
 		}
 		&::before {
 			@include mq(tab) {
-			content: "";
-			background-image: linear-gradient(-90deg, rgba(249, 245, 251, 0) 41%, rgba(249, 245, 251, 0.4) 49%, rgba(249, 245, 251, 0.9) 58% 79%, rgba(249, 245, 251, 0.9) 91%);
-			height: 100%;
-			width: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
-			@include mq(sp) {
-				background-image: none;
+				content: "";
+				background-image: linear-gradient(-90deg, rgba(249, 245, 251, 0) 41%, rgba(249, 245, 251, 0.4) 49%, rgba(249, 245, 251, 0.9) 58% 79%, rgba(249, 245, 251, 0.9) 91%);
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				@include mq(sp) {
+					background-image: none;
+				}
 			}
 		}
 	}
-}
 	&:last-child {
 		background-size: cover;
 		@include imgPath('canDo_twinbee_content_3','png');
@@ -608,7 +608,7 @@ body {
 		}
 	}	
 }
-.m_canDo_twinbee_content_img{
+.m_canDo_twinbee_content_img {
 	@include mq(sp) {
 		width: min(100%,283px);
 	}
@@ -623,10 +623,10 @@ body {
 			text-align: center;
 		}
 		&::before {
-		@include mq(sp) {
-			content: url(../images/m_plus.svg);
-			padding-right: 12px;
-			vertical-align: top;
+			@include mq(sp) {
+				content: url(../images/m_plus.svg);
+				padding-right: 12px;
+				vertical-align: top;
 			}
 		}
 	}
@@ -677,8 +677,12 @@ body {
 		width: min(100%, 33.2857%);
 	}
 	@include mq(sp) {
+		align-items: center;
+		display: flex;
 		font-size: 1rem;
 		height: 42px;
+		justify-content: center;
+		padding: 0;
 		white-space: nowrap;
 		width: min(100%, 114.33px);
 	}
@@ -836,6 +840,14 @@ body {
 	height: 45px;
 	text-align: center;
 	width: min(100%, 27.68%);
+	@include mq(tab) {
+		width: min(100%, 33.2857%);
+	}
+	@include mq(sp) {
+		font-size: 1rem;
+		height: 42px;
+		width: min(100%, 114.33px);
+	}
 }
 p.job_introduct_example_text_content_list {
 	margin-left: 0;
@@ -941,7 +953,7 @@ p.job_introduct_example_text_content_list {
 		right: calc(100% - 220px);
 		top: 120px;
 		@include mq(tab) {
-			display: none;
+			right: calc(100% + 20%);
 		}
 		@include mq(sp) {
 			display: block;
@@ -993,7 +1005,7 @@ p.job_introduct_example_text_content_list {
 			text-align: left;
 			margin: 0 auto;
 			padding-top: 10px;
-			width:70%;
+			width:100%;
 		}
 		@include mq(sp) {
 			text-align: left;
@@ -1006,12 +1018,16 @@ p.job_introduct_example_text_content_list {
 }
 .flow_listItem {
 	&_num {
+		display: flex;
 		font-size: 2.5rem;
 		letter-spacing: 5%;
 		line-height: 100%;
+		margin-bottom: -20px;
 		transform: translate(-17px,-0.28px) rotate(-10deg);
 		@include mq(sp) {
 			font-size: 2rem;
+			justify-content: center;
+			margin: 0;
 			position: relative;
 			top: 16px;
 			transform: none;

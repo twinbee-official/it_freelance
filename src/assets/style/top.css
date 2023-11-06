@@ -488,6 +488,9 @@ body {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     padding: 0;
   }
 }
@@ -538,6 +541,7 @@ body {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     height: 810px;
+    margin: 0;
     background-image: url("../images/bg_free_memberRegist.png");
     padding: 32px 0;
     width: 80%;
@@ -1225,8 +1229,18 @@ body {
 }
 @media screen and (max-width: 420px) {
   .job_introduct_tab_label {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     font-size: 1rem;
     height: 42px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0;
     white-space: nowrap;
     width: min(100%, 114.33px);
   }
@@ -1444,6 +1458,20 @@ body {
   width: 27.68%;
 }
 
+@media screen and (max-width: 768px) {
+  .job_introduct_tab > .job_introduct_tab_label:hover,
+  .job_introduct_tab .job_introduct_tab_label:has(:checked) {
+    width: 33.2857%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .job_introduct_tab > .job_introduct_tab_label:hover,
+  .job_introduct_tab .job_introduct_tab_label:has(:checked) {
+    font-size: 1rem;
+    height: 42px;
+    width: min(100%, 114.33px);
+  }
+}
 p.job_introduct_example_text_content_list {
   margin-left: 0;
 }
@@ -1581,7 +1609,7 @@ p.job_introduct_example_text_content_list {
 
 @media screen and (max-width: 768px) {
   .flow_listItem:not(:last-child)::after {
-    display: none;
+    right: 120%;
   }
 }
 @media screen and (max-width: 420px) {
@@ -1649,7 +1677,7 @@ p.job_introduct_example_text_content_list {
     text-align: left;
     margin: 0 auto;
     padding-top: 10px;
-    width: 70%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 420px) {
@@ -1662,9 +1690,13 @@ p.job_introduct_example_text_content_list {
   }
 }
 .flow_listItem_num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 2.5rem;
   letter-spacing: 5%;
   line-height: 100%;
+  margin-bottom: -20px;
   -webkit-transform: translate(-17px, -0.28px) rotate(-10deg);
   transform: translate(-17px, -0.28px) rotate(-10deg);
 }
@@ -1672,6 +1704,10 @@ p.job_introduct_example_text_content_list {
 @media screen and (max-width: 420px) {
   .flow_listItem_num {
     font-size: 2rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
     position: relative;
     top: 16px;
     -webkit-transform: none;
