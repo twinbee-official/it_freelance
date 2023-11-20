@@ -407,6 +407,11 @@ body {
   font-family: "Helvetica Neue", "Arial", sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+  .-en {
+    display: contents;
+  }
+}
 @font-face {
   font-family: "ooohbaby";
   src: url("../font/OoohBaby-Regular.ttf");
@@ -1461,7 +1466,7 @@ body {
     width: min(100%, 114.33px);
   }
 }
-p.job_introduct_example_text_content_list {
+.job_introduct_example_text_content_list {
   margin-left: 0;
 }
 
@@ -1500,11 +1505,6 @@ p.job_introduct_example_text_content_list {
   .job_introduct_tab_inner {
     padding-bottom: 40px;
     width: min(100%, 343px);
-  }
-}
-@media screen and (max-width: 768px) {
-  .-en {
-    display: contents;
   }
 }
 /* お仕事紹介 en */

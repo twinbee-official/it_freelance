@@ -14,17 +14,24 @@ body {
 // 英字フォント
 .-en {
 	font-family: "Helvetica Neue", "Arial", sans-serif;
+	@include mq(tab) {
+		display: contents;
+	}
 }
+
 @font-face {
 	font-family: 'ooohbaby';
 	src: url('../font/OoohBaby-Regular.ttf');
 }
+
 .-handWriteFont,.-num {
 	font-family: 'ooohbaby';
 }
+
 .-handWriteFont {
 	color: $sl_corporatePurple;
 }
+
 .-num {
 	color: $cl_mainPurple;
 }
@@ -36,6 +43,7 @@ body {
 		display: block;
 	}
 }
+
 .desktop_tablet_none {
 	display: none;
 	@include mq(tab) {
@@ -45,6 +53,7 @@ body {
 		display: block;
 	}
 }
+
 .mobile_none {
 	display: block;
 	@include mq(tab) {
@@ -181,6 +190,8 @@ body {
 		}
 	}
 }
+
+// モバイル用
 .m_header_menuList {
 	width: 100%;
 	&_logo_img {
@@ -204,6 +215,7 @@ body {
 		}
 	}
 }
+
 .m_header_menu_icon {
 	@include mq(tab) {
 		align-items: center;
@@ -238,6 +250,7 @@ body {
 		}
 	}
 }
+
 .m_header_menu_icon {
 	//チェック後のアイコンの動き
 	&:checked ~ .m_header_menu_iconLine {
@@ -418,6 +431,7 @@ body {
 		width: min(100%, 375px);
 	}
 }
+
 .h2_sub {
 	display: block;
 	font-size: 1rem;
@@ -434,6 +448,7 @@ body {
 		margin-top: 48px;
 	}
 }
+
 .canDo_twinbee_content {
 	align-items: center;
 	background-color: $cl_fadePurple;
@@ -545,6 +560,7 @@ body {
 		}
 	}
 }
+
 .canDo_twinbee_content {
 	&_inner {
 		width: min(100%, 46.27%);
@@ -597,11 +613,13 @@ body {
 		}
 	}	
 }
+
 .m_canDo_twinbee_content_img {
 	@include mq(sp) {
 		width: min(100%,283px);
 	}
 }
+
 .canDo_twinbee_content_icon {
 	&_plus {
 		@include mq(sp) {
@@ -648,6 +666,7 @@ body {
 		padding: 64px 0;
 	}
 }
+
 .job_introduct_tab_label {
 	background-color: $cl_fadePurple;
 	border-left: dashed 1px $cl_plPurple;
@@ -698,6 +717,7 @@ body {
 		color: $cl_plPurple;
 	}
 }
+
 .job_introduct_tab {
 	display: flex;
 	flex-wrap: wrap;
@@ -766,6 +786,7 @@ body {
 		}
 	}
 }
+
 .job_introduct_example {
 	display: flex;
 	flex-wrap: wrap;
@@ -838,7 +859,8 @@ body {
 		width: min(100%, 114.33px);
 	}
 }
-p.job_introduct_example_text_content_list {
+
+.job_introduct_example_text_content_list {
 	margin-left: 0;
 }
 
@@ -854,6 +876,7 @@ p.job_introduct_example_text_content_list {
 	left: 50%;
 	transform: translateX(-50%);
 }
+
 .job_introduct_tab .job_introduct_tabItem {
 	display: none;
 }
@@ -862,6 +885,7 @@ p.job_introduct_example_text_content_list {
 .job_introduct_tab .job_introduct_tab_label:has(:checked) + div {
 	display: block;
 }
+
 .job_introduct_tab_inner {
 	background-color: $cl_fadePurple;
 	display: none;
@@ -870,11 +894,6 @@ p.job_introduct_example_text_content_list {
 	@include mq(sp) {
 		padding-bottom: 40px;
 		width: min(100%, 343px);
-	}
-}
-.-en{
-	@include mq(tab) {
-		display: contents;
 	}
 }
 /* お仕事紹介 en */
@@ -913,6 +932,7 @@ p.job_introduct_example_text_content_list {
 		}
 	}
 }
+
 .flow_listItem {
 	margin-top: 64px;
 	width: min(100%, 222.17px);
@@ -1005,6 +1025,7 @@ p.job_introduct_example_text_content_list {
 		}
 	}
 }
+
 .flow_listItem {
 	&_num {
 		display: flex;
@@ -1071,6 +1092,7 @@ p.job_introduct_example_text_content_list {
 		}
 	}
 }
+
 .faq_list {
 	@include mq(sp) {
 		overflow: hidden;
@@ -1094,6 +1116,7 @@ p.job_introduct_example_text_content_list {
 		}
 	}
 }
+
 .faq_listItem_title {
 	@include mq(sp) {
 		border-bottom: none;
@@ -1156,6 +1179,7 @@ p.job_introduct_example_text_content_list {
 		z-index: 3;
 	}
 }
+
 .free_memberRegist_formBox {
 	display: flex;
 	height: auto;
@@ -1195,6 +1219,7 @@ p.job_introduct_example_text_content_list {
 		}
 	}
 }
+
 .-require::before {
 	background-color: $sl_accentBlue;
 	border-radius: 4px;
@@ -1209,6 +1234,7 @@ p.job_introduct_example_text_content_list {
 		margin-right: 8px;
 	}
 }
+
 .free_memberRegist_form {
 	padding: 25px 16px 0;
 	&_privacyPolicy {
@@ -1319,6 +1345,7 @@ p.job_introduct_example_text_content_list {
 		}
 	}
 }
+
 .access_map_content_data {
 	display: none;
 	@include mq(sp) {
@@ -1401,6 +1428,7 @@ footer {
 		}
 	}
 }
+
 .copyRight {
 	display: block;
 	font-size: 0.75rem;
