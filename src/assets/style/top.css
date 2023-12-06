@@ -1235,7 +1235,7 @@ body {
 @media screen and (max-width: 420px) {
   .job_introduct {
     margin-top: 0;
-    padding: 64px 0;
+    padding: 64px 0 0;
   }
 }
 .job_introduct_tab {
