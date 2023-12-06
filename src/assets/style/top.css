@@ -1156,6 +1156,7 @@ body {
   }
 }
 .canDo_twinbee_content_title_num {
+  color: #DAADFF;
   font-size: 5rem;
   font-weight: normal;
   margin-right: 20px;
@@ -1517,7 +1518,7 @@ body {
   }
 }
 .flow_listItem_num {
-  color: #EACFFF;
+  color: #DAADFF;
   font-size: 2.5rem;
   -webkit-transform: rotate(-10deg);
   transform: rotate(-10deg);

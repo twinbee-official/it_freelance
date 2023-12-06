@@ -619,6 +619,7 @@ body {
 			text-align: center;
 		}
 		&_num {
+			color: $cl_mainPurple;
 			font-size: 5rem;
 			font-weight: normal;
 			margin-right: 20px;
@@ -899,7 +900,7 @@ body {
 			}
 		}
 		&_num {
-			color: $cl_plPurple;
+			color: $cl_mainPurple;
 			font-size: 2.5rem;
 			transform: rotate(-10deg);
 			position: absolute;
