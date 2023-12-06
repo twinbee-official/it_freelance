@@ -8,6 +8,7 @@ body {
 	color: $cl_text;
 	font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
 	font-size: 16px; // remの基準値(16px=1rem)
+	font-weight: 400;
 	position: relative;
 }
 
@@ -31,6 +32,31 @@ body {
 .-num {
 	color: $cl_mainPurple;
 }
+
+/* 見出し st */
+.sectionTitle {
+	text-align: center;
+	width: 100%;
+	&_main {
+		@include imgPath('bg_title_image','png');
+		background-position: bottom;
+		background-repeat: no-repeat;
+		background-size: cover;
+		font-size: 2rem;
+		font-weight: bold;
+		padding-bottom: 10px;
+		letter-spacing: calc(2rem*0.05);
+		@include mq(sp) {
+			font-size: 1.75rem;
+		}
+	}
+	&_sub {
+		font-size: 1rem;
+		line-height: 160%;
+		margin-top: 20px;
+	}
+}
+/* 見出し en */
 
 //改行操作
 .-desktop_none {
@@ -411,38 +437,6 @@ body {
 	}
 }
 /* 会員登録動線バナー en */
-
-/* 見出し関連 st */
-.h2_main {
-	background-position: calc(100% - 50%) calc(100% + 100%);
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: block;
-	font-size: 2rem;
-	font-weight: bold;
-	@include imgPath('bg_title_image','png');
-	margin: 0 auto;
-	padding-bottom: 15px;
-	text-align: center;
-	width: min(100%, $minWin);
-	@include mq(tab) {
-		background-position: calc(100% - 50%) calc(100% + 100%);
-	}
-	@include mq(sp) {
-		background-position: calc(100% - 50%) calc(100% + 0%);
-		font-size: 1.5rem;
-		@include imgPath('m_bg_title_image','png');
-		width: min(100%, 375px);
-	}
-}
-
-.h2_sub {
-	display: block;
-	font-size: 1rem;
-	margin-top: 20px;
-	text-align: center;
-}
-/* 見出し関連 en */
 
 /* twinbeeができること st */
 .canDo_twinbee {

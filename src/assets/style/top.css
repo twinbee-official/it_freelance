@@ -400,6 +400,7 @@ body {
   color: #382A3F;
   font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 16px;
+  font-weight: 400;
   position: relative;
 }
 
@@ -424,6 +425,35 @@ body {
   color: #DAADFF;
 }
 
+/* 見出し st */
+.sectionTitle {
+  text-align: center;
+  width: 100%;
+}
+
+.sectionTitle_main {
+  background-image: url("../images/bg_title_image.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+  letter-spacing: 0.1rem;
+}
+
+@media screen and (max-width: 420px) {
+  .sectionTitle_main {
+    font-size: 1.75rem;
+  }
+}
+.sectionTitle_sub {
+  font-size: 1rem;
+  line-height: 160%;
+  margin-top: 20px;
+}
+
+/* 見出し en */
 .-desktop_none {
   display: none;
 }
@@ -876,42 +906,6 @@ body {
   }
 }
 /* 会員登録動線バナー en */
-/* 見出し関連 st */
-.h2_main {
-  background-position: 50% 200%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
-  font-size: 2rem;
-  font-weight: bold;
-  background-image: url("../images/bg_title_image.png");
-  margin: 0 auto;
-  padding-bottom: 15px;
-  text-align: center;
-  width: min(100%, 1280px);
-}
-
-@media screen and (max-width: 768px) {
-  .h2_main {
-    background-position: 50% 200%;
-  }
-}
-@media screen and (max-width: 420px) {
-  .h2_main {
-    background-position: 50% 100%;
-    font-size: 1.5rem;
-    background-image: url("../images/m_bg_title_image.png");
-    width: min(100%, 375px);
-  }
-}
-.h2_sub {
-  display: block;
-  font-size: 1rem;
-  margin-top: 20px;
-  text-align: center;
-}
-
-/* 見出し関連 en */
 /* twinbeeができること st */
 .canDo_twinbee {
   margin-top: 64px;
