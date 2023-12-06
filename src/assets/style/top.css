@@ -424,43 +424,6 @@ body {
   color: #DAADFF;
 }
 
-.desktop_none {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .desktop_none {
-    display: block;
-  }
-}
-.desktop_tablet_none {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .desktop_tablet_none {
-    display: none;
-  }
-}
-@media screen and (max-width: 420px) {
-  .desktop_tablet_none {
-    display: block;
-  }
-}
-.mobile_none {
-  display: block;
-}
-
-@media screen and (max-width: 768px) {
-  .mobile_none {
-    display: block;
-  }
-}
-@media screen and (max-width: 420px) {
-  .mobile_none {
-    display: none;
-  }
-}
 .-desktop_none {
   display: none;
 }

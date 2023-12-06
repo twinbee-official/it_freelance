@@ -33,33 +33,6 @@ body {
 }
 
 //改行操作
-.desktop_none {
-	display: none;
-	@include mq(tab) {
-		display: block;
-	}
-}
-
-.desktop_tablet_none {
-	display: none;
-	@include mq(tab) {
-		display: none;
-	}
-	@include mq(sp) {
-		display: block;
-	}
-}
-
-.mobile_none {
-	display: block;
-	@include mq(tab) {
-		display: block;
-	}
-	@include mq(sp) {
-		display: none;
-	}
-}
-
 .-desktop_none {
 	display: none;
 	@include mq(tab) {
