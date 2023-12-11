@@ -1533,112 +1533,74 @@ body {
 /* ご利用の流れ en */
 /* よくある質問 st */
 .faq {
-  padding: 96px 0;
+  margin-top: 96px;
 }
 
 @media screen and (max-width: 420px) {
   .faq {
-    padding: 64px 0;
+    margin-top: 64px;
   }
 }
 .faq_list {
+  counter-reset: number 0;
   margin: 40px auto 0;
-  width: min(100%, 890px);
+  width: min(890px, 100%);
 }
 
+@media screen and (max-width: 768px) {
+  .faq_list {
+    width: 93%;
+  }
+}
 .faq_listItem {
   background-color: #fcf9ff;
-  margin-bottom: 4px;
   padding: 20px;
 }
 
-.faq_listItem:last-child {
-  margin-bottom: 0;
+.faq_listItem:not(:first-of-type) {
+  margin-top: 4px;
 }
 
 .faq_listItem_title {
-  border-bottom: 1px solid #EACFFF;
   font-size: 1.125rem;
-  font-weight: bold;
-  padding-bottom: 20px;
+  line-height: 1.8rem;
+}
+
+.faq_listItem_title::before {
+  content: "Q" counter(number) ". ";
+  counter-increment: number 1;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
 }
 
 @media screen and (max-width: 420px) {
   .faq_listItem_title {
     font-size: 1rem;
+    line-height: 1.6rem;
+    padding-right: 24px;
+    position: relative;
+  }
+  .faq_listItem_title::after {
+    background-image: url("../images/m_plus.svg");
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 10px);
   }
 }
-.faq_listItem_text {
-  font-size: 1rem;
-  margin-left: 0;
-  padding: 20px 0 12px 20px;
+.faq_listItem_cont {
+  border-top: 1px solid #DAADFF;
+  margin-top: 20px;
+  padding: 20px 20px 0;
+  line-height: 1.6rem;
 }
 
 @media screen and (max-width: 420px) {
-  .faq_listItem_text {
-    border-top: #EACFFF 1px solid;
+  .faq_listItem_cont {
     font-size: 0.875rem;
-  }
-}
-@media screen and (max-width: 420px) {
-  .faq_list {
-    overflow: hidden;
-    position: relative;
-  }
-}
-@media screen and (max-width: 420px) {
-  .faq_listItem_checkbox {
-    display: none;
-  }
-}
-@media screen and (max-width: 420px) {
-  .faq_list:checked + .faq_listItem_accordion + .faq_listItem_text {
-    position: relative;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    visibility: visible;
-  }
-}
-@media screen and (max-width: 420px) {
-  .faq_list > .faq_listItem_title::after {
-    -webkit-transform: translateY(-50%) rotate(180deg);
-    transform: translateY(-50%) rotate(180deg);
-  }
-}
-@media screen and (max-width: 420px) {
-  .faq_listItem_title {
-    border-bottom: none;
-    width: min(100%, 315px);
-    position: relative;
-    z-index: 1;
-  }
-}
-@media screen and (max-width: 420px) {
-  .faq_listItem_title::before {
-    background: #333;
-    content: "";
-    height: 2px;
-    right: -20px;
-    width: 16px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-}
-@media screen and (max-width: 420px) {
-  .faq_listItem_title::after {
-    background: #333;
-    content: "";
-    height: 2px;
-    -webkit-transform: translateY(-50%) rotate(90deg);
-    transform: translateY(-50%) rotate(90deg);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    width: 16px;
-    position: absolute;
-    right: -20px;
-    top: 50%;
+    line-height: 1.4rem;
   }
 }
 /* よくある質問 en */
