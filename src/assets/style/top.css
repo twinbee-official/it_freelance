@@ -508,6 +508,11 @@ body {
   z-index: 50;
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+    display: none;
+  }
+}
 .header_inner {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -563,45 +568,6 @@ body {
   white-space: nowrap;
 }
 
-@media screen and (max-width: 768px) {
-  .header_menu {
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
-    background-blend-mode: overlay;
-    background-color: rgb(249, 245, 251);
-    background-position: center center;
-    background-repeat: repeat;
-    background-size: cover;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 0;
-    background-image: url("../images/bg_free_memberRegist.png");
-    padding: 32px 0;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 420px) {
-  .header_menu {
-    height: auto;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header_menuList {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border-right: solid 24px #EACFFF;
-    border-top: solid 1px #EACFFF;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 62px;
-    padding-left: 18.67%;
-    width: 100%;
-  }
-}
 .header_menuList:not(:first-child) {
   margin-left: 32px;
 }
@@ -668,155 +634,17 @@ body {
     opacity: 1;
   }
 }
-.m_header_menuList {
-  width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .m_header_menuList_logo_img {
-    display: block;
-    margin-bottom: 16px;
-    margin-left: 16px;
-    width: min(100%, 162px);
-  }
-}
-@media screen and (max-width: 768px) {
-  .m_header_menuList_anchor_img {
-    display: block;
-    margin: 0 auto;
-    padding-bottom: 24px;
-    text-align: center;
-    width: 70%;
-  }
-}
-@media screen and (max-width: 420px) {
-  .m_header_menuList_anchor_img {
-    width: 89.33%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .m_header_menu_icon {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 60px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 60px;
-    position: fixed;
-    top: 32px;
-    right: 0;
-    z-index: 100;
-  }
-}
-@media screen and (max-width: 768px) {
-  .m_header_menu_iconLine, .m_header_menu_iconLine::before, .m_header_menu_iconLine::after {
-    background-color: #EACFFF;
-    border-radius: 3px;
-    display: block;
-    content: "";
-    height: 3px;
-    width: 25px;
-    position: absolute;
-  }
-}
-@media screen and (max-width: 768px) {
-  .m_header_menu_iconLine::before {
-    bottom: 8px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .m_header_menu_iconLine::after {
-    top: 8px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .m_header_menu_icon:checked ~ .m_header_menu_iconLine {
-    background: rgba(255, 255, 255, 0);
-  }
-}
-@media screen and (max-width: 768px) {
-  .m_header_menu_icon:checked ~ .m_header_menu_iconLine::before {
-    bottom: 0;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-}
-@media screen and (max-width: 768px) {
-  .m_header_menu_icon:checked ~ .m_header_menu_iconLine::after {
-    top: 0;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-}
-@media screen and (max-width: 768px) {
-  .header_menuList {
-    position: relative;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header_menuList:first-child::before {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    content: url(../_images/header_logo.svg);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header_menuList:last-child {
-    border-bottom: solid 1px #EACFFF;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header_menuList::before {
-    border-top: 1.5px solid #fcf9ff;
-    border-right: 1.5px solid #fcf9ff;
-    content: "";
-    height: 13px;
-    margin: auto;
-    width: 13px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 100%;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-}
-@media screen and (max-width: 768px) {
-  .header_menu {
-    left: -100%;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    z-index: 80;
-  }
-}
-@media screen and (max-width: 768px) {
-  .m_header_menu_icon ~ .header_menu {
-    position: fixed;
-    left: 0;
-  }
-}
 /* header en */
 /* メインビジュアル st */
 .mainVisual {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: min(100%, 87.5vh);
+  height: 87.5vh;
   background-image: url("../images/mainVisual.jpg");
   margin: 0 auto;
   width: 100%;
+  position: relative;
 }
 
 @media screen and (max-width: 420px) {
@@ -840,13 +668,6 @@ body {
   width: 59.58%;
 }
 
-@media screen and (max-width: 420px) {
-  .mainVisual_titleBox_main {
-    top: 8.81225vh;
-    width: 94.15%;
-    position: relative;
-  }
-}
 .mainVisual_titleBox_sub {
   font-size: 1.25rem;
   letter-spacing: 0.2rem;
@@ -858,7 +679,7 @@ body {
 @media screen and (max-width: 420px) {
   .mainVisual_titleBox_sub {
     font-size: 1rem;
-    letter-spacing: 5%;
+    letter-spacing: 0.05rem;
     line-height: 160%;
     margin-left: 0;
     margin-top: 28px;
@@ -870,8 +691,9 @@ body {
 /* メインビジュアル en */
 /* 会員登録動線バナー st */
 .free_memberRegist_anchor {
-  width: min(100%, 154px);
-  position: relative;
+  height: 154px;
+  width: 154px;
+  position: absolute;
   bottom: -55px;
   left: 79.84%;
   z-index: 1;
@@ -879,30 +701,27 @@ body {
 
 @media screen and (max-width: 420px) {
   .free_memberRegist_anchor {
-    width: min(100%, 124px);
-    bottom: 29px;
-    left: 37.07%;
+    height: 124px;
+    width: 124px;
+    bottom: 5%;
+    left: inherit;
+    right: 5%;
   }
 }
 .free_memberRegist_anchor_link {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  display: inline-block;
-  height: 154px;
+  display: block;
+  height: 100%;
   background-image: url("../images/free_memberRegist_anchor.png");
   text-indent: -9999px;
-  vertical-align: middle;
-  width: min(100%, 154px);
+  width: 100%;
 }
 
 @media screen and (max-width: 420px) {
   .free_memberRegist_anchor_link {
-    height: 124px;
     background-image: url("../images/m_free_memberRegist_anchor.png");
-    width: min(100%, 124px);
-    position: relative;
-    left: 37.067%;
   }
 }
 /* 会員登録動線バナー en */
