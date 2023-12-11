@@ -1563,7 +1563,7 @@ body {
 
 .faq_listItem_title {
   font-size: 1.125rem;
-  line-height: 1.8rem;
+  line-height: 160%;
 }
 
 .faq_listItem_title::before {
@@ -1575,7 +1575,6 @@ body {
 @media screen and (max-width: 420px) {
   .faq_listItem_title {
     font-size: 1rem;
-    line-height: 1.6rem;
     padding-right: 24px;
     position: relative;
   }
@@ -1613,120 +1612,95 @@ body {
   background-size: contain;
   border-radius: 12px;
   background-image: url("../images/bg_free_memberRegist.png");
-  margin: 0 auto;
+  margin: 96px auto 0;
   padding: 64px 0;
   width: min(100%, 1072px);
-  position: relative;
-  z-index: 1;
-}
-
-@media screen and (max-width: 420px) {
-  .free_memberRegist {
-    padding: 40px 16px;
-    width: min(100%, 375px);
-  }
-}
-.free_memberRegist > .sectionTitle {
-  position: relative;
-  z-index: 2;
 }
 
 .free_memberRegist_form {
-  position: relative;
-  z-index: 3;
+  margin: 40px auto 0;
+  width: min(100%, 708px);
 }
 
+@media screen and (max-width: 420px) {
+  .free_memberRegist_form {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .free_memberRegist_formBox {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.free_memberRegist_formBox:not(:first-child) {
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 420px) {
   .free_memberRegist_formBox {
-    display: block;
+    -webkit-box-align: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 8px;
   }
 }
 .free_memberRegist_formBox_title {
-  font-size: 1.125rem;
   font-weight: bold;
-  margin: 0 20px 0 8px;
-  width: min(100%, 252px);
+  font-size: 1.125rem;
+  min-width: 252px;
 }
 
-@media screen and (max-width: 420px) {
-  .free_memberRegist_formBox_title {
-    font-size: 1rem;
-    margin: 0;
-    margin-bottom: 8px;
-    width: min(100%, 343px);
-  }
-}
 .free_memberRegist_formBox_input {
   background-color: #fff;
   border: 1px solid #EACFFF;
   border-radius: 4px;
-  height: 45px;
-  width: 436px;
+  font-size: 1.125rem;
+  padding: 8px;
+  width: 100%;
 }
 
-@media screen and (max-width: 420px) {
-  .free_memberRegist_formBox_input {
-    height: 42px;
-    width: min(100%, 343px);
-  }
-}
 .free_memberRegist_formBox_input::-webkit-input-placeholder {
-  font-size: 1.125rem;
-  padding: 8px;
-}
-.free_memberRegist_formBox_input::-moz-placeholder {
-  font-size: 1.125rem;
-  padding: 8px;
-}
-.free_memberRegist_formBox_input:-ms-input-placeholder {
-  font-size: 1.125rem;
-  padding: 8px;
-}
-.free_memberRegist_formBox_input::-ms-input-placeholder {
-  font-size: 1.125rem;
-  padding: 8px;
-}
-.free_memberRegist_formBox_input::placeholder {
-  font-size: 1.125rem;
-  padding: 8px;
+  color: rgba(56, 42, 63, 0.4);
 }
 
-@media screen and (max-width: 420px) {
-  .free_memberRegist_formBox_input::-webkit-input-placeholder {
-    font-size: 1rem;
-  }
-  .free_memberRegist_formBox_input::-moz-placeholder {
-    font-size: 1rem;
-  }
-  .free_memberRegist_formBox_input:-ms-input-placeholder {
-    font-size: 1rem;
-  }
-  .free_memberRegist_formBox_input::-ms-input-placeholder {
-    font-size: 1rem;
-  }
-  .free_memberRegist_formBox_input::placeholder {
-    font-size: 1rem;
-  }
+.free_memberRegist_formBox_input::-moz-placeholder {
+  color: rgba(56, 42, 63, 0.4);
 }
+
+.free_memberRegist_formBox_input:-ms-input-placeholder {
+  color: rgba(56, 42, 63, 0.4);
+}
+
+.free_memberRegist_formBox_input::-ms-input-placeholder {
+  color: rgba(56, 42, 63, 0.4);
+}
+
+.free_memberRegist_formBox_input::placeholder {
+  color: rgba(56, 42, 63, 0.4);
+}
+
 .-require::before {
   background-color: #8DA5FA;
   border-radius: 4px;
   color: #fff;
   content: "必須";
   font-size: 0.75rem;
-  letter-spacing: 10%;
-  padding: 4px 8px 5px;
+  font-weight: normal;
+  letter-spacing: 0.075rem;
+  padding: 2px 8px;
+  margin-right: 8px;
 }
 
 @media screen and (max-width: 420px) {
@@ -1736,31 +1710,20 @@ body {
     margin-right: 8px;
   }
 }
-.free_memberRegist_form {
-  padding: 25px 16px 0;
-}
-
 .free_memberRegist_form_privacyPolicy {
   background-color: #fff;
   border: 1px solid #EACFFF;
   border-radius: 4px;
+  color: #382A3F;
   font-size: 0.75rem;
+  font-weight: normal;
   height: 240px;
   line-height: 160%;
-  margin: 0% auto;
+  margin: 20px auto 0;
   overflow: auto;
   padding: 20px;
   scrollbar-width: none;
   width: min(100%, 708px);
-}
-
-@media screen and (max-width: 420px) {
-  .free_memberRegist_form_privacyPolicy {
-    width: min(100%, 343px);
-  }
-}
-.free_memberRegist_form_privacyPolicy::-webkit-scrollbar {
-  display: none;
 }
 
 .free_memberRegist_form_checkBox {
@@ -1775,6 +1738,35 @@ body {
     font-size: 1rem;
   }
 }
+.free_memberRegist_form_checkBoxItem {
+  background-color: #fff;
+  border: 1px solid #EACFFF;
+  border-radius: 4px;
+  height: 30px;
+  margin-right: 20px;
+  padding: 2px;
+  vertical-align: middle;
+  width: min(100%, 30px);
+}
+
+.free_memberRegist_form_checkBoxItem:checked {
+  background: #EACFFF;
+}
+
+.free_memberRegist_form_checkBoxItem::after {
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  content: "";
+  display: block;
+  height: 13.5px;
+  width: 8.5px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: relative;
+  left: 7px;
+  top: 3px;
+}
+
 .free_memberRegist_form_submitBtn {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1807,34 +1799,8 @@ body {
     width: min(100%, 343px);
   }
 }
-.free_memberRegist_form_checkBoxItem {
-  background-color: #fff;
-  border: 1px solid #EACFFF;
-  border-radius: 4px;
-  height: 30px;
-  margin-right: 20px;
-  padding: 2px;
-  vertical-align: middle;
-  width: min(100%, 30px);
-}
-
-.free_memberRegist_form_checkBoxItem:checked {
-  background: #EACFFF;
-  background-clip: content-box;
-}
-
-.free_memberRegist_form_checkBoxItem::after {
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
-  content: "";
-  display: block;
-  height: 13.5px;
-  width: 8.5px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: relative;
-  left: 7px;
-  top: 3px;
+.free_memberRegist_form_submitBtn.-disabled {
+  background: #DADADA;
 }
 
 /* 無料会員登録 en */
