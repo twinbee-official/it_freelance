@@ -436,7 +436,7 @@ body {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: bold;
   padding-bottom: 10px;
   letter-spacing: 0.1rem;
@@ -448,7 +448,7 @@ body {
   }
 }
 .sectionTitle_sub {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 160%;
   margin-top: 20px;
 }
@@ -848,7 +848,7 @@ body {
   }
 }
 .mainVisual_titleBox_sub {
-  font-size: 1rem;
+  font-size: 1.25rem;
   letter-spacing: 0.2rem;
   line-height: 200%;
   margin-left: 5%;
@@ -908,7 +908,7 @@ body {
 /* 会員登録動線バナー en */
 /* twinbeeができること st */
 .canDo_twinbee {
-  margin-top: 64px;
+  margin-top: 72px;
 }
 
 @media screen and (max-width: 420px) {
@@ -1090,7 +1090,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.625rem;
   font-weight: bold;
   position: relative;
   z-index: 5;
@@ -1303,7 +1303,7 @@ body {
   }
 }
 .job_introduct_content_inner_boxTitle {
-  font-size: 1.5rem;
+  font-size: 1.625rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
 }
@@ -1502,7 +1502,7 @@ body {
 }
 
 .flow_listItem_title {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
   margin-top: 20px;

@@ -42,7 +42,7 @@ body {
 		background-position: bottom;
 		background-repeat: no-repeat;
 		background-size: cover;
-		font-size: 2rem;
+		font-size: 2.25rem;
 		font-weight: bold;
 		padding-bottom: 10px;
 		letter-spacing: calc(2rem*0.05);
@@ -51,7 +51,7 @@ body {
 		}
 	}
 	&_sub {
-		font-size: 1rem;
+		font-size: 1.25rem;
 		line-height: 160%;
 		margin-top: 20px;
 	}
@@ -385,7 +385,7 @@ body {
 			}
 		}
 		&_sub {
-			font-size: 1rem;
+			font-size: 1.25rem;
 			letter-spacing: .2rem;
 			line-height: 200%;
 			margin-left: 5%;
@@ -440,7 +440,7 @@ body {
 
 /* twinbeeができること st */
 .canDo_twinbee {
-	margin-top: 64px;
+	margin-top: 72px;
 	@include mq(sp) {
 		margin: 0 auto;
 		margin-top: 48px;
@@ -572,7 +572,7 @@ body {
 	}
 	&_title {
 		align-items: center;
-		font-size: 1.5rem;
+		font-size: 1.625rem;
 		font-weight: bold;
 		position: relative;
 		z-index: 5;
@@ -742,7 +742,7 @@ body {
 				width: 100%;
 			}
 			&Title {
-				font-size: 1.5rem;
+				font-size: 1.625rem;
 				font-weight: bold;
 				letter-spacing: calc(1rem*0.05);
 				@include mq(sp) {
@@ -888,7 +888,7 @@ body {
 			width: auto;
 		}
 		&_title {
-			font-size: 1rem;
+			font-size: 1.125rem;
 			font-weight: bold;
 			letter-spacing: calc(1rem*0.1);
 			margin-top: 20px;
