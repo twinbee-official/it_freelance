@@ -448,7 +448,7 @@ body {
   }
 }
 .sectionTitle_sub {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 160%;
   margin-top: 20px;
 }
@@ -901,7 +901,7 @@ body {
 }
 @media screen and (max-width: 420px) {
   .canDo_twinbee_content_inner {
-    width: min(100%, 238px);
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -909,32 +909,29 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 1.625rem;
   font-weight: bold;
+  line-height: 140%;
+  letter-spacing: 0.05rem;
   position: relative;
-  z-index: 5;
 }
 
-@media screen and (max-width: 768px) {
-  .canDo_twinbee_content_title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-}
 @media screen and (max-width: 420px) {
   .canDo_twinbee_content_title {
-    font-size: 1.125rem;
-    margin: 0 auto;
-    text-align: center;
+    font-size: 1.25rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 .canDo_twinbee_content_title_num {
   color: #DAADFF;
   font-size: 5rem;
   font-weight: normal;
+  line-height: 100%;
   margin-right: 20px;
 }
 
@@ -959,6 +956,7 @@ body {
 }
 @media screen and (max-width: 420px) {
   .canDo_twinbee_content_text {
+    display: none; /* 初回着地時 */
     font-size: 0.875rem;
     margin: 0 auto;
     width: min(100%, 283px);
@@ -966,11 +964,17 @@ body {
 }
 @media screen and (max-width: 420px) {
   .m_canDo_twinbee_content_img {
+    margin-top: 20px;
     width: min(100%, 283px);
   }
 }
+.canDo_twinbee_content_icon_plus {
+  display: none;
+}
+
 @media screen and (max-width: 420px) {
   .canDo_twinbee_content_icon_plus {
+    display: block;
     font-size: 0.875em;
     font-weight: bold;
     line-height: 160%;
@@ -985,8 +989,13 @@ body {
     vertical-align: top;
   }
 }
+.canDo_twinbee_content_icon_minus {
+  display: none;
+}
+
 @media screen and (max-width: 420px) {
   .canDo_twinbee_content_icon_minus {
+    display: block;
     font-size: 0.875em;
     font-weight: bold;
     line-height: 160%;

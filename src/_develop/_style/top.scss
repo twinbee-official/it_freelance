@@ -51,7 +51,7 @@ body {
 		}
 	}
 	&_sub {
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 		line-height: 160%;
 		margin-top: 20px;
 	}
@@ -395,38 +395,33 @@ body {
 			}
 		}
 	}
-}
-
-.canDo_twinbee_content {
 	&_inner {
 		width: min(100%, 46.27%);
 		@include mq(tab) {
 			width: min(100%, 50%);
 		}
 		@include mq(sp) {
-			width: min(100%, 238px);
+			width: 100%;
 			margin: 0 auto
 		}
 	}
 	&_title {
 		align-items: center;
+		display: flex;
 		font-size: 1.625rem;
 		font-weight: bold;
+		line-height: 140%;
+		letter-spacing: calc(1rem * .05);
 		position: relative;
-		z-index: 5;
-		@include mq(tab) {
-			display: flex;
-			flex-wrap: wrap;
-		}
 		@include mq(sp) {
-			font-size: 1.125rem;
-			margin: 0 auto;
-			text-align: center;
+			font-size: 1.25rem;
+			justify-content: center;
 		}
 		&_num {
 			color: $cl_mainPurple;
 			font-size: 5rem;
 			font-weight: normal;
+			line-height: 100%;
 			margin-right: 20px;
 			@include mq(sp) {
 				font-size: 4rem;
@@ -444,22 +439,26 @@ body {
 			width: 100%;
 		}
 		@include mq(sp) {
+			display: none; /* 初回着地時 */
 			font-size: 0.875rem;
 			margin: 0 auto;
 			width: min(100%, 283px);
 		}
-	}	
+	}
 }
 
 .m_canDo_twinbee_content_img {
 	@include mq(sp) {
+		margin-top: 20px;
 		width: min(100%,283px);
 	}
 }
 
 .canDo_twinbee_content_icon {
 	&_plus {
+		display: none;
 		@include mq(sp) {
+			display: block;
 			font-size: 0.875em;
 			font-weight: bold;
 			line-height: 160%;
@@ -475,7 +474,9 @@ body {
 		}
 	}
 	&_minus {
+		display: none;
 		@include mq(sp) {
+			display: block;
 			font-size: 0.875em;
 			font-weight: bold;
 			line-height: 160%;
