@@ -987,6 +987,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: -1;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 420px) {
@@ -1562,6 +1563,7 @@ body {
 
 @media screen and (max-width: 420px) {
   .faq_listItem_cont {
+    display: none; /* 初回 */
     font-size: 0.875rem;
     line-height: 1.4rem;
   }

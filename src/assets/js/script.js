@@ -173,6 +173,26 @@ COMMON.module.headerNav = function($target,$link) {
 }
 
 /**
+ * アコーディオン開閉
+ * @param {jquery} $openBtn
+ * 開くボタン
+ * @param {jquery} $target
+ * アコーディオン内コンテンツ
+ * @param {jquery} $closeBtn
+ * 閉じるボタン
+ */
+COMMON.module.acdnFunc = function($openBtn,$target,$closeBtn) {
+	$openBtn.click(function() {
+		$(this).toggleClass('is_open');
+		$(this).next($target).slideToggle();
+	});
+
+	$closeBtn.click(function() {
+		$(this).parent().slideUp();
+	});
+}
+
+/**
  * 初期化処理
  */
 COMMON.module.init = function() {
@@ -189,6 +209,9 @@ COMMON.module.init = function() {
 	COMMON.module.jumpAnchorLink($('.jsc_free_memberRegist_anchor_link'),0,800);
 	// ページトップ
 	COMMON.module.pageTop();
+
+	// アコーディオン開閉
+	COMMON.module.acdnFunc($('.jsc_acdn_btn'),$('.jsc_acdn_content'),$('.jsc_acdn_close_btn'));
 }
 
 $(function(){

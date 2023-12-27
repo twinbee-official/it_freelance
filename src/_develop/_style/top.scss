@@ -503,6 +503,7 @@ body {
 				position: absolute;
 				left: 0;
 				top: 0;
+				z-index: -1;
 				@include mq(sp) {
 					background-image: none;
 				}
@@ -947,6 +948,7 @@ body {
 			padding: 20px 20px 0;
 			line-height: calc(1rem*1.6);
 			@include mq(sp) {
+				display: none; /* 初回 */
 				font-size: 0.875rem;
 				line-height: calc(0.875rem*1.6);
 			}
