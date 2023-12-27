@@ -15,9 +15,9 @@ body {
 // 英字フォント
 .-en {
 	font-family: "Helvetica Neue", "Arial", sans-serif;
-	@include mq(tab) {
-		display: contents;
-	}
+	// @include mq(tab) {
+	// 	display: contents;
+	// }
 }
 
 @font-face {
@@ -656,6 +656,28 @@ body {
 	}
 	&Item {
 		width: 100%;
+		&.is_current {
+			position: relative;
+			span {
+				background-color: $cl_mainPurple;
+				color: $cl_text;
+				font-weight: bold;
+
+			}
+			&::after {
+				border-style: solid;
+				border-right: 10px solid transparent;
+				border-left: 10px solid transparent;
+				border-top: 12px solid $cl_mainPurple;
+				border-bottom: 0;
+				content: '';
+				height: 0;
+				width: 0;
+				position: absolute;
+				bottom: -11px;
+				left: calc(50% - 10px);
+			}
+		}
 		&_btn {
 			background-color: $cl_fadePurple;
 			color: $cl_plPurple;
@@ -669,25 +691,6 @@ body {
 				color: $cl_text;
 				font-weight: bold;
 				transition: all .2s ease-out;
-			}
-			&.is_current {
-				background-color: $cl_mainPurple;
-				color: $cl_text;
-				font-weight: bold;
-				position: relative;
-				&::after {
-					border-style: solid;
-					border-right: 10px solid transparent;
-					border-left: 10px solid transparent;
-					border-top: 12px solid $cl_mainPurple;
-					border-bottom: 0;
-					content: '';
-					height: 0;
-					width: 0;
-					position: absolute;
-					bottom: -11px;
-					left: calc(50% - 10px);
-				}
 			}
 		}
 	}

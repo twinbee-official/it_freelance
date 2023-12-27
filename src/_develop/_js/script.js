@@ -192,6 +192,27 @@ COMMON.module.acdnFunc = function($openBtn,$target,$closeBtn) {
 	});
 }
 
+
+/**
+ * タブ切り替え
+ * @param {jquery} $tabItem
+ * タブアイテム
+ * @param {jquery} $target
+ * タブコンテンツ
+ * @param {jquery} speed
+ * フェード切り替え速度
+ */
+COMMON.module.tabFunc = function($tabItem,$target,speed) {
+	$tabItem.on("click", function () {
+    $(".is_current").removeClass("is_current");
+    $(this).addClass("is_current");
+    // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+    const index = $(this).index();
+    // クリックしたタブのインデックス番号と同じコンテンツを表示
+    $target.hide().eq(index).fadeIn(speed);
+  });
+}
+
 /**
  * 初期化処理
  */
@@ -212,6 +233,9 @@ COMMON.module.init = function() {
 
 	// アコーディオン開閉
 	COMMON.module.acdnFunc($('.jsc_acdn_btn'),$('.jsc_acdn_content'),$('.jsc_acdn_close_btn'));
+
+	// タブ切り替え
+	COMMON.module.tabFunc($('.jsc_tabItem'),$('.jsc_tabItem_content'),300);
 }
 
 $(function(){
