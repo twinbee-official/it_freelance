@@ -98,11 +98,12 @@ body {
 /* header st */
 .header {
 	align-items: center;
+	// background-color: rgba($cl_wt,.95);
 	display: flex;
 	justify-content: center;
 	padding: 16px 0 8px;
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	z-index: 1;
@@ -151,16 +152,17 @@ body {
 				font-size: 1.125rem;
 				font-weight: normal;
 			}
-			&.-current {
+			&.is_current {
 				// 現在位置
+				position: relative;
 				&::after {
 					content: '';
 					background-color: $cl_plPurple;
-					bottom: 0;
+					bottom: -20px;
 					display: block;
-					height: 1px;
+					height: 2px;
 					position: absolute;
-					width: 166.9px; // 初期値
+					width: 100%;
 				}
 			}
 			&.-igIcon {
@@ -278,7 +280,7 @@ body {
 					height: 62px;
 					padding: 20px 16px 20px 56px;
 					width: 100%;
-					&.-current {
+					&.is_current {
 						display: block;
 						// 現在位置
 						&::after {
@@ -289,7 +291,7 @@ body {
 							transform: rotate(30deg);
 							width: 28px;
 							left: 8px;
-							bottom: calc(50% - 19px/2);
+							bottom: calc(50% - 24px/2);
 						}
 					}
 					&.-igIcon {
@@ -306,6 +308,32 @@ body {
 					width: 100%;
 				}
 			}
+		}
+	}
+}
+
+@include mq(tab) {
+	.is_header_opened {
+		overflow-y: hidden;
+		& .m-header_inner {
+			display: block;
+		}
+		& .header_logo {
+			z-index: -1;
+		}
+	}
+
+	.is_open .m-header_navBtn_border {
+		&:first-child {
+			transform: rotate(-45deg);
+			top: 11px;
+		}
+		&:nth-child(2) {
+			display: none;
+		}
+		&:last-child {
+			bottom: 11px;
+			transform: rotate(45deg);
 		}
 	}
 }
@@ -641,7 +669,7 @@ body {
 				font-weight: bold;
 				transition: all .2s ease-out;
 			}
-			&.-current {
+			&.is_current {
 				background-color: $cl_mainPurple;
 				color: $cl_text;
 				font-weight: bold;
@@ -1093,8 +1121,8 @@ body {
 		margin-top: 40px;
 		text-align: center;
 		width: 100%;
-		position: relative;
-		z-index: 1;
+		// position: relative;
+		// z-index: 1;
 		@include mq(sp) {
 			height: 375px;
 			margin-top: 0;
