@@ -15,9 +15,7 @@ body {
 // 英字フォント
 .-en {
 	font-family: "Helvetica Neue", "Arial", sans-serif;
-	// @include mq(tab) {
-	// 	display: contents;
-	// }
+	// display : contents;
 }
 
 @font-face {
@@ -92,6 +90,37 @@ body {
 	list-style-position: inside;
 }
 /* uncount list en */
+
+/* button */
+.btn {
+	align-items: center;
+	border: 1px solid $cl_midPurple;
+	outline: none;
+	border-radius: 12px;
+	font-size: 1.25rem;
+	font-weight: bold;
+	padding: 24.5px 8px;
+	margin: 20px auto 0;
+	text-align: center;
+	transition: all .6s ease-out;
+	width: min(100%, 526px);
+	@include mq(sp) {
+		width: min(100%, 343px);
+	}
+	&_link {
+		color: $cl_midPurple;
+		text-decoration: none;
+	}
+	&:hover {
+    border-color:transparent;
+    background: linear-gradient(90deg, rgba(154, 176, 255, 1), rgba(239, 207, 255, 1) 52%, rgba(234, 207, 255, 1) 78%, rgba(218, 173, 255, 1));
+    background-size: 200% auto;
+    background-position: 30% center;
+		.btn_link {
+			color: $cl_wt;
+		}
+	}
+}
 
 /* common  en */
 
@@ -391,7 +420,6 @@ body {
 	position: absolute;
 	bottom: -55px;
 	left: calc(100% - 20.16%);
-	// z-index: 1;
 	@include mq(sp) {
 		height: 124px;
 		width: 124px;
@@ -405,11 +433,15 @@ body {
 		background-size: contain;
 		display: block;
 		height: 100%;
+		transition: all .3s ease-in-out;
 		@include imgPath('free_memberRegist_anchor','png');
 		text-indent: -9999px;
 		width: 100%;
 		@include mq(sp) {
 			@include imgPath('m_free_memberRegist_anchor','png');
+		}
+		&:hover {
+			transform: translateY(5px);
 		}
 	}
 }
@@ -610,6 +642,14 @@ body {
 				content: url(../images/m_plus.svg);
 				padding-right: 12px;
 				vertical-align: top;
+			}
+		}
+		&.is_open {
+			margin-bottom: 12px;
+			&::before {
+				@include mq(sp) {
+					content: url(../images/m_minus.svg);
+				}
 			}
 		}
 	}
@@ -944,6 +984,16 @@ body {
 					top: calc(50% - 20px/2);
 				}
 			}
+			&.is_open {
+				@include mq(sp) {
+					font-size: 1rem;
+					padding-right: 24px;
+					position: relative;
+					&::after {
+						@include imgPath("m_minus","svg");
+					}
+				}	
+			}
 		}
 		&_cont {
 			border-top: 1px solid $cl_mainPurple;
@@ -1169,27 +1219,6 @@ body {
 		display: flex;
 		margin: 0 auto;
 		margin-top: 40px;
-	}
-	&_moreBtn {
-		align-items: center;
-		background-image: linear-gradient(90deg, rgba(154, 176, 255, 1), rgba(239, 207, 255, 1) 52%, rgba(234, 207, 255, 1) 78%, rgba(218, 173, 255, 1));
-		border-radius: 12px;
-		display: flex;
-		font-size: 1.25rem;
-		font-weight: bold;
-		height: 72px;
-		justify-content: center;
-		margin: 0 auto;
-		margin-top: 40px;
-		text-decoration: none;
-		width: min(100%, 526px);
-		@include mq(sp) {
-			width: min(100%, 343px);
-		}
-		&_link {
-			color: $cl_wt;
-			text-decoration: none;
-		}
 	}
 }
 /* instagram en */
