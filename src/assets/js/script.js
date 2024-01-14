@@ -188,6 +188,7 @@ COMMON.module.acdnFunc = function($openBtn,$target,$closeBtn) {
 	});
 
 	$closeBtn.click(function() {
+		$openBtn.removeClass('is_open');
 		$(this).parent().slideUp();
 	});
 }
