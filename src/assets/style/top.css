@@ -544,13 +544,19 @@ body {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  height: 84px;
   justify-content: center;
+  transition: 0.3s;
   padding: 16px 0 8px;
   width: 100%;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 9999;
+}
+
+.header_change_color {
+  background-color: #fff;
 }
 
 .header_logo_link {
