@@ -74,6 +74,21 @@
 		</div><!-- /.header_inner -->
 	</header><!-- /.header -->
 	
+	<!-- header_change_color -->
+	<script>
+	window.addEventListener("scroll", function () {
+		// ヘッダーを変数の中に格納する
+		const header = document.querySelector("header");
+		
+		// ウィンドウの幅によって条件分岐
+		const scrollThreshold = window.innerWidth <= 768 ? 80 : 200;
+
+		// スクロール位置が設定した閾値を超えたらクラスを付与する
+		header.classList.toggle("header_change_color", window.scrollY > scrollThreshold);
+	});
+	</script>
+	<!-- /.header_change_color -->
+
 	<main>
 		<div class="section mainVisual jsc_section">
 			<div class="mainVisual_titleBox">
