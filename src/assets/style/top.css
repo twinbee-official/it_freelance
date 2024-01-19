@@ -498,13 +498,14 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #fff;
   border: 1px solid #b97ced;
-  outline: none;
   border-radius: 12px;
   font-size: 1.25rem;
   font-weight: bold;
-  padding: 24.5px 8px;
   margin: 20px auto 0;
+  outline: none;
+  padding: 24.5px 8px;
   text-align: center;
   -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
@@ -533,6 +534,10 @@ body {
   color: #fff;
 }
 
+.btn.-disabled {
+  background: #DADADA;
+}
+
 /* common  en */
 /* header st */
 .header {
@@ -545,12 +550,14 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 16px 0 8px;
+  padding: 16px 0 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   width: 100%;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 10;
 }
 
 .header_logo_link {
@@ -579,6 +586,10 @@ body {
     left: 0;
   }
 }
+.header.is_bg_changed {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
 .header_menu {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -617,8 +628,8 @@ body {
 
 .header_menuList_link.is_current::after {
   content: "";
-  background-color: #EACFFF;
-  bottom: -20px;
+  background-color: #b97ced;
+  bottom: -27px;
   display: block;
   height: 2px;
   position: absolute;
@@ -655,22 +666,33 @@ body {
 @media screen and (max-width: 768px) {
   .m-header {
     padding: 0;
-    display: block;
+  }
+  .m-header_contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
   }
   .m-header_logo {
+    position: static;
+  }
+  .m-header_inner_logo {
     display: block;
     margin-left: 16px;
     margin-top: 16px;
     width: min(162px, 100%);
   }
-  .m-header_logo_link {
+  .m-header_inner_logo_link {
     display: block;
   }
   .m-header_navBtn {
     height: 25px;
     margin: 12px;
     width: 30px;
-    position: absolute;
+    position: relative;
     right: 15px;
     top: 20px;
     z-index: 1;
@@ -786,11 +808,18 @@ body {
   .is_header_opened {
     overflow-y: hidden;
   }
+  .is_header_opened .m-header_contents {
+    width: 0;
+  }
+  .is_header_opened .m-header_logo {
+    position: absolute;
+    z-index: -1;
+  }
+  .is_header_opened .m-header_navBtn {
+    position: absolute;
+  }
   .is_header_opened .m-header_inner {
     display: block;
-  }
-  .is_header_opened .header_logo {
-    z-index: -1;
   }
   .is_open .m-header_navBtn_border:first-child {
     -webkit-transform: rotate(-45deg);
@@ -918,7 +947,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcf9ff;
+  background-color: #faf5ff;
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 12px;
@@ -1123,13 +1152,15 @@ body {
   font-size: 1rem;
   line-height: 180%;
   margin-top: 20px;
+  padding: 0 8px;
   width: 100%;
   position: relative;
-  z-index: 5;
+  z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
   .canDo_twinbee_content_text {
+    padding: 0;
     width: 100%;
   }
 }
@@ -1258,7 +1289,7 @@ body {
 }
 
 .job_introduct_tabItem_btn {
-  background-color: #fcf9ff;
+  background-color: #faf5ff;
   color: #EACFFF;
   display: block;
   font-size: 1.125rem;
@@ -1276,7 +1307,7 @@ body {
 }
 
 .job_introduct_content {
-  background-color: #fcf9ff;
+  background-color: #faf5ff;
   border-radius: 12px;
   margin: 20px auto 0;
   width: min(1072px, 100%);
@@ -1398,7 +1429,7 @@ body {
 /* お仕事紹介 en */
 /* ご利用の流れ st */
 .flow {
-  background-color: #fcf9ff;
+  background-color: #faf5ff;
   margin-top: 96px;
   padding: 96px 0;
 }
@@ -1572,7 +1603,7 @@ body {
   }
 }
 .faq_listItem {
-  background-color: #fcf9ff;
+  background-color: #faf5ff;
   padding: 20px;
 }
 
@@ -1795,42 +1826,6 @@ body {
   position: relative;
   left: 7px;
   top: 3px;
-}
-
-.free_memberRegist_form_submitBtn {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgb(154, 176, 255)), color-stop(52%, rgb(239, 207, 255)), color-stop(78%, rgb(234, 207, 255)), to(rgb(218, 173, 255)));
-  background-image: linear-gradient(90deg, rgb(154, 176, 255), rgb(239, 207, 255) 52%, rgb(234, 207, 255) 78%, rgb(218, 173, 255));
-  border: none;
-  border-radius: 12px;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.25rem;
-  font-weight: bold;
-  height: 72px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0% auto;
-  margin-top: 40px;
-  padding: 0;
-  text-decoration: none;
-  width: min(100%, 526px);
-}
-
-@media screen and (max-width: 420px) {
-  .free_memberRegist_form_submitBtn {
-    font-size: 1.125rem;
-    padding: 20px 0;
-    width: min(100%, 343px);
-  }
-}
-.free_memberRegist_form_submitBtn.-disabled {
-  background: #DADADA;
 }
 
 /* 無料会員登録 en */

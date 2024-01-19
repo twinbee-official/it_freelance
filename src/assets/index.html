@@ -33,16 +33,19 @@
 
 <body id="top">
 	<header class="header m-header jsc_header">
-		<div class="header_logo">
-			<a href="./" class="header_logo_link"><img src="images/header_logo.svg" class="header_logo_img" alt="株式会社TwinBee　IT専門フリーランス求人"></a>
-		</div>
-		<button class="m-header_navBtn jsc_header_navBtn">
-			<span class="m-header_navBtn_border"></span><span class="m-header_navBtn_border"></span><span class="m-header_navBtn_border"></span>
-		</button>
+		<div class="m-header_contents">
+			<div class="header_logo m-header_logo">
+				<a href="./" class="header_logo_link"><img src="images/header_logo.svg" class="header_logo_img" alt="株式会社TwinBee　IT専門フリーランス求人"></a>
+			</div>
+			<button class="m-header_navBtn jsc_header_navBtn">
+				<span class="m-header_navBtn_border"></span><span class="m-header_navBtn_border"></span><span class="m-header_navBtn_border"></span>
+			</button>
+		</div><!-- /.m-header_contents -->
+
 		<div class="header_inner m-header_inner">
 			<ul class="header_menu m-header_menu">
-				<div class="m-header_logo">
-					<a href="./" class="m-header_logo_link"><img src="./images/header_logo.svg" class="m-header_logo_img" alt="株式会社TwinBee　IT専門フリーランス求人"></a>
+				<div class="m-header_inner_logo">
+					<a href="./" class="m-header_inner_logo_link"><img src="./images/header_logo.svg" class="m-header_inner_logo_img" alt="株式会社TwinBee　IT専門フリーランス求人"></a>
 				</div>	
 				<div class="m-header_menu_memberRegist_anchor -desktop_none">
 					<a href="./#free_memberRegist" class="m-header_menu_memberRegist_anchor_link jsc_header_menuList_link">
@@ -399,8 +402,11 @@
 					</label>
 				</div>
 
-				<div class="free_memberRegist_form_submitBtn -disabled">
+				<!-- <div class="free_memberRegist_form_submitBtn -disabled">
 					<input name="submit" type="submit" value="入力内容を確認" disabled>
+				</div> -->
+				<div class="btn">
+					<input name="submit" type="submit" value="入力内容を確認" class="btn_link">
 				</div>
 				<input type="hidden" name="code" value="utf8">
 			</form>

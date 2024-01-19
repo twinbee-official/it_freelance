@@ -173,6 +173,21 @@ COMMON.module.headerNav = function($target,$link) {
 }
 
 /**
+ * ヘッダー背景色変更
+ * @param {*} $header 
+ * ヘッダー本体
+ * @param {*} className 
+ * 変更時の付替クラス
+ */
+COMMON.module.headerBgChange = function($header,className) {
+	// メインビジュアルの半分の高さを取得
+	const halfMvH = $('.mainVisual').height()/2;
+
+	$header.toggleClass(className,window.scrollY > halfMvH);
+}
+
+
+/**
  * アコーディオン開閉
  * @param {jquery} $openBtn
  * 開くボタン
@@ -233,7 +248,6 @@ COMMON.module.igApi = function($output) {
     const data = res.media;
     $.each(data, function(index, val) {
       $.each(val, function(i, item) {
-        console.log(item);
         if(item.media_url){
           //メディアのタイプがビデオの場合、サムネを取得
           media = (item.media_type == 'VIDEO' ? item.thumbnail_url : item.media_url);
@@ -263,12 +277,16 @@ COMMON.module.init = function() {
 		COMMON.module.addCurrentClass(COMMON.device,$('.jsc_section'),50,$('.jsc_header_menuList_link'));
 		COMMON.module.addCurrentClass(COMMON.device,$('.jsc_section'),650,$('.jsc_section'));
 	}
-
 	// ヘッダーハンバーガーメニュー開閉
 	COMMON.module.headerNav($('.jsc_header_navBtn'),$('.jsc_header_menuList_link'));
+	// ヘッダー背景色変更
+	$(window).scroll(function(){
+		COMMON.module.headerBgChange($('.jsc_header'),'is_bg_changed');
+	});
+
 	// アンカーリンク
-	COMMON.module.jumpAnchorLink($('.jsc_header_menuList_link'),0,800);
-	COMMON.module.jumpAnchorLink($('.jsc_free_memberRegist_anchor_link'),0,800);
+	COMMON.module.jumpAnchorLink($('.jsc_header_menuList_link'),96,800);
+	COMMON.module.jumpAnchorLink($('.jsc_free_memberRegist_anchor_link'),96,800);
 	// ページトップ
 	COMMON.module.pageTop();
 
