@@ -215,6 +215,46 @@ COMMON.module.tabFunc = function($tabItem,$target,speed) {
 }
 
 /**
+ * Instagramの投稿表示
+ * @param {jquery} $output
+ * 出力エリア
+ */
+COMMON.module.igApi = function($output) {
+	let list = '';
+	//表示件数
+  const limit = 16;
+	// アクセストークン
+  const accessToken = "EAAJlSmuoEMYBO009KYfkU9cqcCXY6eNZBlcbjmwUQMSVY4u89T3GA5Nmjm0mQBShU1lTS1FfCPvQ29IfCaOFGpy1aZBLxbNTZBzFs7olR8IgAIw3ZCoTKarzSM6QNmhHp4LZCaX1tCXgKBa6jT4GvcW7TZBmJu4ZA5y19mQzE5gAlAyZCQbvbeb8MZAJ4CtfdUIGf";
+  const businessID = 17841458595935178;
+  const url = `https://graph.facebook.com/v10.0/${businessID}?fields=name,media.limit(${limit}){caption,media_url,thumbnail_url,permalink,like_count,comments_count,media_type}&access_token=${accessToken}`;
+  $.ajax({
+    url: url
+  }).done((res)=> {
+    const data = res.media;
+    $.each(data, function(index, val) {
+      $.each(val, function(i, item) {
+        console.log(item);
+        if(item.media_url){
+          //メディアのタイプがビデオの場合、サムネを取得
+          media = (item.media_type == 'VIDEO' ? item.thumbnail_url : item.media_url);
+
+          // 一覧を変数listに格納
+          list +=
+          `<li class="instagram_listItem">
+            <a href="${item.permalink}" target="_blank" rel="noopener" class="instagram_listItem_link">
+            <img src="${media}" class="instagram_listItem_img">
+          </li>`;
+        }
+
+      })
+    });
+		$output.html(`<ul class="instagram_list">${list}</ul>`);
+  }).fail(function(jqXHR, status) {
+    $output.html('<p>読み込みに失敗しました。</p>');
+  });
+}
+
+/**
  * 初期化処理
  */
 COMMON.module.init = function() {
@@ -237,6 +277,9 @@ COMMON.module.init = function() {
 
 	// タブ切り替え
 	COMMON.module.tabFunc($('.jsc_tabItem'),$('.jsc_tabItem_content'),300);
+
+	// Instagram投稿表示
+	COMMON.module.igApi($('#jsi_instagram_outputArea'));
 }
 
 $(function(){

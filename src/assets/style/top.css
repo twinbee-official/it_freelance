@@ -1909,6 +1909,10 @@ body {
   margin-top: 40px;
 }
 
+.instagram_listItem_img {
+  width: 100%;
+}
+
 /* instagram en */
 /* footer st */
 footer {
