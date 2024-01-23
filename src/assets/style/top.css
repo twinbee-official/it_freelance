@@ -1282,6 +1282,30 @@ body {
   transition: all 0.2s ease-out;
 }
 
+.job_introduct_tab .swiper-slide-thumb-active {
+  position: relative;
+}
+
+.job_introduct_tab .swiper-slide-thumb-active span {
+  background-color: #DAADFF;
+  color: #382A3F;
+  font-weight: bold;
+}
+
+.job_introduct_tab .swiper-slide-thumb-active::after {
+  border-style: solid;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 12px solid #DAADFF;
+  border-bottom: 0;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  bottom: -11px;
+  left: calc(50% - 10px);
+}
+
 .job_introduct_content {
   background-color: #faf5ff;
   border-radius: 12px;
