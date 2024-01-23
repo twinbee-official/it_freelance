@@ -708,18 +708,19 @@ body {
 	padding: 0 20px;
 	@include mq(sp) {
 		margin-top: 0;
-		padding: 64px 0 0;
+		padding: 64px 16px 0;
 	}
 }
 
 .job_introduct_tab {
-	display: flex;
-	justify-content: center;
-	margin: 40px auto 0;
+	margin: 0 auto;
 	width: min(100%,890px);
-	@include mq(sp) {
-		margin: 20px 16px 0;
-		width: inherit;
+	&_content {
+		margin: 40px auto 0;
+		@include mq(sp) {
+			margin: 20px auto 0;
+			width: inherit;
+		}
 	}
 	&Item {
 		width: 100%;
@@ -766,18 +767,17 @@ body {
 	background-color: $cl_fadePurple;
 	border-radius: 12px;
 	margin: 20px auto 0;
+	overflow: hidden;
 	width: min(1072px,100%);
 	@include mq(sp) {
-		margin: 20px 16px 0;
-		width: inherit;
+		margin: 20px auto 0;
+		overflow: hidden;
+		padding: 0 16px;
 	}
 	&_inner {
 		padding: 40px 0 64px;
 		@include mq(sp) {
-			padding: 40px 16px;
-		}
-		&.-java , &.-webdesign {
-			display: none; /* 初回 */
+			padding: 40px 0;
 		}
 		&_box {
 			align-items: center;
@@ -845,30 +845,26 @@ body {
 }
 
 // スライダーデザイン調整
-.swiper-pagination {
-	position: absolute;
-	bottom: 0;
+#job_introduct .swiper-pagination {
+	align-items: center;
+	display: flex;
+	font-size: 0;
+	gap: 16px;
+	justify-content: center;
+	margin-top: 16px;
+	width: 100%;
+	position: static;
+	& span {
+		background-color: $cl_plPurple;
+		border-radius: 50%;
+		height: 16px;
+		margin: 0;
+		width: 16px;
+		&[class*="active"] {
+			background-color: $cl_midPurple;
+		}
+	}
 }
-
-// .slick-dots {
-// 	align-items: center;
-// 	display: flex;
-// 	font-size: 0;
-// 	gap: 16px;
-// 	justify-content: center;
-// 	margin-top: 16px;
-// 	width: 100%;
-// 	position: absolute;
-// 	& li {
-// 		background-color: rgba($cl_plPurple,.5);
-// 		border-radius: 50%;
-// 		height: 16px;
-// 		width: 16px;
-// 		&[class*="active"] {
-// 			background-color: $cl_midPurple;
-// 		}
-// 	}
-// }
 /* お仕事紹介 en */
 
 /* ご利用の流れ st */

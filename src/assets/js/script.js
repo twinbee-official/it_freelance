@@ -300,36 +300,33 @@ COMMON.module.init = function() {
 	COMMON.module.igApi($('#jsi_instagram_outputArea'));
 
 	// スライダー設定
-	if(COMMON.device === 'sp') {
-		var tab = new Swiper('.jsc_tab_content', {
-			//タブコンテンツ
-			slidesPerView: 1,
-			autoHeight: true,
-			// ページネーション
-			pagination: {
-				el: ".swiper-pagination",
-				clickable: true,
-			},
-			//タブメニュー
-			thumbs: {
-					swiper: {
-							el: '.jsc_tab_menu',
-							slidesPerView: 3,
-					}
-			},
-	});
+	var tab = new Swiper('.jsc_tab_content', {
+		//タブコンテンツ
+		slidesPerView: 1,
+		autoHeight: true,
+		spaceBetween: 16,
+		// ページネーション
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		//タブメニュー
+		thumbs: {
+				swiper: {
+						el: '.jsc_tab_menu',
+						slidesPerView: 3,
+				}
+		},
+});
 
-	// ドットがクリックされたら、コンテンツ上部へ移動
-		// $('.slick-dots li').click(function() {
-		// 	target = $('.jsc_tabItem_content');
-		// 	adjust = 96;
-		// 	position = target.offset().top - adjust;
-		// 	speed = 800;
-		// 	$("body,html").stop().animate({
-		// 		scrollTop: position
-		// 	}, speed);
-		// });
-	}
+// ドットがクリックされたら、コンテンツ上部へ移動
+	$('.swiper-pagination span').click(function() {
+		target = $('.jsc_tab_content');
+		position = target.offset().top - 96;
+		$("body,html").stop().animate({
+			scrollTop: position
+		}, 800);
+	});
 }
 
 $(function(){

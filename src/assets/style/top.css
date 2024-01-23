@@ -1240,23 +1240,21 @@ body {
 @media screen and (max-width: 420px) {
   .job_introduct {
     margin-top: 0;
-    padding: 64px 0 0;
+    padding: 64px 16px 0;
   }
 }
 .job_introduct_tab {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 40px auto 0;
+  margin: 0 auto;
   width: min(100%, 890px);
 }
 
+.job_introduct_tab_content {
+  margin: 40px auto 0;
+}
+
 @media screen and (max-width: 420px) {
-  .job_introduct_tab {
-    margin: 20px 16px 0;
+  .job_introduct_tab_content {
+    margin: 20px auto 0;
     width: inherit;
   }
 }
@@ -1310,13 +1308,15 @@ body {
   background-color: #faf5ff;
   border-radius: 12px;
   margin: 20px auto 0;
+  overflow: hidden;
   width: min(1072px, 100%);
 }
 
 @media screen and (max-width: 420px) {
   .job_introduct_content {
-    margin: 20px 16px 0;
-    width: inherit;
+    margin: 20px auto 0;
+    overflow: hidden;
+    padding: 0 16px;
   }
 }
 .job_introduct_content_inner {
@@ -1325,13 +1325,9 @@ body {
 
 @media screen and (max-width: 420px) {
   .job_introduct_content_inner {
-    padding: 40px 16px;
+    padding: 40px 0;
   }
 }
-.job_introduct_content_inner.-java, .job_introduct_content_inner.-webdesign {
-  display: none; /* 初回 */
-}
-
 .job_introduct_content_inner_box {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1426,9 +1422,33 @@ body {
     margin-top: 8px;
   }
 }
-.swiper-pagination {
-  position: absolute;
-  bottom: 0;
+#job_introduct .swiper-pagination {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  gap: 16px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 16px;
+  width: 100%;
+  position: static;
+}
+
+#job_introduct .swiper-pagination span {
+  background-color: #EACFFF;
+  border-radius: 50%;
+  height: 16px;
+  margin: 0;
+  width: 16px;
+}
+
+#job_introduct .swiper-pagination span[class*=active] {
+  background-color: #b97ced;
 }
 
 /* お仕事紹介 en */
