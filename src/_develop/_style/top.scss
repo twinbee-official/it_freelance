@@ -824,27 +824,94 @@ body {
 }
 
 // スライダーデザイン調整
-.swiper-slide-active {
-	position: relative;
-	span {
-		background-color: $cl_mainPurple;
-		color: $cl_text;
-		font-weight: bold;
-	}
-	&::after {
-		border-style: solid;
-		border-right: 10px solid transparent;
-		border-left: 10px solid transparent;
-		border-top: 12px solid $cl_mainPurple;
-		border-bottom: 0;
-		content: '';
-		height: 0;
-		width: 0;
-		position: absolute;
-		bottom: -11px;
-		left: calc(50% - 10px);
+.tab-menu {
+
+	.swiper-wrapper {
+
+			.swiper-slide {
+					padding: 20px 0;
+					text-align: center;
+					color: #555555;
+					background-color: #ffffff;;
+					cursor: pointer;
+					border-right: 2px solid #2f3640;
+					
+					&:last-child {
+							border: 0;
+					}
+			}
+			
+			.swiper-slide-thumb-active {
+					background-color: #cccccc;
+			}
 	}
 }
+
+
+.tab-content {
+	position: relative;
+	.swiper-wrapper {
+			.swiper-slide {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				h1 {
+					width: 100%;
+					margin: 20px 0;
+					color: white;
+					font-size: 1.5rem;
+				}
+				.post {
+					width: calc(94% / 3);
+					margin: 0 0 28px 0;
+					background-color: #ffffff;
+					a {
+						display: block;
+						text-decoration: none;
+						img {
+							width: 100%;
+						}
+						h2 {
+							padding: 10px;
+							color: #555555;
+							font-size: 1.14rem;
+							font-weight: bold;
+						}
+						p {
+							padding: 0 10px 10px 10px;
+							color: #555555;
+						}
+					}
+				}
+			}
+		}
+	}
+
+.swiper-pagination {
+	position: absolute;
+	bottom: 0;
+}
+// .swiper-slide-active {
+// 	position: relative;
+// 	span {
+// 		background-color: $cl_mainPurple;
+// 		color: $cl_text;
+// 		font-weight: bold;
+// 	}
+// 	&::after {
+// 		border-style: solid;
+// 		border-right: 10px solid transparent;
+// 		border-left: 10px solid transparent;
+// 		border-top: 12px solid $cl_mainPurple;
+// 		border-bottom: 0;
+// 		content: '';
+// 		height: 0;
+// 		width: 0;
+// 		position: absolute;
+// 		bottom: -11px;
+// 		left: calc(50% - 10px);
+// 	}
+// }
 
 // .slick-dots {
 // 	align-items: center;

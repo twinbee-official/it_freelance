@@ -1402,28 +1402,75 @@ body {
     margin-top: 8px;
   }
 }
-.swiper-slide-active {
+.tab-menu .swiper-wrapper .swiper-slide {
+  padding: 20px 0;
+  text-align: center;
+  color: #555555;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-right: 2px solid #2f3640;
+}
+
+.tab-menu .swiper-wrapper .swiper-slide:last-child {
+  border: 0;
+}
+
+.tab-menu .swiper-wrapper .swiper-slide-thumb-active {
+  background-color: #cccccc;
+}
+
+.tab-content {
   position: relative;
 }
 
-.swiper-slide-active span {
-  background-color: #DAADFF;
-  color: #382A3F;
+.tab-content .swiper-wrapper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.tab-content .swiper-wrapper .swiper-slide h1 {
+  width: 100%;
+  margin: 20px 0;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.tab-content .swiper-wrapper .swiper-slide .post {
+  width: 31.3333333333%;
+  margin: 0 0 28px 0;
+  background-color: #ffffff;
+}
+
+.tab-content .swiper-wrapper .swiper-slide .post a {
+  display: block;
+  text-decoration: none;
+}
+
+.tab-content .swiper-wrapper .swiper-slide .post a img {
+  width: 100%;
+}
+
+.tab-content .swiper-wrapper .swiper-slide .post a h2 {
+  padding: 10px;
+  color: #555555;
+  font-size: 1.14rem;
   font-weight: bold;
 }
 
-.swiper-slide-active::after {
-  border-style: solid;
-  border-right: 10px solid transparent;
-  border-left: 10px solid transparent;
-  border-top: 12px solid #DAADFF;
-  border-bottom: 0;
-  content: "";
-  height: 0;
-  width: 0;
+.tab-content .swiper-wrapper .swiper-slide .post a p {
+  padding: 0 10px 10px 10px;
+  color: #555555;
+}
+
+.swiper-pagination {
   position: absolute;
-  bottom: -11px;
-  left: calc(50% - 10px);
+  bottom: 0;
 }
 
 /* お仕事紹介 en */

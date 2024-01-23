@@ -301,30 +301,25 @@ COMMON.module.init = function() {
 
 	// スライダー設定
 	if(COMMON.device === 'sp') {
-		var tab = new Swiper('.jsc_tab_content', {
+		var tab = new Swiper('.tab-content', {
 			//タブコンテンツ
 			slidesPerView: 1,
-			autoHeight: true, 
-			
+			autoHeight: true,
+			// ページネーション
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
 			//タブメニュー
 			thumbs: {
 					swiper: {
-							el: '.jsc_tab_menu',
+							el: '.tab-menu',
 							slidesPerView: 3,
 					}
 			},
 	});
-	
-		// $('#jsi_sliderCont').slick({
-		// 	dots: true,
-		// 	arrows: false,
-		// 	slidesToShow: 1,
-		// 	adaptiveHeight: true,
-		// });
 
-		// スライダーの動きを検知して、タブに反映
-
-		// ドットがクリックされたら、コンテンツ上部へ移動
+	// ドットがクリックされたら、コンテンツ上部へ移動
 		// $('.slick-dots li').click(function() {
 		// 	target = $('.jsc_tabItem_content');
 		// 	adjust = 96;
