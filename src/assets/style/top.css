@@ -1264,30 +1264,6 @@ body {
   width: 100%;
 }
 
-.job_introduct_tabItem.is_current {
-  position: relative;
-}
-
-.job_introduct_tabItem.is_current span {
-  background-color: #DAADFF;
-  color: #382A3F;
-  font-weight: bold;
-}
-
-.job_introduct_tabItem.is_current::after {
-  border-style: solid;
-  border-right: 10px solid transparent;
-  border-left: 10px solid transparent;
-  border-top: 12px solid #DAADFF;
-  border-bottom: 0;
-  content: "";
-  height: 0;
-  width: 0;
-  position: absolute;
-  bottom: -11px;
-  left: calc(50% - 10px);
-}
-
 .job_introduct_tabItem_btn {
   background-color: #faf5ff;
   color: #EACFFF;
@@ -1426,6 +1402,30 @@ body {
     margin-top: 8px;
   }
 }
+.swiper-slide-active {
+  position: relative;
+}
+
+.swiper-slide-active span {
+  background-color: #DAADFF;
+  color: #382A3F;
+  font-weight: bold;
+}
+
+.swiper-slide-active::after {
+  border-style: solid;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 12px solid #DAADFF;
+  border-bottom: 0;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  bottom: -11px;
+  left: calc(50% - 10px);
+}
+
 /* お仕事紹介 en */
 /* ご利用の流れ st */
 .flow {

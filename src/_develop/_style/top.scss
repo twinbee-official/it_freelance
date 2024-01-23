@@ -723,28 +723,6 @@ body {
 	}
 	&Item {
 		width: 100%;
-		&.is_current {
-			position: relative;
-			span {
-				background-color: $cl_mainPurple;
-				color: $cl_text;
-				font-weight: bold;
-
-			}
-			&::after {
-				border-style: solid;
-				border-right: 10px solid transparent;
-				border-left: 10px solid transparent;
-				border-top: 12px solid $cl_mainPurple;
-				border-bottom: 0;
-				content: '';
-				height: 0;
-				width: 0;
-				position: absolute;
-				bottom: -11px;
-				left: calc(50% - 10px);
-			}
-		}
 		&_btn {
 			background-color: $cl_fadePurple;
 			color: $cl_plPurple;
@@ -844,6 +822,49 @@ body {
 		}
 	}
 }
+
+// スライダーデザイン調整
+.swiper-slide-active {
+	position: relative;
+	span {
+		background-color: $cl_mainPurple;
+		color: $cl_text;
+		font-weight: bold;
+	}
+	&::after {
+		border-style: solid;
+		border-right: 10px solid transparent;
+		border-left: 10px solid transparent;
+		border-top: 12px solid $cl_mainPurple;
+		border-bottom: 0;
+		content: '';
+		height: 0;
+		width: 0;
+		position: absolute;
+		bottom: -11px;
+		left: calc(50% - 10px);
+	}
+}
+
+// .slick-dots {
+// 	align-items: center;
+// 	display: flex;
+// 	font-size: 0;
+// 	gap: 16px;
+// 	justify-content: center;
+// 	margin-top: 16px;
+// 	width: 100%;
+// 	position: absolute;
+// 	& li {
+// 		background-color: rgba($cl_plPurple,.5);
+// 		border-radius: 50%;
+// 		height: 16px;
+// 		width: 16px;
+// 		&[class*="active"] {
+// 			background-color: $cl_midPurple;
+// 		}
+// 	}
+// }
 /* お仕事紹介 en */
 
 /* ご利用の流れ st */

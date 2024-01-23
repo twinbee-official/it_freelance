@@ -294,10 +294,47 @@ COMMON.module.init = function() {
 	COMMON.module.acdnFunc($('.jsc_acdn_btn'),$('.jsc_acdn_content'),$('.jsc_acdn_close_btn'));
 
 	// タブ切り替え
-	COMMON.module.tabFunc($('.jsc_tabItem'),$('.jsc_tabItem_content'),300);
+	// COMMON.module.tabFunc($('.jsc_tabItem'),$('.jsc_tabItem_content'),300);
 
 	// Instagram投稿表示
 	COMMON.module.igApi($('#jsi_instagram_outputArea'));
+
+	// スライダー設定
+	if(COMMON.device === 'sp') {
+		var tab = new Swiper('.jsc_tab_content', {
+			//タブコンテンツ
+			slidesPerView: 1,
+			autoHeight: true, 
+			
+			//タブメニュー
+			thumbs: {
+					swiper: {
+							el: '.jsc_tab_menu',
+							slidesPerView: 3,
+					}
+			},
+	});
+	
+		// $('#jsi_sliderCont').slick({
+		// 	dots: true,
+		// 	arrows: false,
+		// 	slidesToShow: 1,
+		// 	adaptiveHeight: true,
+		// });
+
+		// スライダーの動きを検知して、タブに反映
+
+		// ドットがクリックされたら、コンテンツ上部へ移動
+		// $('.slick-dots li').click(function() {
+		// 	target = $('.jsc_tabItem_content');
+		// 	adjust = 96;
+		// 	position = target.offset().top - adjust;
+		// 	speed = 800;
+		// 	$("body,html").stop().animate({
+		// 		scrollTop: position
+		// 	}, speed);
+		// });
+	}
 }
 
 $(function(){
