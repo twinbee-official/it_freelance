@@ -301,7 +301,7 @@ COMMON.module.init = function() {
 
 	// スライダー設定
 	if(COMMON.device === 'sp') {
-		var tab = new Swiper('.tab-content', {
+		var tab = new Swiper('.jsc_tab_content', {
 			//タブコンテンツ
 			slidesPerView: 1,
 			autoHeight: true,
@@ -313,7 +313,7 @@ COMMON.module.init = function() {
 			//タブメニュー
 			thumbs: {
 					swiper: {
-							el: '.tab-menu',
+							el: '.jsc_tab_menu',
 							slidesPerView: 3,
 					}
 			},
