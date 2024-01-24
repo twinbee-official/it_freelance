@@ -1177,8 +1177,6 @@ body {
 		margin-top: 40px;
 		text-align: center;
 		width: 100%;
-		// position: relative;
-		// z-index: 1;
 		@include mq(sp) {
 			height: 375px;
 			margin-top: 0;
@@ -1217,12 +1215,32 @@ body {
 		margin-top: 64px;
 	}
 	&_list {
-		display: flex;
+		display: grid;
+		gap: 20px; 
+		grid-template-columns: repeat(3, 1fr);
 		margin: 0 auto;
 		margin-top: 40px;
+		width: min(100%, 890px);
+		@include mq(tab) {
+			grid-template-columns: repeat(2, 1fr);
+			margin-top: 40px;
+			padding: 0 16px;
+			width: max(100%, 736px);
+		}
+		@include mq(sp) {
+			width: max(100%, 375px);
+		}
 		&Item {
+			text-align: center;
 			&_img {
-				width: 100%;
+				height: auto;
+				width: min(100%, 283.33px);
+				@include mq(tab) {
+					width: min(100%, 358px);
+				}
+				@include mq(sp) {
+					width: min(100%, 161.5px);
+				}
 			}
 		}
 	}
