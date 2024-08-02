@@ -36,7 +36,7 @@ const connectSSI = require("connect-ssi");
 const ejsComp = () => {
 	return src(["./_develop/**/*.ejs","!./_develop/_inc/_parts/*.ejs"])
 		.pipe(ejs({}, {}, { ext: '.html' }))
-		.pipe(rename({ extname: ".php" }))
+		.pipe(rename({ extname: ".html" }))
 		.pipe(dest('./assets/'));
 }
 
