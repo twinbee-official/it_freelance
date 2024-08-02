@@ -420,6 +420,15 @@ body {
   color: #DAADFF;
 }
 
+.section {
+  margin: 96px auto 0;
+}
+
+@media screen and (max-width: 420px) {
+  .section {
+    margin: 64px auto 0;
+  }
+}
 /* 見出し st */
 .sectionTitle {
   text-align: center;
@@ -539,7 +548,9 @@ body {
 }
 
 /* common  en */
-/* header st */
+/* ------------------------------
+ * ヘッダーメニュー
+ ------------------------------ */
 .header {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -663,6 +674,9 @@ body {
     opacity: 1;
   }
 }
+/* ------------------------------
+ * ヘッダーメニュー（モバイル）
+ ------------------------------ */
 @media screen and (max-width: 768px) {
   .m-header {
     padding: 0;
@@ -836,7 +850,47 @@ body {
   }
 }
 /* header en */
-/* メインビジュアル st */
+/* ------------------------------
+ * フッター
+ ------------------------------ */
+footer {
+  background-color: #8DA5FA;
+  height: 189px;
+  margin-top: 96px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 420px) {
+  footer {
+    height: 134px;
+    margin-top: 64px;
+    padding: 20px 0;
+  }
+}
+footer_logo {
+  display: block;
+  height: 80px;
+  margin: 0 auto;
+  width: 80px;
+}
+
+@media screen and (max-width: 420px) {
+  footer_logo {
+    height: 65px;
+    width: min(100%, 65px);
+  }
+}
+.copyRight {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 10px;
+}
+
+/* footer en */
+/* ------------------------------
+ * メインビジュアル
+ ------------------------------ */
 .mainVisual {
   background-position: center center;
   background-repeat: no-repeat;
@@ -890,7 +944,9 @@ body {
   }
 }
 /* メインビジュアル en */
-/* 会員登録動線バナー st */
+/* ------------------------------
+ * 会員登録動線バナー
+ ------------------------------ */
 .free_memberRegist_anchor {
   height: 154px;
   width: 154px;
@@ -932,7 +988,9 @@ body {
 }
 
 /* 会員登録動線バナー en */
-/* twinbeeができること st */
+/* ------------------------------
+ * TwinBeeができること
+ ------------------------------ */
 .canDo_twinbee {
   margin-top: 72px;
 }
@@ -1230,10 +1288,10 @@ body {
   }
 }
 /* twinbeeができること en */
-/* お仕事紹介 st */
+/* ------------------------------
+ * お仕事紹介
+ ------------------------------ */
 .job_introduct {
-  margin: 0 auto;
-  margin-top: 96px;
   padding: 0 20px;
 }
 
@@ -1452,10 +1510,11 @@ body {
 }
 
 /* お仕事紹介 en */
-/* ご利用の流れ st */
+/* ------------------------------
+ * ご利用の流れ
+ ------------------------------ */
 .flow {
   background-color: #faf5ff;
-  margin-top: 96px;
   padding: 96px 0;
 }
 
@@ -1606,11 +1665,9 @@ body {
 }
 
 /* ご利用の流れ en */
-/* よくある質問 st */
-.faq {
-  margin-top: 96px;
-}
-
+/* ------------------------------
+ * よくある質問
+ ------------------------------ */
 @media screen and (max-width: 420px) {
   .faq {
     margin-top: 64px;
@@ -1689,7 +1746,9 @@ body {
   }
 }
 /* よくある質問 en */
-/* 無料会員登録 st */
+/* ------------------------------
+ * 無料会員登録
+ ------------------------------ */
 .free_memberRegist {
   background-blend-mode: soft-light;
   background-color: rgb(249, 245, 251);
@@ -1698,7 +1757,6 @@ body {
   background-size: contain;
   border-radius: 12px;
   background-image: url("../images/bg_free_memberRegist.png");
-  margin: 96px auto 0;
   padding: 64px 0;
   width: min(100%, 1072px);
 }
@@ -1854,18 +1912,13 @@ body {
 }
 
 /* 無料会員登録 en */
-/* アクセス st */
+/* ------------------------------
+ * アクセス
+ ------------------------------ */
 .access {
   height: auto;
-  margin: 0 auto;
-  padding-top: 96px;
 }
 
-@media screen and (max-width: 420px) {
-  .access {
-    padding: 64px 0;
-  }
-}
 @media screen and (max-width: 420px) {
   .access_map_content {
     margin-top: 20px;
@@ -1911,62 +1964,50 @@ body {
   }
 }
 /* アクセス en */
-/* instagram st */
-.instagram {
-  margin-top: 96px;
-}
-
-@media screen and (max-width: 420px) {
-  .instagram {
-    margin-top: 64px;
-  }
-}
+/* ------------------------------
+ * INSTAGRAM
+ ------------------------------ */
 .instagram_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
-  margin-top: 40px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+  margin: 40px auto 0;
+  max-width: 890px;
+}
+
+@media screen and (max-width: 420px) {
+  .instagram_list {
+    padding: 0 16px;
+  }
+}
+.instagram_listItem {
+  width: calc(33.3333333333% - 20px);
+}
+
+@media screen and (max-width: 420px) {
+  .instagram_listItem {
+    width: calc(50% - 10px);
+  }
+}
+.instagram_listItem_link {
+  display: block;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+.instagram_listItem_link:hover {
+  opacity: 0.5;
 }
 
 .instagram_listItem_img {
+  aspect-ratio: 1/1;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
   width: 100%;
 }
 
 /* instagram en */
-/* footer st */
-footer {
-  background-color: #8DA5FA;
-  height: 189px;
-  margin-top: 96px;
-  padding: 40px 0;
-  text-align: center;
-}
-
-@media screen and (max-width: 420px) {
-  footer {
-    height: 134px;
-    margin-top: 64px;
-    padding: 20px 0;
-  }
-}
-footer_logo {
-  display: block;
-  height: 80px;
-  margin: 0 auto;
-  width: 80px;
-}
-
-@media screen and (max-width: 420px) {
-  footer_logo {
-    height: 65px;
-    width: min(100%, 65px);
-  }
-}
-.copyRight {
-  display: block;
-  font-size: 0.75rem;
-  margin-top: 10px;
-}
-
-/* footer en */
