@@ -107,16 +107,18 @@ body {
 	font-weight: bold;
 	margin: 20px auto 0;
 	outline: none;
-	padding: 24.5px 8px;
-	text-align: center;
 	transition: all .6s ease-out;
 	width: min(100%, 526px);
 	@include mq(sp) {
 		width: min(100%, 343px);
 	}
 	&_link {
+		display: block;
 		color: $cl_midPurple;
+		padding: 24.5px 8px;
+		text-align: center;
 		text-decoration: none;
+		width: 100%;
 	}
 	&:hover {
     border-color:transparent;
@@ -438,17 +440,18 @@ body {
  * メインビジュアル
  ------------------------------ */
 .mainVisual {
+	aspect-ratio: 64 / 35;
+	@include imgPath('d_mv_bg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 87.5vh;
-	@include imgPath('mainVisual');
+	height: 100%;
 	margin: 0 auto;
 	width: 100%;
 	position: relative;
 	@include mq(sp) {
-		height: 375px;
-		@include imgPath('m_bg_mainVisual');
+		aspect-ratio: 3 / 4;
+		@include imgPath('m_mv_bg');
 	}
 	&_titleBox {
 		padding-left: 3.5vw;
@@ -493,7 +496,7 @@ body {
 	@include mq(sp) {
 		height: 124px;
 		width: 124px;
-		bottom: 5%;
+		bottom: calc(-62px / 2);
 		left: inherit;
 		right: 5%;
 	}
@@ -507,9 +510,6 @@ body {
 		@include imgPath('free_memberRegist_anchor','png');
 		text-indent: -9999px;
 		width: 100%;
-		@include mq(sp) {
-			@include imgPath('m_free_memberRegist_anchor','png');
-		}
 		&:hover {
 			transform: translateY(5px);
 		}
@@ -782,6 +782,7 @@ body {
 			&:hover {
 				background-color: rgba($cl_mainPurple,.6);
 				color: $cl_text;
+				cursor: pointer;
 				font-weight: bold;
 				transition: all .2s ease-out;
 			}

@@ -514,8 +514,6 @@ body {
   font-weight: bold;
   margin: 20px auto 0;
   outline: none;
-  padding: 24.5px 8px;
-  text-align: center;
   -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
   width: min(100%, 526px);
@@ -527,8 +525,12 @@ body {
   }
 }
 .btn_link {
+  display: block;
   color: #b97ced;
+  padding: 24.5px 8px;
+  text-align: center;
   text-decoration: none;
+  width: 100%;
 }
 
 .btn:hover {
@@ -892,11 +894,12 @@ footer_logo {
  * メインビジュアル
  ------------------------------ */
 .mainVisual {
+  aspect-ratio: 64/35;
+  background-image: url("../images/d_mv_bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 87.5vh;
-  background-image: url("../images/mainVisual.jpg");
+  height: 100%;
   margin: 0 auto;
   width: 100%;
   position: relative;
@@ -904,8 +907,8 @@ footer_logo {
 
 @media screen and (max-width: 420px) {
   .mainVisual {
-    height: 375px;
-    background-image: url("../images/m_bg_mainVisual.jpg");
+    aspect-ratio: 3/4;
+    background-image: url("../images/m_mv_bg.jpg");
   }
 }
 .mainVisual_titleBox {
@@ -959,7 +962,7 @@ footer_logo {
   .free_memberRegist_anchor {
     height: 124px;
     width: 124px;
-    bottom: 5%;
+    bottom: -31px;
     left: inherit;
     right: 5%;
   }
@@ -977,11 +980,6 @@ footer_logo {
   width: 100%;
 }
 
-@media screen and (max-width: 420px) {
-  .free_memberRegist_anchor_link {
-    background-image: url("../images/m_free_memberRegist_anchor.png");
-  }
-}
 .free_memberRegist_anchor_link:hover {
   -webkit-transform: translateY(5px);
   transform: translateY(5px);
@@ -1333,6 +1331,7 @@ footer_logo {
 .job_introduct_tabItem_btn:hover {
   background-color: rgba(218, 173, 255, 0.6);
   color: #382A3F;
+  cursor: pointer;
   font-weight: bold;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
