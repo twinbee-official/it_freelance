@@ -237,7 +237,7 @@ COMMON.module.tabFunc = function($tabItem,$target,speed) {
 COMMON.module.igApi = function($output) {
 	let list = '';
 	//表示件数
-  const limit = 16;
+  const limit = 6;
 	// アクセストークン
   const accessToken = "EAAJlSmuoEMYBO009KYfkU9cqcCXY6eNZBlcbjmwUQMSVY4u89T3GA5Nmjm0mQBShU1lTS1FfCPvQ29IfCaOFGpy1aZBLxbNTZBzFs7olR8IgAIw3ZCoTKarzSM6QNmhHp4LZCaX1tCXgKBa6jT4GvcW7TZBmJu4ZA5y19mQzE5gAlAyZCQbvbeb8MZAJ4CtfdUIGf";
   const businessID = 17841458595935178;
